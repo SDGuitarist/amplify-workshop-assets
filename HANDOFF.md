@@ -106,8 +106,10 @@ Alex is building a credibility portfolio to pitch Every (every.to) for writing, 
 3. Build `.claude/commands/credibility.md` — takes audience parameter (educator/publication/business/speaking/general), reads the portfolio, outputs tailored document
 4. Must also document: custom skills, commands, processes, workflows Alex created himself to fill gaps beyond the compound engineering plugin (session-kickoff agent, code-explainer agent, pre-commit-check agent, Feed-Forward Framework, Plan Quality Gate, Codex integration workflow, promo-post command, mood variant system, etc.)
 
-**Important context:**
-- Projects have 2+ years of evolution. Claude Code (Feb 2, 2026) is the latest acceleration, not the origin.
+**Important context — two distinct eras:**
+- **Claude Projects (web chat, 2+ years):** Where Alex developed frameworks, iterated on ideas (some to v4.0+), built the AI Dual Literacy thesis, and matured his thinking. The extractions he'll paste come from here.
+- **Claude Code (CLI, 40 days since Feb 2, 2026):** Where ideas became shipped code. 10 repos, 1,301 commits, 103 solution docs. The `every-resume.md` covers this era.
+- The credibility portfolio combines BOTH eras. Claude Projects = intellectual foundation. Claude Code = production execution.
 - Follow brand-voice.md rules. No em-dashes. No overclaiming. Confident about experience, never about perfection.
 
 ### P1 — Content Pipeline
