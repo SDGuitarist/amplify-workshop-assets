@@ -1,14 +1,16 @@
 # Amplify Workshop — Content Pipeline Handoff
 
-## What This Is
-
-A context-engineered content pipeline for promoting the Amplify workshop (April 25, 2026). Built March 12-13 across one session. The system generates platform-specific social media posts in Alex's voice, with scheduled auto-open reminders and HTML graphic templates.
+**Date:** 2026-03-13
+**Branch:** main
+**Phase:** Content generation (Week 1 complete, Week 2 next)
 
 ## Current State
 
+Content pipeline fully operational. 48 cron jobs installed. 7 posts generated and formatted (Mar 13 launch x3, Mar 14 x2, Mar 17 x2). All marketing graphics updated with QR codes + contact info blocks. `/promo-post` command updated to auto-generate comment sections.
+
 ### Done
 - `.claude/CLAUDE.md` — behavioral file, loaded every session
-- `.claude/commands/promo-post.md` — `/promo-post [platform] [date-or-theme]` command
+- `.claude/commands/promo-post.md` — updated with post + comment section format and platform templates
 - `context/workshop-arc-v2.md` — full 7-phase workshop curriculum (source of truth for all frameworks)
 - `context/brand-voice.md` — voice DNA, 7 samples, platform rules, banned words, confidence calibration
 - `context/content-calendar.md` — 6-week posting schedule (Mar 13 to Apr 30), 48 posts mapped
@@ -16,86 +18,75 @@ A context-engineered content pipeline for promoting the Amplify workshop (April 
 - `templates/instagram-square.html` — 1080x1080, 3 variants: default, framework, persona
 - `templates/instagram-story.html` — 1080x1920, 2 variants: default, bigtext
 - `templates/linkedin-card.html` — 1200x628, 2 variants: default, framework
-- `output/2026-03-13-linkedin-launch.txt` — DONE, reviewed, voice-checked
-- `output/2026-03-13-facebook-launch.txt` — DONE, reviewed, voice-checked
-- `output/2026-03-13-instagram-launch.txt` — DONE, reviewed, voice-checked
+- All 6 social/marketing graphics updated: QR code (landing page) + contact block (email, phone, Venmo)
+- `output/2026-03-13-linkedin-launch.txt` — DONE, with comment section
+- `output/2026-03-13-facebook-launch.txt` — DONE, with comment section
+- `output/2026-03-13-instagram-launch.txt` — DONE, with comment section
+- `output/2026-03-14-facebook-bts.txt` — DONE, with comment section
+- `output/2026-03-14-instagram-bts-story.txt` — DONE (reminder format)
+- `output/2026-03-17-instagram-why-i-built-this.txt` — DONE, with comment section
+- `output/2026-03-17-linkedin-market-gap.txt` — DONE, with comment section
 - `output/cron-schedule.md` — reference for all 48 cron jobs
 - 48 cron jobs installed (`crontab -l` to verify), auto-open 15 min before each posting time
 - `sudo pmset -c sleep 0` needs to be run manually to keep Mac awake while plugged in
 
 ### Not Done — Next Actions (Priority Order)
 
-1. **Generate remaining Week 1 posts (Mar 14, Mar 17)**
-   - Mar 14 Facebook behind-the-scenes (`output/2026-03-14-facebook-bts.txt`)
-   - Mar 14 IG Story reminder (`output/2026-03-14-instagram-bts-story.txt`)
-   - Mar 17 Instagram "Why I built this" carousel (`output/2026-03-17-instagram-why-i-built-this.txt`)
-   - Mar 17 LinkedIn market gap (`output/2026-03-17-linkedin-market-gap.txt`)
+1. **Generate Week 2 posts before Mar 20**
+   - Mar 20 LinkedIn "Three Questions" (`output/2026-03-20-linkedin-three-questions.txt`)
+   - Mar 20 Instagram "Three Questions" carousel (`output/2026-03-20-instagram-three-questions.txt`)
+   - Mar 24 Facebook "never fabricate" (`output/2026-03-24-facebook-never-fabricate.txt`)
+   - Mar 24 Instagram before/after (`output/2026-03-24-instagram-before-after.txt`)
+   - Mar 26 LinkedIn Expert-First (`output/2026-03-26-linkedin-expert-first.txt`)
+   - Mar 26 Facebook early bird soft (`output/2026-03-26-facebook-early-bird-soft.txt`)
 
 2. **Generate graphics for posts that need them**
    - Use `/gemini-imagegen` or `/frontend-design` for unique visuals
    - Use `templates/` for structured graphics (swap text, screenshot)
    - Priority graphics: Mar 17 IG carousel slides, Mar 24 before/after demo
 
-3. **Generate Week 2 posts before Mar 20**
-   - Three Questions (LI + IG), Never Fabricate (FB), Before/After (IG), Expert-First (LI), Early Bird soft (FB)
-
-4. **Build remaining weeks incrementally**
+3. **Build remaining weeks incrementally**
    - Generate each week's posts 2-3 days before they're needed
    - Don't batch all 48 at once (voice drift risk, context window waste)
 
-5. **Post-March 28: Update price in all templates and future posts**
+4. **Post-March 28: Update price in all templates and future posts**
    - Early bird ends March 28. All posts after that date show $150 not $100.
    - Update templates: instagram-square.html, instagram-story.html, linkedin-card.html
+   - Update `/promo-post` command comment templates
 
-6. **Add cron jobs for graphics as they're generated**
+5. **Add cron jobs for graphics as they're generated**
    - Only text posts have auto-open cron jobs right now. Graphics do not.
    - As graphics are saved to `output/graphics/`, add matching cron entries to auto-open them alongside the text posts.
 
-7. **March 13 launch day graphics: use existing assets**
-   - `03-social-instagram-square.html`, `04-social-instagram-story.html`, and `06-social-linkedin-twitter.html` already have the right launch content.
-   - Open each in browser, screenshot at native resolution, use as tomorrow's graphics.
-   - No new graphics needed for launch day.
-
-8. **After April 30: Clean up cron**
+6. **After April 30: Clean up cron**
    - Run `crontab -r` to remove all scheduled jobs
 
-## How to Generate a Post
+## Post File Format
 
-From the project directory:
 ```
-/promo-post linkedin mar-20
-/promo-post instagram three-questions
-/promo-post facebook early-bird-deadline
+[Platform] | [Date] | [Time] PT
+---
+[Post copy + hashtags]
+---
+FIRST COMMENT — Post immediately:
+[Registration link, pricing, payment, contact]
+
+SECOND COMMENT — Post 30-60 min later: (Instagram only)
+[Engagement question]
 ```
-
-The command reads brand-voice.md every time, checks the calendar, pulls from the workshop arc if needed, runs a voice check, and saves to `output/`.
-
-## How to Generate a Graphic
-
-1. Copy the relevant template from `templates/`
-2. Swap the SWAP-marked content sections
-3. Add variant class if needed (`.framework`, `.persona`, `.bigtext`, `.urgency`)
-4. Open in browser, screenshot at native resolution
-5. Save to `output/graphics/`
-
-Or use `/gemini-imagegen` for unique AI-generated visuals (behind-the-scenes, conceptual imagery, atmospheric shots).
 
 ## Key Voice Rules (Quick Reference)
 
 - No em-dashes. Ever.
 - No banned AI vocabulary (full list in brand-voice.md)
 - Max 1 exclamation mark per post. Zero is better.
-- Confident about experience. Never confident about perfection.
-- One CTA per post. Direct close: "Interested?" / "You in?" / "Link in bio."
+- One CTA per post. Direct close.
 - Never fabricate stats, testimonials, or seat counts.
-- Hashtags: LinkedIn 3-5, Instagram 15-20, Facebook none.
+- QR codes on content side, never on photos.
 
-## File Hierarchy (What Overrides What)
+## Design Rule
 
-1. `brand-voice.md` — always wins
-2. `content-calendar.md` — posting schedule and hooks
-3. `voice-reference-extracts.md` — informs tone, never overrides brand-voice.md
-4. `workshop-arc-v2.md` — source of truth for framework content
+QR + contact info grouped as a bottom-bar on the content side of any graphic. QR left, contact stacked right. Photos stay clean (only name/role badge allowed).
 
 ## Session Start Prompt
 
