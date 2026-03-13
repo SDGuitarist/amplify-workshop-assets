@@ -72,7 +72,7 @@ Save the final post as a clean text file to `output/` with this naming conventio
 
 Example: `output/2026-03-13-linkedin-launch.txt`
 
-File format (ready to copy-paste):
+File format (ready to copy-paste, with comment section):
 
 ```
 [Platform] | [Month Day, Year] | [Time] PT
@@ -81,15 +81,57 @@ File format (ready to copy-paste):
 
 [THE POST COPY]
 
+[HASHTAGS — if applicable, per platform rules below]
+
 ---
 
-[HASHTAGS per platform rules below]
+FIRST COMMENT — Post immediately:
+
+[Platform-specific first comment, see templates below]
+
+SECOND COMMENT — Post 30-60 min later:  (Instagram only)
+
+[Engagement question relevant to the post theme]
 ```
 
 **Hashtag rules (from brand-voice.md):**
 - **LinkedIn:** 3-5 max. Professional, discoverable. Too many looks spammy.
 - **Instagram:** 15-20. Mix broad discovery, niche, and branded (#AmplifyWorkshop).
 - **Facebook:** No hashtags. They don't drive discovery on Facebook.
+
+**First comment templates by platform:**
+
+**LinkedIn:**
+```
+Registration and details: https://sdguitarist.github.io/amplify-workshop-assets/07-website-hero.html
+
+30 seats. $100 early bird through March 28. $150 after.
+Venmo @Alex-Guillen-Music | Zelle alex.guillen.music@gmail.com
+619-755-3246 | alex@alexguillenmusic.com
+
+Happy to answer any questions.
+```
+
+**Facebook:**
+```
+Register here: https://sdguitarist.github.io/amplify-workshop-assets/07-website-hero.html
+
+$100 early bird through March 28. $150 after.
+Venmo @Alex-Guillen-Music | Zelle alex.guillen.music@gmail.com
+619-755-3246 | alex@alexguillenmusic.com
+
+Know someone who'd benefit? Tag them or send this their way.
+```
+
+**Instagram:**
+```
+Link in bio for all the details. 30 seats, $100 early bird through March 28.
+Venmo @Alex-Guillen-Music | Zelle alex.guillen.music@gmail.com
+619-755-3246 | alex@alexguillenmusic.com
+DM me if you're thinking about it.
+```
+
+**IMPORTANT:** After March 28, update all comment templates: remove "early bird" language, change price to $150. The registration link, payment methods, and contact info stay the same.
 
 ### 7. Show QA Summary
 

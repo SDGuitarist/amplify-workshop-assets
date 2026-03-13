@@ -125,6 +125,45 @@
       pointer-events: none;
     }
 
+    .bottom-bar {
+      margin-top: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .qr-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .qr-wrap img {
+      width: 80px;
+      height: 80px;
+      border-radius: 6px;
+      border: 2px solid rgba(194,120,64,0.25);
+    }
+
+    .qr-wrap span {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(250,243,232,0.4);
+    }
+
+    .contact {
+      font-size: 13px;
+      color: rgba(250,243,232,0.45);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-top: 4px;
+    }
+
     .right {
       width: 360px;
       flex-shrink: 0;
@@ -187,6 +226,17 @@
         <div class="meta-item"><strong>April 25</strong> · 10 AM – 2 PM</div>
         <div class="meta-item"><strong>3201 Thorn St, SD 92104</strong></div>
         <div class="meta-price">$100 Early Bird</div>
+      </div>
+      <div class="bottom-bar">
+        <div class="qr-wrap">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://sdguitarist.github.io/amplify-workshop-assets/07-website-hero.html&bgcolor=1a0f08&color=faf3e8" alt="QR Code - Register">
+          <span>Register</span>
+        </div>
+        <div class="contact">
+          <span>alex@alexguillenmusic.com</span>
+          <span>619-755-3246</span>
+          <span>Venmo @Alex-Guillen-Music</span>
+        </div>
       </div>
     </div>
     <div class="right">
