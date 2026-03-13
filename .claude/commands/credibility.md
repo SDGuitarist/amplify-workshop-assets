@@ -40,8 +40,9 @@ Generate a tailored credibility document for Alex Guillen based on audience type
 - 10 software projects, 1,301 commits in 40 days
 - 103 solution documents (compound learning)
 - 2+ years of AI framework development
-- 13 original frameworks
+- 40+ original frameworks across sales, teaching, operations, accessibility
 - 22 custom AI skills
+- 10 Claude Projects (Era 1) + 10 code repos (Era 2)
 - [2-3 audience-specific stats]
 
 ## Contact

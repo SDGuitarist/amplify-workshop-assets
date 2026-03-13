@@ -66,6 +66,7 @@ This is intentional. Alex's position: you diagnose first. You trust the system b
 - **Strategic Council Protocol** — Three-lens decision governance (Creative/Strategic, Skeptic, Operational) with Mode A (full council, irreversible decisions) and Mode B (light assessment, tactical decisions).
 - **Feed-Forward Framework** — Three questions end every phase: hardest decision, rejected alternatives, least confident. Each phase's uncertainties become the next phase's priorities.
 - **Plan Quality Gate** — No work starts unless the plan answers: What's changing? What must not change? How will we know it worked? Most likely way this plan is wrong?
+- **"Proof-Point, Not Priority"** — Four-question matrix for evaluating validation projects: portable credentials? clear compensation? honored commitments? extractable value regardless of outcome?
 
 **Teaching and Communication:**
 - **AI Dual Literacy** — AI literacy + domain expertise = business capability.
@@ -78,6 +79,38 @@ This is intentional. Alex's position: you diagnose first. You trust the system b
 - **Counter-Narrative (Floor and Ceiling)** — AI raising the floor makes the ceiling matter more. When anyone can generate, intentionality becomes premium.
 - **"Capacity is the binding constraint, not knowledge"** — Reframe from "learn AI" to "deploy what you already know."
 - **"Access not confidence"** — Positioning the workshop as closing an access gap, validated by Randstad research.
+
+**Sales Psychology and Lead Response:**
+- **Atomic Sales Framework** — Three "quarks" (Belief, Desire, Permission) must all be present for a sale. Original decision-science model validated by sales advisors.
+- **Five-Link Belief Chain** — Problem, Category, Vehicle, You, Themselves. Chain breaks at its weakest link. Diagnose, don't assume.
+- **Level 7 Analysis** — Seven-layer extraction for reading inbound leads: surface data through competitive positioning to differentiating wedge.
+- **Reasoning-First Method with Deletion Test** — Visible pre-work required before drafting. If removing the specific detail leaves a sentence that works for any lead, it fails.
+- **Sparse Lead Type Classification** — Four behavioral types (price shopper, overwhelmed/busy, impatient filler, still deciding) replacing binary clear/vague assessment.
+- **Absences as Signals** — Blank form fields are diagnostic information, not missing data. Each absence type maps to a specific response strategy.
+- **Stealth Premium Detection** — Checklist for identifying high-budget clients hiding behind sparse forms.
+- **The Gift-Giver Framework** — Three parties in cultural events (honoree, gift-giver, guests). The booking client's invisible labor deserves explicit validation.
+- **The Vehicle Framework** — Demonstrated understanding creates separation, but understanding without a credibility vehicle doesn't convert.
+- **Stakes Language** — Structured two-sentence format naming the cost of the gap.
+- **Desire Triage Matrix** — Four dimensions (Origin, Clarity, Attachment, Ownership). Desire is assessed, not created.
+- **Systematic Intimacy** — Professional knowledge as scalable trust-building. Scales across relationships; personal rapport doesn't.
+- **Trust Velocity** — Professional intimacy compresses months of trust into a single conversation.
+- **The Refinement Trap** — Framework sophistication as productive-feeling avoidance. Self-correcting pattern for ADHD entrepreneurs.
+- **Break the Trolley** — Reject the problem frame rather than optimizing within it. Applied from philosophy to business strategy.
+- **Neutral Social Proof** — Event-characteristic language outperforms decision-maker language by avoiding unintended committee dynamics.
+- **The Compounding Intelligence Loop** — Perform, Capture Intel, Refine Database, Better Proposals, Win More Gigs. Flywheel competitors can't shortcut.
+
+**Referral and Network Building:**
+- **4-Part Pitch (WHEN, WHAT, WHY YOU, SO THEY GET)** — Referral language designed for third-party delivery, not self-promotion.
+- **Referral Window Mapping** — Identifying exact moments in each vendor's client flow where referral opportunities surface.
+- **Contribution Equity Framework** — Seven non-referral value currencies that balance structural asymmetry in referral networks.
+- **Booking Order as Referral Architecture** — Wedding vendor booking timeline is itself a referral architecture. 15-rank system with direction analysis.
+- **Five Levels of Referral** — From "name and number" (~10% conversion) through "active introduction with endorsement" (80%+ conversion).
+
+**Event Design and Accessibility:**
+- **Quiet Zone Interior Zoning Model** — Passive Corner, Active Regulation Zone, Escape Route. ASPECTSS framework adapted for outdoor festivals, validated by community autism advocate.
+- **Grant-Ready Language Block System** — Modular, citation-backed narrative blocks designed to be recombined across grant applications.
+- **Partnership Red Flag Pattern Library** — Scope narrowing, compensation ambiguity, unfulfilled commitments, unanswered questions. Documented with specific evidence.
+- **Cultural Authenticity Viability Analysis** — Whether a musical tradition can be authentically represented solo or requires ensemble. Budget and station design built on this research.
 
 **Business Operations:**
 - **Capacity-Realistic Consulting** — Every recommendation filtered through: can this specific person, with their specific bandwidth, actually execute this?
@@ -116,8 +149,11 @@ This is intentional. Alex's position: you diagnose first. You trust the system b
 | **Amplify Workshop Development** | Active, pre-launch | Workshop curriculum, lead management, go-to-market engine. 8-lead pipeline, 13 original frameworks placed across 7 phases. |
 | **Compound Engineering Command Center** | Active, reference | Operational playbook translating compound engineering for a non-coder. 8 knowledge files, prompt templates for every phase, batched review methodology. |
 | **Health Command Center** | Active | Clinical coordination across 4 specialists, 5-medication regimen. Gig Protection Protocol. Treatment escalation achieved through self-advocacy scripts. |
-
-<!-- BATCH 2 PROJECTS WILL BE ADDED HERE -->
+| **Pacific Flow Lead Intelligence System** | Active, daily use | Modular lead response engine with 12+ knowledge files, 6-step classification protocol, competition-weighted pricing matrix, cinematic response drafting with mechanical verification gate. Processes real leads while Alex performs on stage. |
+| **Atomic Sales: Learning + Operations** | Active, evolving | Original decision-science framework (Atomic Sales) with three "quarks" (Belief, Desire, Permission), Five-Link Belief Chain diagnostic, Level 7 lead analysis, dual-mode governance (Learning + Operations). 22 custom skills. |
+| **Sales Psychology Lab** | Active, R&D | Experimental sandbox separating theory from execution. 12 testable hypotheses, conversion autopsy framework, 24-point referral rubric, hypothesis-to-validation pipeline. Theory validated here migrates to production projects. |
+| **NIWA — Vendor Referral Network** | Active, post-Session 1 | B2B referral network engine for San Diego wedding vendors. 4-Part Pitch framework, Referral Window Mapping, Contribution Equity Framework. Session 1 held Jan 27, 2026 with 4 vendors. |
+| **Sound Garden / El Jardín** | Closed, assets extracted | Community festival design and grant strategy. Sensory-inclusive event methodology (ASPECTSS-adapted), grant-ready language block system, partnership red flag pattern library. Produced portable credentials for PFE consulting. |
 
 ### Era 2: Claude Code (40 Days)
 
@@ -165,8 +201,11 @@ Designed by a musician who needed his apps to learn from each other the way a ba
 ### Revenue and Clients
 
 - Apt 4 Music Foundation: $200 grant strategy engagement delivered. 12 verified grant opportunities researched. Re-engagement pipeline active, second engagement scope document prepared.
-- Pacific Flow Entertainment: Lead response pipeline processes real inbound gig inquiries daily. Client onboarding packages generated for actual bookings.
+- Pacific Flow Entertainment: Lead response pipeline processes real inbound gig inquiries daily. Active leads include JW Marriott Palm Desert (400 guests, dual mariachi/Latin band quote), celebration of life booking, competing wedding date hold.
 - Faith Border Missions: Assessed for grant readiness, redirected to appropriate service tier (Grant Readiness Roadmap) rather than forced into poor-fit engagement.
+- Sharp Rees-Stealy VIP Ribbon Cutting: Booked through the sales psychology framework. Validated the GigSalad lead response methodology.
+- NIWA referral network: Session 1 held Jan 27, 2026. Dream of Niwa vendor outreach reached 30+ vendors with 6 positive responses.
+- Sound Garden: 11 sponsorship outreach emails generated 4 responses in 2 days. Project closed but produced portable consulting credentials and a finished Accessibility Capability Sheet.
 
 ### Measurable Technical Results
 
@@ -189,12 +228,34 @@ Designed by a musician who needed his apps to learn from each other the way a ba
 - 48-post content pipeline operational with automated scheduling
 - Organic endorsement from Heather Hilton: "You are so good at making AI seem less threatening."
 
+### Sales and Lead Response
+
+- Automated lead pipeline deployed on Railway with Mailgun webhooks, Twilio SMS approval, 48 passing tests
+- Lead response system handles real inquiries across GigSalad, The Bash, The Knot, venue referrals, and direct channels
+- Competition-weighted pricing produces different quote calibration based on number of competing quotes (3 vs. 11)
+- Sensitive context safety: memorial/celebration of life flags cascade through entire pipeline, disabling social proof and pressure language automatically
+- Collateral generation: 7 personalized document types (wedding guide, song list, genre guide, venue guide, trust doc, event checklist, venue kit) produced for real clients
+
+### Referral Network
+
+- NIWA Session 1 validated the core thesis: warm referrals convert at 80%+ vs. 5% for cold platform leads (confirmed by member Kevin DelMastro's real numbers)
+- 4-Part Pitch framework successfully taught to all attendees
+- Instagram discovered as dominant lead source during session, shifting network strategy
+
+### Accessibility and Community
+
+- Sensory-inclusive event design methodology validated through phone consultation with Crystal Sanford (Sanford Autism Advocacy Group)
+- ASPECTSS framework successfully adapted from built environments to outdoor festival context
+- Accessibility Capability Sheet produced as a finished business development document
+
 ### What Did Not Work (Honesty Section)
 
 - Railway environment variables showed in dashboard but didn't inject. Cost 90 minutes. Documented.
 - Plugin namespace bug silently broke workflow enforcement. Found and fixed manually.
 - Early brainstorm assumed GigSalad emails contained full lead data. They don't. A 5-minute check would have killed the assumption before planning started.
 - ADHD research loops: research feels productive but produces no code. Identified and documented as a pattern to interrupt.
+- Sound Garden partnership ended due to scope narrowing and compensation ambiguity. But value extraction was designed from day one, so the exit still produced portable assets. The lesson: "Silence is an answer."
+- Most sales psychology hypotheses remain formally untested against the 20-30+ lead threshold for statistical confidence. The RV framework has one tracked case. Intellectual honesty about what's validated vs. what's promising.
 
 ---
 
@@ -224,14 +285,19 @@ Hands-on workshop for creatives and small business owners. Participants build th
 
 - Every (every.to): target publication for writing, podcast, online workshop
 - Warm lead: Robert Gleason (CEO Evans Hotels, SDCLA Chair) for sound strategy positioning
-- Multi-venue hospitality outreach across San Diego luxury properties
+- Multi-venue hospitality outreach across San Diego luxury properties (Lodge at Torrey Pines, Thornton Winery, Gaylord Pacific, Hotel Solea)
+- NIWA vendor referral network: active B2B network with structured sessions, trigger-based referral scripts, cross-vendor intelligence sharing
+- Dream of Niwa vendor network: 30+ vendors reached, 6 positive responses
 - Women-focused org outreach drafted for 5 organizations
+- Accessibility consulting pipeline seeded through Sound Garden methodology and Crystal Sanford validation
 
 ### What Makes This Different from Other AI Portfolios
 
 Alex is not demoing tools. He's running a business on systems he built. The workshop isn't theoretical. The lead pipeline processes real leads. The grant consulting generated real revenue. The health system caught a real drug interaction. The content pipeline is scheduling real posts.
 
 The compound engineering methodology means every failure becomes a documented lesson that prevents the same failure from happening again. 103 solution docs in 40 days is not volume for volume's sake. It's a non-coder building institutional memory at the speed of someone who can't afford to make the same mistake twice.
+
+And the honesty is built in. The portfolio documents what didn't work alongside what did. Failed partnerships still produced portable assets because value extraction was designed from day one. Sales hypotheses are labeled as untested when they haven't hit statistical thresholds. The Refinement Trap is named and tracked as a personal failure mode. This isn't a highlight reel. It's a working system with its own self-correction mechanisms.
 
 ---
 
