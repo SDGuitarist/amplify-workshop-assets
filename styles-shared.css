@@ -412,6 +412,17 @@ em, .em, .highlight {
 .mood-trust .story-divider {
   background: linear-gradient(135deg, var(--warm-gold), var(--warm-amber));
 }
+/* Price badge label fix for light-background moods */
+.mood-trust .price-highlight .d-label,
+.mood-bts .price-highlight .d-label {
+  color: rgba(42,24,16,0.85);
+  text-shadow: none;
+}
+.mood-trust .price-highlight small,
+.mood-bts .price-highlight small {
+  color: rgba(42,24,16,0.6);
+  text-shadow: none;
+}
 .mood-trust .meta-item {
   color: rgba(42,24,16,0.55);
 }

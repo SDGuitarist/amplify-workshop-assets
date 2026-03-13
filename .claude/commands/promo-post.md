@@ -77,6 +77,8 @@ Examples:
 
 This tells you which CSS classes to apply when generating the graphic for this post.
 
+After assigning mood, verify "AI" appears in at least one of: question line, subtitle, or description. If not, adjust the subtitle to include "Human-Led AI" or "AI Workshop" so "AI" is immediately visible at a glance.
+
 ### 6. Voice Check (MANDATORY)
 
 Before presenting the post, verify:
