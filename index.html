@@ -8,14 +8,18 @@
   <style>
     body {
       display: block;
-      padding: 48px;
+      padding: 24px 16px;
       font-family: var(--font-body);
       background: linear-gradient(135deg, #f0e6d8, #f5ebe0);
     }
 
+    @media (min-width: 768px) {
+      body { padding: 48px; }
+    }
+
     h1 {
       font-family: var(--font-display);
-      font-size: 32px;
+      font-size: 24px;
       background: var(--gradient-gold);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -23,26 +27,46 @@
       margin-bottom: 8px;
     }
 
+    @media (min-width: 768px) {
+      h1 { font-size: 32px; }
+    }
+
     .intro {
-      font-size: 16px;
+      font-size: 14px;
       color: var(--cognac);
-      margin-bottom: 40px;
+      margin-bottom: 28px;
       max-width: 700px;
       line-height: 1.6;
     }
 
+    @media (min-width: 768px) {
+      .intro { font-size: 16px; margin-bottom: 40px; }
+    }
+
     .asset-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 24px;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .asset-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+
+    @media (min-width: 1024px) {
+      .asset-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
     }
 
     .asset-card {
       background: white;
-      border-radius: 12px;
-      padding: 28px;
+      border-radius: 10px;
+      padding: 20px;
       border: 1px solid #e0d5c8;
       transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    @media (min-width: 768px) {
+      .asset-card { padding: 28px; border-radius: 12px; }
     }
 
     .asset-card:hover {
@@ -52,31 +76,43 @@
 
     .asset-card h3 {
       font-family: var(--font-display);
-      font-size: 18px;
+      font-size: 16px;
       color: var(--deep-brown);
       margin-bottom: 4px;
     }
 
+    @media (min-width: 768px) {
+      .asset-card h3 { font-size: 18px; }
+    }
+
     .asset-card .dims {
-      font-size: 13px;
+      font-size: 12px;
       background: var(--gradient-amber-glow);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
+    }
+
+    @media (min-width: 768px) {
+      .asset-card .dims { font-size: 13px; margin-bottom: 8px; }
     }
 
     .asset-card p {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--cognac);
       line-height: 1.5;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .asset-card p { font-size: 14px; margin-bottom: 16px; }
     }
 
     .asset-card a {
       display: inline-block;
-      padding: 8px 20px;
+      padding: 8px 18px;
       background: var(--gradient-hero);
       color: var(--bright-amber);
       border-radius: 6px;
@@ -86,20 +122,27 @@
       transition: opacity 0.2s;
     }
 
-    .asset-card a:hover {
-      opacity: 0.9;
-    }
+    .asset-card a:hover { opacity: 0.9; }
 
     .tip {
-      margin-top: 48px;
-      padding: 24px;
+      margin-top: 32px;
+      padding: 20px;
       background: var(--gradient-hero);
-      border-radius: 12px;
+      border-radius: 10px;
       color: rgba(250,243,232,0.8);
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.6;
-      max-width: 700px;
       border: 1px solid rgba(194,120,64,0.15);
+    }
+
+    @media (min-width: 768px) {
+      .tip {
+        margin-top: 48px;
+        padding: 24px;
+        border-radius: 12px;
+        font-size: 14px;
+        max-width: 700px;
+      }
     }
 
     .tip strong {
@@ -112,7 +155,7 @@
 </head>
 <body>
   <h1>Amplify Workshop — Asset Library</h1>
-  <p class="intro">All marketing assets for the Amplify workshop. Open each file in your browser, then screenshot or print at the listed dimensions. Every file is self-contained HTML/CSS.</p>
+  <p class="intro">All marketing assets for the Amplify workshop. Open each file in your browser, then screenshot or print at the listed dimensions.</p>
 
   <div class="asset-grid">
     <div class="asset-card">
@@ -160,7 +203,7 @@
     <div class="asset-card">
       <h3>Website Landing Page</h3>
       <div class="dims">Full responsive page</div>
-      <p>Complete landing section with hero, details, takeaways, host bio, QR code, and pricing. Ready to embed.</p>
+      <p>Complete landing section with hero, details, takeaways, host bio, QR code, and pricing. Fully mobile-first.</p>
       <a href="07-website-hero.html">Open Preview</a>
     </div>
 
@@ -174,13 +217,13 @@
     <div class="asset-card">
       <h3>Newsletter Copy (Text)</h3>
       <div class="dims">Plain text · Copy/paste ready</div>
-      <p>Short and medium versions of the newsletter blurb with phone number. Just text — paste into any email tool.</p>
+      <p>Short and medium versions of the newsletter blurb with phone number. Paste into any email tool.</p>
       <a href="09-newsletter-copy-paste.txt">Open File</a>
     </div>
   </div>
 
   <div class="tip">
-    <strong>How to export as images:</strong> Open any file in Chrome, zoom to 100%, and use Cmd+Shift+P → "Capture full size screenshot". For the print flyer, use Cmd+P → Save as PDF. Each sub-page has a link back to this index.
+    <strong>How to export as images:</strong> Open any file in Chrome, zoom to 100%, and use Cmd+Shift+P → "Capture full size screenshot". For the print flyer, use Cmd+P → Save as PDF. Social media assets auto-scale on mobile but maintain exact pixel dimensions for screenshotting on desktop.
   </div>
 </body>
 </html>

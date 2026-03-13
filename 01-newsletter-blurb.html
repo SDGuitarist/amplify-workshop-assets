@@ -6,21 +6,32 @@
   <title>Amplify Workshop — Newsletter Insert</title>
   <link rel="stylesheet" href="styles-shared.css">
   <style>
+    body { padding: 0; background: var(--warm-white); }
+
     .newsletter-card {
-      width: 600px;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
       background: var(--gradient-cream);
-      border-radius: 12px;
-      overflow: hidden;
       font-family: var(--font-body);
       box-shadow: 0 4px 24px rgba(26,15,8,0.12);
     }
 
+    @media (min-width: 640px) {
+      body { padding: 40px; background: #e8ddd0; }
+      .newsletter-card { border-radius: 12px; overflow: hidden; }
+    }
+
     .newsletter-header {
       background: var(--gradient-hero);
-      padding: var(--space-xl) var(--space-xl) var(--space-lg);
+      padding: 28px 24px 24px;
       text-align: center;
       position: relative;
       overflow: hidden;
+    }
+
+    @media (min-width: 640px) {
+      .newsletter-header { padding: 32px 32px 28px; }
     }
 
     .newsletter-header::before {
@@ -35,19 +46,22 @@
     }
 
     .newsletter-header .tagline {
-      font-family: var(--font-body);
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 500;
-      letter-spacing: 3px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
       color: var(--bright-amber);
       margin-bottom: var(--space-sm);
       position: relative;
     }
 
+    @media (min-width: 640px) {
+      .newsletter-header .tagline { font-size: 11px; letter-spacing: 3px; }
+    }
+
     .newsletter-header h1 {
       font-family: var(--font-display);
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 700;
       background: var(--gradient-gold);
       -webkit-background-clip: text;
@@ -58,13 +72,21 @@
       position: relative;
     }
 
+    @media (min-width: 640px) {
+      .newsletter-header h1 { font-size: 32px; }
+    }
+
     .newsletter-header .subtitle {
       font-family: var(--font-display);
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       color: var(--soft-gold);
       line-height: 1.3;
       position: relative;
+    }
+
+    @media (min-width: 640px) {
+      .newsletter-header .subtitle { font-size: 18px; }
     }
 
     .newsletter-header .date-bar {
@@ -73,24 +95,36 @@
       border-top: 1px solid rgba(212,168,83,0.2);
       display: flex;
       justify-content: center;
-      gap: var(--space-xl);
-      font-size: 13px;
+      gap: var(--space-lg);
+      font-size: 12px;
       color: rgba(250,243,232,0.8);
       font-weight: 500;
       position: relative;
     }
 
+    @media (min-width: 640px) {
+      .newsletter-header .date-bar { font-size: 13px; }
+    }
+
     .newsletter-body {
-      padding: var(--space-xl);
+      padding: 24px;
+    }
+
+    @media (min-width: 640px) {
+      .newsletter-body { padding: 32px; }
     }
 
     .description {
-      font-size: 15px;
+      font-size: 14px;
       line-height: 1.7;
       color: #3a2a1e;
       margin-bottom: var(--space-lg);
       padding-bottom: var(--space-lg);
       border-bottom: 1px solid #e8ddd0;
+    }
+
+    @media (min-width: 640px) {
+      .description { font-size: 15px; }
     }
 
     .description em {
@@ -104,19 +138,34 @@
 
     .host-section {
       display: flex;
-      gap: var(--space-lg);
-      align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-md);
       margin-bottom: var(--space-lg);
     }
 
+    @media (min-width: 480px) {
+      .host-section {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: var(--space-lg);
+      }
+    }
+
     .host-photo {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center top;
       border: 3px solid var(--copper);
       flex-shrink: 0;
+    }
+
+    @media (min-width: 640px) {
+      .host-photo { width: 100px; height: 100px; }
     }
 
     .host-info h3 {
@@ -135,16 +184,27 @@
     }
 
     .host-info p {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.6;
       color: #4a3828;
     }
 
+    @media (min-width: 640px) {
+      .host-info p { font-size: 14px; }
+    }
+
     .details-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-md);
+      grid-template-columns: 1fr;
+      gap: var(--space-sm);
       margin-bottom: var(--space-lg);
+    }
+
+    @media (min-width: 480px) {
+      .details-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-md);
+      }
     }
 
     .detail-item {
@@ -177,11 +237,9 @@
       display: block;
     }
 
-    /* Early bird pricing — vibrant gradient highlight */
+    /* Pricing */
     .pricing-bar {
       display: flex;
-      align-items: center;
-      gap: var(--space-md);
       border-radius: 10px;
       overflow: hidden;
       margin-bottom: var(--space-md);
@@ -190,7 +248,11 @@
     .price-item {
       text-align: center;
       flex: 1;
-      padding: var(--space-md) var(--space-lg);
+      padding: 14px 16px;
+    }
+
+    @media (min-width: 640px) {
+      .price-item { padding: 16px 24px; }
     }
 
     .price-item.early {
@@ -208,18 +270,26 @@
 
     .price-item.early .amount {
       font-family: var(--font-display);
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 700;
       color: white;
       text-shadow: 0 2px 8px rgba(0,0,0,0.15);
       position: relative;
     }
 
+    @media (min-width: 640px) {
+      .price-item.early .amount { font-size: 28px; }
+    }
+
     .price-item.early .price-label {
-      font-size: 11px;
+      font-size: 10px;
       color: rgba(255,255,255,0.9);
       font-weight: 600;
       position: relative;
+    }
+
+    @media (min-width: 640px) {
+      .price-item.early .price-label { font-size: 11px; }
     }
 
     .price-item.regular {
@@ -228,13 +298,13 @@
 
     .price-item.regular .amount {
       font-family: var(--font-display);
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 600;
       color: rgba(250,243,232,0.6);
     }
 
     .price-item.regular .price-label {
-      font-size: 11px;
+      font-size: 10px;
       color: rgba(250,243,232,0.4);
     }
 
@@ -246,24 +316,36 @@
       letter-spacing: 0.5px;
     }
 
-    /* QR + Contact footer */
+    /* Footer */
     .newsletter-footer {
-      padding: var(--space-md) var(--space-xl) var(--space-lg);
+      padding: 16px 24px 24px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: var(--space-lg);
+      gap: var(--space-md);
       border-top: 1px solid #e8ddd0;
-    }
-
-    .qr-section {
-      flex-shrink: 0;
       text-align: center;
     }
 
+    @media (min-width: 480px) {
+      .newsletter-footer {
+        flex-direction: row;
+        text-align: left;
+        padding: 16px 32px 28px;
+        gap: var(--space-lg);
+      }
+    }
+
+    .qr-section { flex-shrink: 0; }
+
     .qr-section img {
-      width: 80px;
-      height: 80px;
+      width: 72px;
+      height: 72px;
       border-radius: 8px;
+    }
+
+    @media (min-width: 640px) {
+      .qr-section img { width: 80px; height: 80px; }
     }
 
     .qr-section .qr-label {
@@ -341,7 +423,7 @@
         <div class="detail-item">
           <div class="label">Contact</div>
           <div class="value">
-            Alex · <span class="phone" style="color:var(--deep-brown);font-weight:600">619-755-3246</span>
+            Alex · <span style="color:var(--deep-brown);font-weight:600">619-755-3246</span>
             <small>alex.guillen.music@gmail.com</small>
           </div>
         </div>
