@@ -52,7 +52,32 @@ Write one post for the specified platform. Follow the platform voice adjustments
 
 **LinkedIn:** Thought leadership angle. Lead with insight, not announcement. Professional but still Alex. No links in body (mention "link in comments" if needed).
 
-### 5. Voice Check (MANDATORY)
+### 5. Assign Mood Variant
+
+Based on the post's content theme, assign a mood and intensity for the accompanying graphic. Use this mapping:
+
+| Content Theme | Mood Class | When to Use Bold |
+|---|---|---|
+| Launch, announcements, "one week away," "what to expect" | (default — no class) | Major milestones, all-platform pushes |
+| Framework tease, teaching concepts, The Wedge, Three Questions, Expert-First, The Mirror | `mood-framework` | When the framework is the entire focus of the post |
+| Behind-the-scenes, prep, personal stories, casual | `mood-bts` | When paired with a real photo |
+| Deadline, countdown, seat scarcity, price going up | `mood-urgency` | Deadline day, final 24 hours, last seats |
+| Testimonials, "who is this for," FAQ, social proof | `mood-trust` | Heather quote, direct testimonials |
+
+Add a `GRAPHIC` line at the top of the saved file, right after the platform/date/time header:
+
+```
+GRAPHIC: mood-[variant] [bold if applicable] | [instagram-square / instagram-story / linkedin]
+```
+
+Examples:
+- `GRAPHIC: mood-framework | instagram-square`
+- `GRAPHIC: mood-urgency mood-bold | instagram-square`
+- `GRAPHIC: (default) | linkedin`
+
+This tells you which CSS classes to apply when generating the graphic for this post.
+
+### 6. Voice Check (MANDATORY)
 
 Before presenting the post, verify:
 - [ ] No em-dashes anywhere
@@ -65,7 +90,7 @@ Before presenting the post, verify:
 
 If any check fails, fix it before showing the post.
 
-### 6. Save the Post
+### 7. Save the Post
 
 Save the final post as a clean text file to `output/` with this naming convention:
 `output/YYYY-MM-DD-[platform]-[theme-slug].txt`
@@ -134,13 +159,14 @@ DM me if you're thinking about it.
 
 **IMPORTANT:** After March 28, update all comment templates: remove "early bird" language, change price to $150. The registration link, payment methods, and contact info stay the same.
 
-### 7. Show QA Summary
+### 8. Show QA Summary
 
 After saving, show a brief QA summary to the user (not in the file):
 
 ```
 SAVED: output/[filename].txt
 VOICE CHECK: Passed/Failed
+MOOD: [mood class] [bold if applicable]
 NOTES: [Any context about choices made or flags to review]
 ```
 
