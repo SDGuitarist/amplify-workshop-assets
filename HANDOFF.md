@@ -47,7 +47,16 @@ A context-engineered content pipeline for promoting the Amplify workshop (April 
    - Early bird ends March 28. All posts after that date show $150 not $100.
    - Update templates: instagram-square.html, instagram-story.html, linkedin-card.html
 
-6. **After April 30: Clean up cron**
+6. **Add cron jobs for graphics as they're generated**
+   - Only text posts have auto-open cron jobs right now. Graphics do not.
+   - As graphics are saved to `output/graphics/`, add matching cron entries to auto-open them alongside the text posts.
+
+7. **March 13 launch day graphics: use existing assets**
+   - `03-social-instagram-square.html`, `04-social-instagram-story.html`, and `06-social-linkedin-twitter.html` already have the right launch content.
+   - Open each in browser, screenshot at native resolution, use as tomorrow's graphics.
+   - No new graphics needed for launch day.
+
+8. **After April 30: Clean up cron**
    - Run `crontab -r` to remove all scheduled jobs
 
 ## How to Generate a Post
