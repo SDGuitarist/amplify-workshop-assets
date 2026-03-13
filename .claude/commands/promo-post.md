@@ -103,7 +103,7 @@ SECOND COMMENT — Post 30-60 min later:  (Instagram only)
 
 **LinkedIn:**
 ```
-Registration and details: https://sdguitarist.github.io/amplify-workshop-assets/07-website-hero.html
+Registration and details: https://tinyurl.com/Amplify-AI
 
 30 seats. $100 early bird through March 28. $150 after.
 Venmo @Alex-Guillen-Music | Zelle alex.guillen.music@gmail.com
@@ -114,7 +114,7 @@ Happy to answer any questions.
 
 **Facebook:**
 ```
-Register here: https://sdguitarist.github.io/amplify-workshop-assets/07-website-hero.html
+Register here: https://tinyurl.com/Amplify-AI
 
 $100 early bird through March 28. $150 after.
 Venmo @Alex-Guillen-Music | Zelle alex.guillen.music@gmail.com
@@ -125,7 +125,8 @@ Know someone who'd benefit? Tag them or send this their way.
 
 **Instagram:**
 ```
-Link in bio for all the details. 30 seats, $100 early bird through March 28.
+Register: https://tinyurl.com/Amplify-AI
+30 seats, $100 early bird through March 28.
 Venmo @Alex-Guillen-Music | Zelle alex.guillen.music@gmail.com
 619-755-3246 | alex@alexguillenmusic.com
 DM me if you're thinking about it.
