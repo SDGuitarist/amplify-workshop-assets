@@ -105,6 +105,550 @@ em, .em, .highlight {
   box-shadow: 0 4px 20px rgba(26,15,8,0.5);
 }
 
+/* =============================================
+   MOOD VARIANTS
+   Add one of these classes to the card/story container
+   to shift the visual tone. The default (no class) = launch.
+
+   SUBTLE (default):
+   .mood-launch     — dark, confident (default, no class needed)
+   .mood-framework  — warm, intellectual curiosity
+   .mood-bts        — light, casual, approachable
+   .mood-urgency    — bold, high-contrast, time-sensitive
+   .mood-trust      — clean, grounded, credible
+
+   BOLD (add .mood-bold alongside any mood class):
+   .mood-bold       — amplifies any mood with stronger colors,
+                      accent borders, and glow effects
+   ============================================= */
+
+/* --- FRAMEWORK: warm cognac, inviting --- */
+.mood-framework {
+  background: linear-gradient(135deg, #3d2518 0%, #6b3a24 40%, #8b5a3c 70%, #6b3a24 100%);
+}
+.mood-framework::before {
+  background: radial-gradient(circle, rgba(232,164,76,0.1) 0%, transparent 70%);
+}
+.mood-framework::after {
+  background: radial-gradient(circle, rgba(212,136,58,0.08) 0%, transparent 70%);
+}
+.mood-framework h1 {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mood-framework .question {
+  background: linear-gradient(135deg, var(--bright-amber), var(--soft-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mood-framework .subtitle {
+  color: var(--cream);
+}
+.mood-framework .details-bar,
+.mood-framework .info-cards .info-card {
+  border-color: rgba(212,136,58,0.2);
+  background: rgba(212,136,58,0.08);
+}
+.mood-framework .detail .d-label,
+.mood-framework .info-card .ic-label {
+  color: var(--bright-amber);
+}
+.mood-framework .story-divider {
+  background: var(--gradient-gold);
+}
+
+/* --- BTS: light cream, casual notebook feel --- */
+.mood-bts {
+  background: linear-gradient(135deg, #f8f0e3 0%, #faf3e8 40%, #f5ebe0 70%, #f8f0e3 100%);
+}
+.mood-bts::before {
+  background: radial-gradient(circle, rgba(107,58,36,0.04) 0%, transparent 70%);
+}
+.mood-bts::after {
+  background: radial-gradient(circle, rgba(139,90,60,0.03) 0%, transparent 70%);
+}
+.mood-bts h1 {
+  background: linear-gradient(135deg, var(--cognac), var(--leather));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mood-bts .question {
+  background: linear-gradient(135deg, var(--cognac), var(--warm-amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mood-bts .subtitle {
+  color: var(--leather);
+}
+.mood-bts .desc,
+.mood-bts .info-block .desc {
+  color: rgba(42,24,16,0.75);
+}
+.mood-bts .desc em,
+.mood-bts .info-block .desc em {
+  background: linear-gradient(135deg, var(--terracotta), var(--warm-amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mood-bts .detail .d-label,
+.mood-bts .info-card .ic-label {
+  color: var(--leather);
+}
+.mood-bts .detail .d-value,
+.mood-bts .info-card .ic-value {
+  color: var(--deep-brown);
+}
+.mood-bts .detail .d-value small,
+.mood-bts .info-card .ic-value small {
+  color: rgba(42,24,16,0.45);
+}
+.mood-bts .details-bar {
+  border-top-color: rgba(107,58,36,0.15);
+}
+.mood-bts .info-cards .info-card {
+  background: rgba(107,58,36,0.05);
+  border-color: rgba(107,58,36,0.12);
+}
+.mood-bts .contact {
+  color: rgba(42,24,16,0.5);
+}
+.mood-bts .contact .seats {
+  color: var(--cognac);
+}
+.mood-bts .contact .link-in-bio {
+  color: var(--leather);
+}
+.mood-bts .qr-wrap span {
+  color: rgba(42,24,16,0.4);
+}
+.mood-bts .qr-wrap img {
+  border-color: rgba(107,58,36,0.2);
+}
+.mood-bts .photo-frame,
+.mood-bts .photo-wrapper img {
+  border-color: rgba(107,58,36,0.25);
+}
+.mood-bts .info-block .host {
+  background: linear-gradient(135deg, var(--cognac), var(--warm-amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mood-bts .info-block .host-role {
+  color: rgba(42,24,16,0.4);
+}
+.mood-bts .photo-label {
+  background: linear-gradient(135deg, var(--cream), var(--warm-white));
+  border-color: rgba(107,58,36,0.15);
+}
+.mood-bts .photo-label .name {
+  color: var(--deep-brown);
+}
+.mood-bts .photo-label .role {
+  color: rgba(42,24,16,0.5);
+}
+.mood-bts .story-divider {
+  background: linear-gradient(135deg, var(--cognac), var(--warm-amber));
+}
+.mood-bts .meta-item {
+  color: rgba(42,24,16,0.55);
+}
+.mood-bts .meta-item strong {
+  color: var(--deep-brown);
+}
+/* BTS badge on LinkedIn photo */
+.mood-bts .right::before {
+  background: linear-gradient(90deg, var(--cream), transparent);
+}
+.mood-bts .badge {
+  background: linear-gradient(135deg, rgba(248,240,227,0.92), rgba(250,243,232,0.92));
+  border-color: rgba(107,58,36,0.15);
+}
+.mood-bts .badge .name {
+  color: var(--deep-brown);
+}
+.mood-bts .badge .role {
+  color: rgba(42,24,16,0.5);
+}
+
+/* --- URGENCY: dark with hot orange/coral accents --- */
+.mood-urgency {
+  background: linear-gradient(135deg, #1a0f08 0%, #2a1810 30%, #1a0f08 100%);
+}
+.mood-urgency::before {
+  background: radial-gradient(circle, rgba(255,107,74,0.12) 0%, transparent 70%);
+}
+.mood-urgency::after {
+  background: radial-gradient(circle, rgba(255,140,66,0.08) 0%, transparent 70%);
+}
+.mood-urgency h1 {
+  background: linear-gradient(135deg, var(--highlight-coral) 0%, var(--highlight-orange) 40%, var(--golden) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mood-urgency .question {
+  background: linear-gradient(135deg, var(--highlight-coral), var(--highlight-orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mood-urgency .subtitle {
+  color: var(--highlight-orange);
+}
+.mood-urgency .details-bar {
+  border-top-color: rgba(255,107,74,0.25);
+}
+.mood-urgency .info-cards .info-card {
+  border-color: rgba(255,107,74,0.15);
+  background: rgba(255,107,74,0.06);
+}
+.mood-urgency .detail .d-label,
+.mood-urgency .info-card .ic-label {
+  color: var(--highlight-coral);
+}
+.mood-urgency .contact .seats {
+  color: var(--highlight-coral);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.mood-urgency .story-divider {
+  background: linear-gradient(135deg, var(--highlight-coral), var(--highlight-orange));
+}
+.mood-urgency .photo-frame,
+.mood-urgency .photo-wrapper img {
+  border-color: rgba(255,107,74,0.3);
+}
+
+/* --- TRUST: clean warm-white, grounded --- */
+.mood-trust {
+  background: linear-gradient(135deg, #f8f0e3 0%, #faf3e8 30%, #f5ebe0 60%, #f8f0e3 100%);
+}
+.mood-trust::before {
+  background: radial-gradient(circle, rgba(212,168,83,0.05) 0%, transparent 70%);
+}
+.mood-trust::after {
+  background: radial-gradient(circle, rgba(194,120,64,0.03) 0%, transparent 70%);
+}
+.mood-trust h1 {
+  background: linear-gradient(135deg, var(--deep-brown), var(--rich-brown));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mood-trust .question {
+  background: linear-gradient(135deg, var(--warm-gold), var(--warm-amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mood-trust .subtitle {
+  color: var(--cognac);
+}
+.mood-trust .desc,
+.mood-trust .info-block .desc {
+  color: rgba(42,24,16,0.7);
+}
+.mood-trust .desc em,
+.mood-trust .info-block .desc em {
+  background: linear-gradient(135deg, var(--warm-gold), var(--warm-amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+}
+.mood-trust .detail .d-label,
+.mood-trust .info-card .ic-label {
+  color: var(--warm-gold);
+}
+.mood-trust .detail .d-value,
+.mood-trust .info-card .ic-value {
+  color: var(--deep-brown);
+}
+.mood-trust .detail .d-value small,
+.mood-trust .info-card .ic-value small {
+  color: rgba(42,24,16,0.4);
+}
+.mood-trust .details-bar {
+  border-top-color: rgba(212,168,83,0.2);
+}
+.mood-trust .info-cards .info-card {
+  background: rgba(212,168,83,0.06);
+  border-color: rgba(212,168,83,0.15);
+}
+.mood-trust .contact {
+  color: rgba(42,24,16,0.45);
+}
+.mood-trust .contact .seats {
+  color: var(--cognac);
+}
+.mood-trust .contact .link-in-bio {
+  color: var(--warm-gold);
+}
+.mood-trust .qr-wrap span {
+  color: rgba(42,24,16,0.35);
+}
+.mood-trust .qr-wrap img {
+  border-color: rgba(212,168,83,0.2);
+}
+.mood-trust .photo-frame,
+.mood-trust .photo-wrapper img {
+  border-color: rgba(212,168,83,0.3);
+}
+.mood-trust .info-block .host {
+  background: linear-gradient(135deg, var(--warm-gold), var(--warm-amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.mood-trust .info-block .host-role {
+  color: rgba(42,24,16,0.4);
+}
+.mood-trust .photo-label {
+  background: linear-gradient(135deg, var(--cream), var(--warm-white));
+  border-color: rgba(212,168,83,0.2);
+}
+.mood-trust .photo-label .name {
+  color: var(--deep-brown);
+}
+.mood-trust .photo-label .role {
+  color: rgba(42,24,16,0.45);
+}
+.mood-trust .story-divider {
+  background: linear-gradient(135deg, var(--warm-gold), var(--warm-amber));
+}
+.mood-trust .meta-item {
+  color: rgba(42,24,16,0.55);
+}
+.mood-trust .meta-item strong {
+  color: var(--deep-brown);
+}
+.mood-trust .right::before {
+  background: linear-gradient(90deg, var(--cream), transparent);
+}
+.mood-trust .badge {
+  background: linear-gradient(135deg, rgba(248,240,227,0.92), rgba(250,243,232,0.92));
+  border-color: rgba(212,168,83,0.2);
+}
+.mood-trust .badge .name {
+  color: var(--deep-brown);
+}
+.mood-trust .badge .role {
+  color: rgba(42,24,16,0.45);
+}
+
+/* =============================================
+   BOLD MOOD MODIFIER
+   Add .mood-bold alongside any mood class for
+   stronger colors, accent borders, and glow effects.
+   e.g. <div class="card mood-framework mood-bold">
+   ============================================= */
+
+/* --- BOLD LAUNCH (default + bold) --- */
+.mood-bold:not(.mood-framework):not(.mood-bts):not(.mood-urgency):not(.mood-trust) {
+  background: linear-gradient(135deg, #0d0704 0%, #1a0f08 30%, #2a1810 60%, #1a0f08 100%);
+  border: 2px solid rgba(240,192,94,0.3);
+  box-shadow: 0 0 60px rgba(212,136,58,0.15), inset 0 0 80px rgba(240,192,94,0.03);
+}
+.mood-bold:not(.mood-framework):not(.mood-bts):not(.mood-urgency):not(.mood-trust)::before {
+  background: radial-gradient(circle, rgba(255,140,66,0.18) 0%, transparent 70%);
+}
+.mood-bold:not(.mood-framework):not(.mood-bts):not(.mood-urgency):not(.mood-trust) h1 {
+  background: linear-gradient(135deg, var(--warm-amber) 0%, var(--golden) 30%, #fff5d4 50%, var(--golden) 70%, var(--warm-amber) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 2px 12px rgba(240,192,94,0.35));
+}
+.mood-bold:not(.mood-framework):not(.mood-bts):not(.mood-urgency):not(.mood-trust) .question {
+  background: linear-gradient(135deg, var(--golden), #fff5d4, var(--golden));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 600;
+}
+.mood-bold:not(.mood-framework):not(.mood-bts):not(.mood-urgency):not(.mood-trust) .subtitle {
+  color: var(--golden);
+  filter: drop-shadow(0 1px 8px rgba(240,192,94,0.2));
+}
+
+/* --- BOLD FRAMEWORK --- */
+.mood-framework.mood-bold {
+  background: linear-gradient(135deg, #2a1810 0%, #6b3a24 35%, #a05a30 55%, #6b3a24 80%, #2a1810 100%);
+  border: 2px solid rgba(232,164,76,0.35);
+  box-shadow: 0 0 60px rgba(160,90,48,0.2), inset 0 0 60px rgba(232,164,76,0.04);
+}
+.mood-framework.mood-bold::before {
+  background: radial-gradient(circle, rgba(232,164,76,0.2) 0%, transparent 65%);
+}
+.mood-framework.mood-bold h1 {
+  background: linear-gradient(135deg, var(--bright-amber) 0%, #ffe0a0 40%, var(--golden) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 2px 12px rgba(232,164,76,0.3));
+}
+.mood-framework.mood-bold .question {
+  background: linear-gradient(135deg, var(--golden), #ffe0a0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 600;
+}
+.mood-framework.mood-bold .subtitle {
+  color: var(--soft-gold);
+  filter: drop-shadow(0 1px 8px rgba(232,164,76,0.2));
+}
+.mood-framework.mood-bold .details-bar,
+.mood-framework.mood-bold .info-cards .info-card {
+  border-color: rgba(232,164,76,0.3);
+  background: rgba(232,164,76,0.12);
+}
+.mood-framework.mood-bold .story-divider {
+  height: 4px;
+  background: linear-gradient(135deg, var(--bright-amber), var(--golden), var(--bright-amber));
+  box-shadow: 0 0 12px rgba(232,164,76,0.4);
+}
+
+/* --- BOLD BTS --- */
+.mood-bts.mood-bold {
+  background: linear-gradient(135deg, #faf3e8 0%, #fff8f0 40%, #f5ebe0 70%, #ede0d0 100%);
+  border: 2px solid rgba(107,58,36,0.25);
+  box-shadow: 0 0 40px rgba(107,58,36,0.08);
+}
+.mood-bts.mood-bold h1 {
+  background: linear-gradient(135deg, #4a2510 0%, var(--cognac) 40%, var(--leather) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 2px 8px rgba(107,58,36,0.15));
+}
+.mood-bts.mood-bold .question {
+  background: linear-gradient(135deg, var(--terracotta), var(--warm-amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 600;
+  letter-spacing: 4.5px;
+}
+.mood-bts.mood-bold .subtitle {
+  color: var(--cognac);
+  font-weight: 500;
+}
+.mood-bts.mood-bold .desc,
+.mood-bts.mood-bold .info-block .desc {
+  color: rgba(42,24,16,0.85);
+  font-weight: 400;
+}
+.mood-bts.mood-bold .details-bar {
+  border-top: 2px solid rgba(107,58,36,0.2);
+}
+.mood-bts.mood-bold .info-cards .info-card {
+  background: rgba(107,58,36,0.08);
+  border-color: rgba(107,58,36,0.18);
+}
+.mood-bts.mood-bold .photo-frame,
+.mood-bts.mood-bold .photo-wrapper img {
+  border-width: 3px;
+  border-color: rgba(107,58,36,0.35);
+  box-shadow: 0 4px 24px rgba(107,58,36,0.12);
+}
+.mood-bts.mood-bold .story-divider {
+  height: 4px;
+  background: linear-gradient(135deg, var(--terracotta), var(--warm-amber), var(--cognac));
+}
+
+/* --- BOLD URGENCY --- */
+.mood-urgency.mood-bold {
+  background: linear-gradient(135deg, #0d0704 0%, #1a0808 30%, #2a0f0f 50%, #1a0808 100%);
+  border: 2px solid rgba(255,107,74,0.4);
+  box-shadow: 0 0 80px rgba(255,107,74,0.15), inset 0 0 80px rgba(255,60,40,0.03);
+}
+.mood-urgency.mood-bold::before {
+  background: radial-gradient(circle, rgba(255,107,74,0.25) 0%, transparent 65%);
+}
+.mood-urgency.mood-bold::after {
+  background: radial-gradient(circle, rgba(255,60,40,0.15) 0%, transparent 70%);
+}
+.mood-urgency.mood-bold h1 {
+  background: linear-gradient(135deg, #ff4030 0%, var(--highlight-coral) 25%, var(--highlight-orange) 50%, var(--golden) 80%, var(--highlight-orange) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 2px 16px rgba(255,107,74,0.45));
+}
+.mood-urgency.mood-bold .question {
+  background: linear-gradient(135deg, #ff4030, var(--highlight-coral));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+.mood-urgency.mood-bold .subtitle {
+  color: var(--highlight-coral);
+  filter: drop-shadow(0 1px 10px rgba(255,107,74,0.3));
+}
+.mood-urgency.mood-bold .details-bar {
+  border-top: 2px solid rgba(255,107,74,0.35);
+}
+.mood-urgency.mood-bold .info-cards .info-card {
+  border-color: rgba(255,107,74,0.25);
+  background: rgba(255,107,74,0.1);
+}
+.mood-urgency.mood-bold .contact .seats {
+  color: var(--highlight-coral);
+  font-size: 15px;
+  font-weight: 700;
+  filter: drop-shadow(0 1px 6px rgba(255,107,74,0.3));
+}
+.mood-urgency.mood-bold .story-divider {
+  height: 4px;
+  background: linear-gradient(135deg, #ff4030, var(--highlight-coral), var(--highlight-orange));
+  box-shadow: 0 0 16px rgba(255,107,74,0.5);
+}
+.mood-urgency.mood-bold .photo-frame,
+.mood-urgency.mood-bold .photo-wrapper img {
+  border-width: 3px;
+  border-color: rgba(255,107,74,0.45);
+  box-shadow: 0 0 24px rgba(255,107,74,0.15);
+}
+
+/* --- BOLD TRUST --- */
+.mood-trust.mood-bold {
+  background: linear-gradient(135deg, #f5ebe0 0%, #faf3e8 30%, #fff8f0 50%, #faf3e8 70%, #f5ebe0 100%);
+  border: 2px solid rgba(212,168,83,0.35);
+  box-shadow: 0 0 40px rgba(212,168,83,0.1);
+}
+.mood-trust.mood-bold h1 {
+  background: linear-gradient(135deg, #1a0f08, var(--deep-brown), var(--cognac));
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 2px 8px rgba(42,24,16,0.1));
+}
+.mood-trust.mood-bold .question {
+  background: linear-gradient(135deg, var(--warm-amber), var(--warm-gold), var(--warm-amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 600;
+}
+.mood-trust.mood-bold .subtitle {
+  color: var(--leather);
+  font-weight: 500;
+}
+.mood-trust.mood-bold .desc em,
+.mood-trust.mood-bold .info-block .desc em {
+  background: linear-gradient(135deg, var(--warm-amber), var(--warm-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+}
+.mood-trust.mood-bold .details-bar {
+  border-top: 2px solid rgba(212,168,83,0.3);
+}
+.mood-trust.mood-bold .info-cards .info-card {
+  background: rgba(212,168,83,0.1);
+  border-color: rgba(212,168,83,0.25);
+}
+.mood-trust.mood-bold .photo-frame,
+.mood-trust.mood-bold .photo-wrapper img {
+  border-width: 3px;
+  border-color: rgba(212,168,83,0.4);
+  box-shadow: 0 4px 20px rgba(212,168,83,0.12);
+}
+.mood-trust.mood-bold .story-divider {
+  height: 4px;
+  background: linear-gradient(135deg, var(--warm-gold), var(--warm-amber), var(--warm-gold));
+  box-shadow: 0 0 10px rgba(212,168,83,0.3);
+}
+
 /* Fixed-size asset scaling wrapper for mobile viewing */
 .asset-viewport {
   width: 100%;

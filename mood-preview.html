@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Variants Preview</title>
+  <link rel="stylesheet" href="styles-shared.css">
+  <style>
+    body {
+      background: #2a1810;
+      padding: 40px;
+      display: block;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      color: var(--cream);
+      font-size: 28px;
+      margin: 60px 0 12px;
+      text-align: center;
+    }
+    h2:first-of-type { margin-top: 0; }
+
+    .mood-label {
+      font-family: var(--font-body);
+      color: rgba(250,243,232,0.5);
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .tier-labels {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 12px;
+    }
+
+    .tier-label {
+      width: 360px;
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(250,243,232,0.35);
+    }
+
+    .preview-row {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    /* Mini card for preview */
+    .mini-card {
+      width: 360px;
+      height: 360px;
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 16px;
+      /* Default = launch mood */
+      background: var(--gradient-hero);
+    }
+
+    .mini-card::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.08) 0%, transparent 70%);
+    }
+
+    .mini-card::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(194,120,64,0.06) 0%, transparent 70%);
+    }
+
+    .mini-top {
+      padding: 28px 28px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mini-card .question {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+
+    .mini-card h1 {
+      font-family: var(--font-display);
+      font-size: 42px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.0;
+      margin-bottom: 4px;
+    }
+
+    .mini-card .subtitle {
+      font-family: var(--font-display);
+      font-size: 15px;
+      color: var(--soft-gold);
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+
+    .mini-card .desc {
+      font-size: 11px;
+      line-height: 1.5;
+      color: rgba(250,243,232,0.8);
+    }
+
+    .mini-card .desc em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .mini-bottom {
+      padding: 0 28px 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mini-details {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px solid rgba(194,120,64,0.2);
+    }
+
+    .mini-detail .d-label {
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 2px;
+    }
+
+    .mini-detail .d-value {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .mini-price {
+      background: var(--gradient-early-bird);
+      border-radius: 8px;
+      padding: 8px 14px;
+      text-align: center;
+      margin-left: auto;
+    }
+
+    .mini-price .d-label {
+      color: rgba(255,255,255,0.85);
+    }
+
+    .mini-price .d-value {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: white;
+    }
+
+    .contact {
+      font-size: 13px;
+      color: rgba(250,243,232,0.45);
+    }
+
+    .detail { text-align: left; }
+    .details-bar { border-top: 1px solid rgba(194,120,64,0.2); }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-link">&#8592; All Assets</a>
+
+  <!-- 1. LAUNCH -->
+  <h2>1. Launch</h2>
+  <div class="mood-label">Dark, confident. Announcements, major moments.</div>
+  <div class="tier-labels">
+    <div class="tier-label">Subtle</div>
+    <div class="tier-label">Bold</div>
+  </div>
+  <div class="preview-row">
+    <div class="mini-card">
+      <div class="mini-top">
+        <div class="question">What happens when expertise leads AI?</div>
+        <h1>Amplify</h1>
+        <div class="subtitle">The Power of Human-Led AI</div>
+        <p class="desc">A hands-on workshop for creatives and small business owners. Use AI to work <em>deeper</em>, not just faster.</p>
+      </div>
+      <div class="mini-bottom">
+        <div class="mini-details">
+          <div class="mini-detail detail">
+            <div class="d-label">When</div>
+            <div class="d-value">April 25</div>
+          </div>
+          <div class="mini-detail detail">
+            <div class="d-label">Where</div>
+            <div class="d-value">Expressive Arts SD</div>
+          </div>
+          <div class="mini-price">
+            <div class="d-label">Early Bird</div>
+            <div class="d-value">$100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mini-card mood-bold">
+      <div class="mini-top">
+        <div class="question">What happens when expertise leads AI?</div>
+        <h1>Amplify</h1>
+        <div class="subtitle">The Power of Human-Led AI</div>
+        <p class="desc">A hands-on workshop for creatives and small business owners. Use AI to work <em>deeper</em>, not just faster.</p>
+      </div>
+      <div class="mini-bottom">
+        <div class="mini-details">
+          <div class="mini-detail detail">
+            <div class="d-label">When</div>
+            <div class="d-value">April 25</div>
+          </div>
+          <div class="mini-detail detail">
+            <div class="d-label">Where</div>
+            <div class="d-value">Expressive Arts SD</div>
+          </div>
+          <div class="mini-price">
+            <div class="d-label">Early Bird</div>
+            <div class="d-value">$100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. FRAMEWORK -->
+  <h2>2. Framework</h2>
+  <div class="mood-label">Warm cognac, intellectual curiosity. Teaching concepts.</div>
+  <div class="tier-labels">
+    <div class="tier-label">Subtle</div>
+    <div class="tier-label">Bold</div>
+  </div>
+  <div class="preview-row">
+    <div class="mini-card mood-framework">
+      <div class="mini-top">
+        <div class="question">Where are you irreplaceable?</div>
+        <h1>Amplify</h1>
+        <div class="subtitle">The Three Questions</div>
+        <p class="desc">Where are you irreplaceable? Where are you just doing tasks? <em>That's the starting point.</em></p>
+      </div>
+      <div class="mini-bottom">
+        <div class="mini-details">
+          <div class="mini-detail detail">
+            <div class="d-label">When</div>
+            <div class="d-value">April 25</div>
+          </div>
+          <div class="mini-detail detail">
+            <div class="d-label">Where</div>
+            <div class="d-value">Expressive Arts SD</div>
+          </div>
+          <div class="mini-price">
+            <div class="d-label">Early Bird</div>
+            <div class="d-value">$100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mini-card mood-framework mood-bold">
+      <div class="mini-top">
+        <div class="question">Where are you irreplaceable?</div>
+        <h1>Amplify</h1>
+        <div class="subtitle">The Three Questions</div>
+        <p class="desc">Where are you irreplaceable? Where are you just doing tasks? <em>That's the starting point.</em></p>
+      </div>
+      <div class="mini-bottom">
+        <div class="mini-details">
+          <div class="mini-detail detail">
+            <div class="d-label">When</div>
+            <div class="d-value">April 25</div>
+          </div>
+          <div class="mini-detail detail">
+            <div class="d-label">Where</div>
+            <div class="d-value">Expressive Arts SD</div>
+          </div>
+          <div class="mini-price">
+            <div class="d-label">Early Bird</div>
+            <div class="d-value">$100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. BTS -->
+  <h2>3. Behind-the-Scenes</h2>
+  <div class="mood-label">Light cream, casual, approachable. Prep, personal stories.</div>
+  <div class="tier-labels">
+    <div class="tier-label">Subtle</div>
+    <div class="tier-label">Bold</div>
+  </div>
+  <div class="preview-row">
+    <div class="mini-card mood-bts">
+      <div class="mini-top">
+        <div class="question">Building something worth teaching</div>
+        <h1>Amplify</h1>
+        <div class="subtitle">Workshop Prep Day</div>
+        <p class="desc">Spent this morning building out the exercises. Every one of them comes from <em>real workflow problems</em> I've solved.</p>
+      </div>
+      <div class="mini-bottom">
+        <div class="mini-details">
+          <div class="mini-detail detail">
+            <div class="d-label">When</div>
+            <div class="d-value">April 25</div>
+          </div>
+          <div class="mini-detail detail">
+            <div class="d-label">Where</div>
+            <div class="d-value">Expressive Arts SD</div>
+          </div>
+          <div class="mini-price">
+            <div class="d-label">Early Bird</div>
+            <div class="d-value">$100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mini-card mood-bts mood-bold">
+      <div class="mini-top">
+        <div class="question">Building something worth teaching</div>
+        <h1>Amplify</h1>
+        <div class="subtitle">Workshop Prep Day</div>
+        <p class="desc">Spent this morning building out the exercises. Every one of them comes from <em>real workflow problems</em> I've solved.</p>
+      </div>
+      <div class="mini-bottom">
+        <div class="mini-details">
+          <div class="mini-detail detail">
+            <div class="d-label">When</div>
+            <div class="d-value">April 25</div>
+          </div>
+          <div class="mini-detail detail">
+            <div class="d-label">Where</div>
+            <div class="d-value">Expressive Arts SD</div>
+          </div>
+          <div class="mini-price">
+            <div class="d-label">Early Bird</div>
+            <div class="d-value">$100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. URGENCY -->
+  <h2>4. Urgency</h2>
+  <div class="mood-label">Dark with hot coral/orange accents. Deadlines, countdowns.</div>
+  <div class="tier-labels">
+    <div class="tier-label">Subtle</div>
+    <div class="tier-label">Bold</div>
+  </div>
+  <div class="preview-row">
+    <div class="mini-card mood-urgency">
+      <div class="mini-top">
+        <div class="question">Last day at $100</div>
+        <h1>Amplify</h1>
+        <div class="subtitle">Price Goes Up Tomorrow</div>
+        <p class="desc">30 seats. $100 today. <em>$150 after March 28.</em> If you've been thinking about it, stop thinking.</p>
+      </div>
+      <div class="mini-bottom">
+        <div class="mini-details">
+          <div class="mini-detail detail">
+            <div class="d-label">When</div>
+            <div class="d-value">April 25</div>
+          </div>
+          <div class="mini-detail detail">
+            <div class="d-label">Where</div>
+            <div class="d-value">Expressive Arts SD</div>
+          </div>
+          <div class="mini-price">
+            <div class="d-label">Early Bird</div>
+            <div class="d-value">$100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mini-card mood-urgency mood-bold">
+      <div class="mini-top">
+        <div class="question">Last day at $100</div>
+        <h1>Amplify</h1>
+        <div class="subtitle">Price Goes Up Tomorrow</div>
+        <p class="desc">30 seats. $100 today. <em>$150 after March 28.</em> If you've been thinking about it, stop thinking.</p>
+      </div>
+      <div class="mini-bottom">
+        <div class="mini-details">
+          <div class="mini-detail detail">
+            <div class="d-label">When</div>
+            <div class="d-value">April 25</div>
+          </div>
+          <div class="mini-detail detail">
+            <div class="d-label">Where</div>
+            <div class="d-value">Expressive Arts SD</div>
+          </div>
+          <div class="mini-price">
+            <div class="d-label">Early Bird</div>
+            <div class="d-value">$100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. TRUST -->
+  <h2>5. Social Proof / Trust</h2>
+  <div class="mood-label">Clean warm-white, grounded. Testimonials, personas, FAQ.</div>
+  <div class="tier-labels">
+    <div class="tier-label">Subtle</div>
+    <div class="tier-label">Bold</div>
+  </div>
+  <div class="preview-row">
+    <div class="mini-card mood-trust">
+      <div class="mini-top">
+        <div class="question">What attendees are saying</div>
+        <h1>Amplify</h1>
+        <div class="subtitle">"Less threatening, more useful."</div>
+        <p class="desc">"You are so good at making AI seem less threatening." <em>Real words from a real person.</em></p>
+      </div>
+      <div class="mini-bottom">
+        <div class="mini-details">
+          <div class="mini-detail detail">
+            <div class="d-label">When</div>
+            <div class="d-value">April 25</div>
+          </div>
+          <div class="mini-detail detail">
+            <div class="d-label">Where</div>
+            <div class="d-value">Expressive Arts SD</div>
+          </div>
+          <div class="mini-price">
+            <div class="d-label">Early Bird</div>
+            <div class="d-value">$100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mini-card mood-trust mood-bold">
+      <div class="mini-top">
+        <div class="question">What attendees are saying</div>
+        <h1>Amplify</h1>
+        <div class="subtitle">"Less threatening, more useful."</div>
+        <p class="desc">"You are so good at making AI seem less threatening." <em>Real words from a real person.</em></p>
+      </div>
+      <div class="mini-bottom">
+        <div class="mini-details">
+          <div class="mini-detail detail">
+            <div class="d-label">When</div>
+            <div class="d-value">April 25</div>
+          </div>
+          <div class="mini-detail detail">
+            <div class="d-label">Where</div>
+            <div class="d-value">Expressive Arts SD</div>
+          </div>
+          <div class="mini-price">
+            <div class="d-label">Early Bird</div>
+            <div class="d-value">$100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
