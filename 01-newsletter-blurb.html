@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amplify Workshop — Newsletter Insert</title>
+  <link rel="stylesheet" href="styles-shared.css">
+  <style>
+    .newsletter-card {
+      width: 600px;
+      background: var(--gradient-cream);
+      border-radius: 12px;
+      overflow: hidden;
+      font-family: var(--font-body);
+      box-shadow: 0 4px 24px rgba(26,15,8,0.12);
+    }
+
+    .newsletter-header {
+      background: var(--gradient-hero);
+      padding: var(--space-xl) var(--space-xl) var(--space-lg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .newsletter-header::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.12) 0%, transparent 70%);
+    }
+
+    .newsletter-header .tagline {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--bright-amber);
+      margin-bottom: var(--space-sm);
+      position: relative;
+    }
+
+    .newsletter-header h1 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.15;
+      margin-bottom: 6px;
+      position: relative;
+    }
+
+    .newsletter-header .subtitle {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--soft-gold);
+      line-height: 1.3;
+      position: relative;
+    }
+
+    .newsletter-header .date-bar {
+      margin-top: var(--space-md);
+      padding: 10px 0 0;
+      border-top: 1px solid rgba(212,168,83,0.2);
+      display: flex;
+      justify-content: center;
+      gap: var(--space-xl);
+      font-size: 13px;
+      color: rgba(250,243,232,0.8);
+      font-weight: 500;
+      position: relative;
+    }
+
+    .newsletter-body {
+      padding: var(--space-xl);
+    }
+
+    .description {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #3a2a1e;
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-lg);
+      border-bottom: 1px solid #e8ddd0;
+    }
+
+    .description em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .host-section {
+      display: flex;
+      gap: var(--space-lg);
+      align-items: flex-start;
+      margin-bottom: var(--space-lg);
+    }
+
+    .host-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid var(--copper);
+      flex-shrink: 0;
+    }
+
+    .host-info h3 {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--deep-brown);
+      margin-bottom: 4px;
+    }
+
+    .host-info .host-title {
+      font-size: 12px;
+      color: var(--cognac);
+      font-weight: 500;
+      margin-bottom: var(--space-sm);
+    }
+
+    .host-info p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #4a3828;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .detail-item {
+      padding: var(--space-md);
+      background: linear-gradient(135deg, #f5ebe0, #faf3e8);
+      border-radius: 8px;
+      border: 1px solid #e8ddd0;
+    }
+
+    .detail-item .label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 4px;
+    }
+
+    .detail-item .value {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--deep-brown);
+      line-height: 1.4;
+    }
+
+    .detail-item .value small {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--cognac);
+      display: block;
+    }
+
+    /* Early bird pricing — vibrant gradient highlight */
+    .pricing-bar {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: var(--space-md);
+    }
+
+    .price-item {
+      text-align: center;
+      flex: 1;
+      padding: var(--space-md) var(--space-lg);
+    }
+
+    .price-item.early {
+      background: var(--gradient-early-bird);
+      position: relative;
+    }
+
+    .price-item.early::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .price-item.early .amount {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    .price-item.early .price-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+      position: relative;
+    }
+
+    .price-item.regular {
+      background: var(--gradient-hero);
+    }
+
+    .price-item.regular .amount {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: rgba(250,243,232,0.6);
+    }
+
+    .price-item.regular .price-label {
+      font-size: 11px;
+      color: rgba(250,243,232,0.4);
+    }
+
+    .seats-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--terracotta);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* QR + Contact footer */
+    .newsletter-footer {
+      padding: var(--space-md) var(--space-xl) var(--space-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      border-top: 1px solid #e8ddd0;
+    }
+
+    .qr-section {
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .qr-section img {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+    }
+
+    .qr-section .qr-label {
+      font-size: 10px;
+      color: var(--cognac);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .contact-info {
+      font-size: 13px;
+      color: #4a3828;
+      line-height: 1.6;
+    }
+
+    .contact-info a {
+      color: var(--copper);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info .phone {
+      font-weight: 600;
+      color: var(--deep-brown);
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-link">&#8592; All Assets</a>
+
+  <div class="newsletter-card">
+    <div class="newsletter-header">
+      <div class="tagline">What happens when expertise leads AI?</div>
+      <h1>Amplify</h1>
+      <div class="subtitle">The Power of Human-Led AI</div>
+      <div class="date-bar">
+        <span>Saturday, April 25</span>
+        <span>10 AM – 2 PM</span>
+      </div>
+    </div>
+
+    <div class="newsletter-body">
+      <p class="description">
+        A hands-on workshop for artists, creatives, and small business owners who want to use AI to work deeper, not just faster. You'll leave with a practical framework for bringing your expertise into AI — so the output sounds like <em>you</em>, not like everyone else. No tech background needed.
+      </p>
+
+      <div class="host-section">
+        <img src="images/alex-headshot.jpeg" alt="Alex Guillen" class="host-photo">
+        <div class="host-info">
+          <h3>Led by Alex Guillen</h3>
+          <div class="host-title">Entrepreneur, Creative &amp; Founder of Pacific Flow Entertainment</div>
+          <p>Not an AI engineer. A business owner who built his own AI-powered systems and is teaching what actually works.</p>
+        </div>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-item">
+          <div class="label">Location</div>
+          <div class="value">
+            Expressive Arts San Diego
+            <small>3201 Thorn St, San Diego, CA 92104</small>
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="label">When</div>
+          <div class="value">
+            Saturday, April 25, 2026
+            <small>10:00 AM – 2:00 PM</small>
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="label">For</div>
+          <div class="value">Artists, creatives &amp; small business owners</div>
+        </div>
+        <div class="detail-item">
+          <div class="label">Contact</div>
+          <div class="value">
+            Alex · <span class="phone" style="color:var(--deep-brown);font-weight:600">619-755-3246</span>
+            <small>alex.guillen.music@gmail.com</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-bar">
+        <div class="price-item early">
+          <div class="amount">$100</div>
+          <div class="price-label">Early Bird (through March 28)</div>
+        </div>
+        <div class="price-item regular">
+          <div class="amount">$150</div>
+          <div class="price-label">Regular Price</div>
+        </div>
+      </div>
+      <div class="seats-note">Limited to 30 seats</div>
+    </div>
+
+    <div class="newsletter-footer">
+      <div class="qr-section">
+        <img src="images/venmo-qr.png" alt="Venmo QR Code">
+        <div class="qr-label">Venmo</div>
+      </div>
+      <div class="contact-info">
+        <strong>Contact Alex</strong><br>
+        <span class="phone">619-755-3246</span><br>
+        <a href="mailto:alex.guillen.music@gmail.com">alex.guillen.music@gmail.com</a><br>
+        Venmo: <a href="#">@Alex-Guillen-Music</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

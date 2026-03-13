@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amplify Workshop — All Assets</title>
+  <link rel="stylesheet" href="styles-shared.css">
+  <style>
+    body {
+      display: block;
+      padding: 48px;
+      font-family: var(--font-body);
+      background: linear-gradient(135deg, #f0e6d8, #f5ebe0);
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .intro {
+      font-size: 16px;
+      color: var(--cognac);
+      margin-bottom: 40px;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .asset-card {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      border: 1px solid #e0d5c8;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .asset-card:hover {
+      box-shadow: 0 4px 20px rgba(26,15,8,0.1);
+      transform: translateY(-2px);
+    }
+
+    .asset-card h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--deep-brown);
+      margin-bottom: 4px;
+    }
+
+    .asset-card .dims {
+      font-size: 13px;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .asset-card p {
+      font-size: 14px;
+      color: var(--cognac);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .asset-card a {
+      display: inline-block;
+      padding: 8px 20px;
+      background: var(--gradient-hero);
+      color: var(--bright-amber);
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    .asset-card a:hover {
+      opacity: 0.9;
+    }
+
+    .tip {
+      margin-top: 48px;
+      padding: 24px;
+      background: var(--gradient-hero);
+      border-radius: 12px;
+      color: rgba(250,243,232,0.8);
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 700px;
+      border: 1px solid rgba(194,120,64,0.15);
+    }
+
+    .tip strong {
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body>
+  <h1>Amplify Workshop — Asset Library</h1>
+  <p class="intro">All marketing assets for the Amplify workshop. Open each file in your browser, then screenshot or print at the listed dimensions. Every file is self-contained HTML/CSS.</p>
+
+  <div class="asset-grid">
+    <div class="asset-card">
+      <h3>Newsletter Insert</h3>
+      <div class="dims">600px wide · Email-safe</div>
+      <p>Card-style insert for the venue owner's newsletter. Includes photo, QR code, pricing, and all event details.</p>
+      <a href="01-newsletter-blurb.html">Open Preview</a>
+    </div>
+
+    <div class="asset-card">
+      <h3>Print Flyer</h3>
+      <div class="dims">8.5 x 11 in · Letter size</div>
+      <p>Full-page flyer for printing. Warm brown tones with amber accents, photo, QR code, and complete event info.</p>
+      <a href="02-flyer-print.html">Open Preview</a>
+    </div>
+
+    <div class="asset-card">
+      <h3>Instagram Square</h3>
+      <div class="dims">1080 x 1080px</div>
+      <p>Square format for Instagram feed, Facebook posts. Full address and highlighted early bird pricing.</p>
+      <a href="03-social-instagram-square.html">Open Preview</a>
+    </div>
+
+    <div class="asset-card">
+      <h3>Instagram/TikTok Story</h3>
+      <div class="dims">1080 x 1920px · 9:16</div>
+      <p>Vertical format for Instagram Stories, TikTok, Reels. Large photo with bold gradient text.</p>
+      <a href="04-social-instagram-story.html">Open Preview</a>
+    </div>
+
+    <div class="asset-card">
+      <h3>Facebook Event Cover</h3>
+      <div class="dims">1920 x 1005px</div>
+      <p>Widescreen banner for Facebook events. Photo on right, full address and contact on left.</p>
+      <a href="05-social-facebook-event.html">Open Preview</a>
+    </div>
+
+    <div class="asset-card">
+      <h3>LinkedIn / Twitter Card</h3>
+      <div class="dims">1200 x 628px · 1.91:1</div>
+      <p>Standard link preview / shared image format for LinkedIn and Twitter/X.</p>
+      <a href="06-social-linkedin-twitter.html">Open Preview</a>
+    </div>
+
+    <div class="asset-card">
+      <h3>Website Landing Page</h3>
+      <div class="dims">Full responsive page</div>
+      <p>Complete landing section with hero, details, takeaways, host bio, QR code, and pricing. Ready to embed.</p>
+      <a href="07-website-hero.html">Open Preview</a>
+    </div>
+
+    <div class="asset-card">
+      <h3>Email Signature Block</h3>
+      <div class="dims">600px wide · Compact</div>
+      <p>Small banner to add below your email signature. Full address, phone, and highlighted early bird price.</p>
+      <a href="08-email-signature-block.html">Open Preview</a>
+    </div>
+
+    <div class="asset-card">
+      <h3>Newsletter Copy (Text)</h3>
+      <div class="dims">Plain text · Copy/paste ready</div>
+      <p>Short and medium versions of the newsletter blurb with phone number. Just text — paste into any email tool.</p>
+      <a href="09-newsletter-copy-paste.txt">Open File</a>
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>How to export as images:</strong> Open any file in Chrome, zoom to 100%, and use Cmd+Shift+P → "Capture full size screenshot". For the print flyer, use Cmd+P → Save as PDF. Each sub-page has a link back to this index.
+  </div>
+</body>
+</html>

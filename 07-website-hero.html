@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amplify Workshop — Website Landing Section</title>
+  <link rel="stylesheet" href="styles-shared.css">
+  <style>
+    body {
+      padding: 0;
+      background: var(--warm-white);
+      display: block;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: var(--gradient-hero);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      font-family: var(--font-body);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.06) 0%, transparent 70%);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -150px;
+      left: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(194,120,64,0.04) 0%, transparent 70%);
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 64px;
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .hero-text { flex: 1; }
+
+    .hero-text .question {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+    }
+
+    .hero-text h1 {
+      font-family: var(--font-display);
+      font-size: 80px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.0;
+      margin-bottom: 12px;
+    }
+
+    .hero-text .subtitle {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--soft-gold);
+      font-weight: 400;
+      margin-bottom: 32px;
+    }
+
+    .hero-text .hero-desc {
+      font-size: 19px;
+      line-height: 1.7;
+      color: rgba(250,243,232,0.8);
+      margin-bottom: 40px;
+      max-width: 560px;
+    }
+
+    .hero-text .hero-desc em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 36px;
+      background: var(--gradient-early-bird);
+      color: white;
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(255,107,74,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-cta::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(255,107,74,0.4);
+    }
+
+    .hero-cta .price-tag {
+      font-size: 14px;
+      font-weight: 400;
+      opacity: 0.85;
+    }
+
+    .hero-photo {
+      width: 380px;
+      flex-shrink: 0;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 20px;
+      border: 3px solid rgba(194,120,64,0.3);
+    }
+
+    .hero-photo .caption {
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .hero-photo .caption .name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .hero-photo .caption .role {
+      font-size: 13px;
+      color: rgba(250,243,232,0.5);
+    }
+
+    /* ===== DETAILS ===== */
+    .details-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 64px;
+      font-family: var(--font-body);
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+
+    .detail-card {
+      padding: 36px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(26,15,8,0.04);
+      border: 1px solid #e8ddd0;
+    }
+
+    .detail-card .dc-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(194,120,64,0.1), rgba(255,140,66,0.08));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .detail-card .dc-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 8px;
+    }
+
+    .detail-card .dc-value {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--deep-brown);
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .detail-card .dc-sub {
+      font-size: 15px;
+      color: var(--cognac);
+      line-height: 1.5;
+    }
+
+    /* ===== WHAT YOU'LL GET ===== */
+    .what-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 64px 80px;
+      font-family: var(--font-body);
+    }
+
+    .what-section h2 {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--deep-brown);
+      margin-bottom: 12px;
+    }
+
+    .what-section .what-sub {
+      font-size: 18px;
+      color: var(--cognac);
+      margin-bottom: 40px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .what-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .what-item {
+      display: flex;
+      gap: 16px;
+      padding: 24px;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e8ddd0;
+    }
+
+    .what-item .wi-bullet {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--gradient-early-bird);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .what-item .wi-bullet span {
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .what-item .wi-text {
+      font-size: 16px;
+      color: var(--deep-brown);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    /* ===== HOST ===== */
+    .host-section {
+      background: linear-gradient(135deg, #f0e6d8, #f5ebe0, #f0e6d8);
+      padding: 80px 64px;
+      font-family: var(--font-body);
+    }
+
+    .host-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .host-img {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid var(--copper);
+      flex-shrink: 0;
+    }
+
+    .host-text h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--deep-brown);
+      margin-bottom: 4px;
+    }
+
+    .host-text .host-title {
+      font-size: 15px;
+      color: var(--copper);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .host-text p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #4a3828;
+      max-width: 600px;
+    }
+
+    /* ===== PRICING ===== */
+    .pricing-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 64px;
+      text-align: center;
+      font-family: var(--font-body);
+    }
+
+    .pricing-cards {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .p-card {
+      padding: 40px 56px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    /* Early bird card — gradient pop */
+    .p-card.early {
+      background: var(--gradient-early-bird);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(255,107,74,0.25);
+    }
+
+    .p-card.early::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .p-card.early .p-label {
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+      position: relative;
+    }
+
+    .p-card.early .p-amount {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    .p-card.early .p-note {
+      color: rgba(255,255,255,0.8);
+      font-weight: 500;
+      position: relative;
+    }
+
+    .p-card.regular {
+      background: linear-gradient(135deg, #f5ebe0, #faf3e8);
+      border: 1px solid #e0d5c8;
+    }
+
+    .p-card .p-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .p-card.regular .p-label { color: var(--cognac); }
+
+    .p-card .p-amount {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .p-card.regular .p-amount { color: var(--deep-brown); }
+
+    .p-card .p-note { font-size: 14px; }
+    .p-card.regular .p-note { color: var(--cognac); }
+
+    .pricing-section .seats-note {
+      font-size: 16px;
+      color: var(--terracotta);
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    /* QR + Contact */
+    .contact-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .qr-section img {
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+    }
+
+    .qr-section .qr-label {
+      font-size: 12px;
+      color: var(--cognac);
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    .contact-details {
+      text-align: left;
+      font-size: 16px;
+      color: #4a3828;
+      line-height: 1.8;
+    }
+
+    .contact-details a {
+      color: var(--copper);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-details .phone {
+      font-weight: 700;
+      color: var(--deep-brown);
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-link">&#8592; All Assets</a>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="question">What happens when expertise leads AI?</div>
+        <h1>Amplify</h1>
+        <div class="subtitle">The Power of Human-Led AI</div>
+        <p class="hero-desc">A hands-on workshop for artists, creatives, and small business owners who want to use AI to work <em>deeper</em>, not just faster. No tech background needed.</p>
+        <a href="#pricing" class="hero-cta">
+          Reserve Your Seat <span class="price-tag">· $100 Early Bird</span>
+        </a>
+      </div>
+      <div class="hero-photo">
+        <img src="images/alex-headshot.jpeg" alt="Alex Guillen">
+        <div class="caption">
+          <div class="name">Alex Guillen</div>
+          <div class="role">Founder, Pacific Flow Entertainment</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="details-section">
+    <div class="details-grid">
+      <div class="detail-card">
+        <div class="dc-icon">&#128197;</div>
+        <div class="dc-label">When</div>
+        <div class="dc-value">Saturday, April 25, 2026</div>
+        <div class="dc-sub">10:00 AM – 2:00 PM</div>
+      </div>
+      <div class="detail-card">
+        <div class="dc-icon">&#128205;</div>
+        <div class="dc-label">Where</div>
+        <div class="dc-value">Expressive Arts San Diego</div>
+        <div class="dc-sub">3201 Thorn St, San Diego, CA 92104</div>
+      </div>
+      <div class="detail-card">
+        <div class="dc-icon">&#128101;</div>
+        <div class="dc-label">Who It's For</div>
+        <div class="dc-value">Creatives &amp; Business Owners</div>
+        <div class="dc-sub">Artists, entrepreneurs, and anyone tired of generic AI output</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU'LL GET -->
+  <section class="what-section">
+    <h2>What You'll Walk Away With</h2>
+    <p class="what-sub">This isn't a lecture. It's a working session where you build something real with your own expertise.</p>
+    <div class="what-grid">
+      <div class="what-item">
+        <div class="wi-bullet"><span>&#10003;</span></div>
+        <div class="wi-text">A practical framework for bringing your expertise into AI</div>
+      </div>
+      <div class="what-item">
+        <div class="wi-bullet"><span>&#10003;</span></div>
+        <div class="wi-text">Output that sounds like <em style="background:var(--gradient-early-bird);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700;">you</em>, not like everyone else</div>
+      </div>
+      <div class="what-item">
+        <div class="wi-bullet"><span>&#10003;</span></div>
+        <div class="wi-text">Hands-on practice — not theory, not slides</div>
+      </div>
+      <div class="what-item">
+        <div class="wi-bullet"><span>&#10003;</span></div>
+        <div class="wi-text">Confidence to use AI in your actual workflow</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOST -->
+  <section class="host-section">
+    <div class="host-inner">
+      <img src="images/alex-headshot.jpeg" alt="Alex Guillen" class="host-img">
+      <div class="host-text">
+        <h2>Meet Your Host</h2>
+        <div class="host-title">Alex Guillen — Entrepreneur, Creative &amp; Founder of Pacific Flow Entertainment</div>
+        <p>Not an AI engineer. A business owner who built his own AI-powered systems and is teaching what actually works. Alex brings a creative-first perspective to AI — practical tools for real people doing real work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-section" id="pricing">
+    <div class="pricing-cards">
+      <div class="p-card early">
+        <div class="p-label">Early Bird (through March 28)</div>
+        <div class="p-amount">$100</div>
+        <div class="p-note">Best value — limited time</div>
+      </div>
+      <div class="p-card regular">
+        <div class="p-label">Regular Price</div>
+        <div class="p-amount">$150</div>
+        <div class="p-note">After March 28</div>
+      </div>
+    </div>
+    <div class="seats-note">Limited to 30 Seats</div>
+
+    <div class="contact-block">
+      <div class="qr-section">
+        <img src="images/venmo-qr.png" alt="Venmo QR Code">
+        <div class="qr-label">Scan to Pay via Venmo</div>
+      </div>
+      <div class="contact-details">
+        <span class="phone">619-755-3246</span><br>
+        <a href="mailto:alex.guillen.music@gmail.com">alex.guillen.music@gmail.com</a><br>
+        Venmo: <a href="#">@Alex-Guillen-Music</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

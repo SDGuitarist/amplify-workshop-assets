@@ -1,0 +1,92 @@
+/* Shared Design System — Amplify Workshop
+   Palette: Warm cognac/leather browns, cream, amber — matched to Alex's photo */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Core palette — warm cognac, leather, cream */
+  --espresso: #1a0f08;
+  --deep-brown: #2a1810;
+  --rich-brown: #3d2518;
+  --cognac: #6b3a24;
+  --leather: #8b5a3c;
+  --warm-amber: #d4883a;
+  --bright-amber: #e8a44c;
+  --golden: #f0c05e;
+  --warm-gold: #d4a853;
+  --bright-gold: #f0c86e;
+  --soft-gold: #f5dca0;
+  --cream: #faf3e8;
+  --warm-white: #f8f0e3;
+  --copper: #c27840;
+  --terracotta: #c4603a;
+  --rust: #a84828;
+  --highlight-orange: #ff8c42;
+  --highlight-coral: #ff6b4a;
+
+  /* Gradients — warm, rich, layered */
+  --gradient-hero: linear-gradient(135deg, #1a0f08 0%, #2a1810 30%, #3d2518 70%, #2a1810 100%);
+  --gradient-warm-surface: linear-gradient(135deg, #3d2518 0%, #4a2d1c 50%, #3d2518 100%);
+  --gradient-gold: linear-gradient(135deg, #d4883a 0%, #f0c05e 40%, #e8a44c 70%, #d4883a 100%);
+  --gradient-amber-glow: linear-gradient(135deg, #ff8c42 0%, #f0c05e 50%, #e8a44c 100%);
+  --gradient-early-bird: linear-gradient(135deg, #ff6b4a 0%, #ff8c42 30%, #f0c05e 70%, #e8a44c 100%);
+  --gradient-leather: linear-gradient(135deg, #6b3a24 0%, #8b5a3c 50%, #6b3a24 100%);
+  --gradient-cream: linear-gradient(135deg, #f8f0e3 0%, #faf3e8 50%, #f5ebe0 100%);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #e8ddd0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* Utility: emphasized/italic text pops */
+em, .em, .highlight {
+  font-style: normal;
+  background: var(--gradient-early-bird);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Home link on sub-pages */
+.home-link {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 9999;
+  background: var(--gradient-leather);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(26,15,8,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(212,168,83,0.2);
+}
+
+.home-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(26,15,8,0.5);
+}

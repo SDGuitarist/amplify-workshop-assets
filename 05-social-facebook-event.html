@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amplify — Facebook Event Cover (1920x1005)</title>
+  <link rel="stylesheet" href="styles-shared.css">
+  <style>
+    .fb-cover {
+      width: 1920px;
+      height: 1005px;
+      background: var(--gradient-hero);
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .fb-cover::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: 200px;
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.05) 0%, transparent 70%);
+    }
+
+    .fb-cover::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: 100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(194,120,64,0.04) 0%, transparent 70%);
+    }
+
+    .left-content {
+      flex: 1;
+      padding: 80px 0 80px 100px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .question {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 120px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.0;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-family: var(--font-display);
+      font-size: 36px;
+      color: var(--soft-gold);
+      font-weight: 400;
+      margin-bottom: 48px;
+    }
+
+    .desc {
+      font-size: 22px;
+      line-height: 1.6;
+      color: rgba(250,243,232,0.8);
+      max-width: 700px;
+      margin-bottom: 48px;
+    }
+
+    .desc em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 36px;
+      align-items: flex-end;
+    }
+
+    .info-item .ii-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 4px;
+    }
+
+    .info-item .ii-value {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .info-item .ii-value small {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(250,243,232,0.45);
+      display: block;
+    }
+
+    /* Early bird — vibrant */
+    .info-item.price-box {
+      background: var(--gradient-early-bird);
+      border-radius: 12px;
+      padding: 16px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-item.price-box::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .info-item.price-box .ii-label {
+      color: rgba(255,255,255,0.85);
+      position: relative;
+    }
+
+    .info-item.price-box .ii-value {
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    .info-item .phone-small {
+      font-size: 14px;
+      color: rgba(250,243,232,0.5);
+      margin-top: 8px;
+    }
+
+    .right-photo {
+      width: 500px;
+      height: 100%;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .right-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .right-photo::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 180px;
+      height: 100%;
+      background: linear-gradient(90deg, var(--espresso) 0%, transparent 100%);
+      z-index: 1;
+    }
+
+    .photo-overlay {
+      position: absolute;
+      bottom: 48px;
+      left: 32px;
+      z-index: 2;
+      background: linear-gradient(135deg, rgba(26,15,8,0.9), rgba(42,24,16,0.9));
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(194,120,64,0.25);
+      border-radius: 12px;
+      padding: 16px 24px;
+    }
+
+    .photo-overlay .name {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .photo-overlay .role {
+      font-size: 13px;
+      color: rgba(250,243,232,0.5);
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-link">&#8592; All Assets</a>
+
+  <div class="fb-cover">
+    <div class="left-content">
+      <div class="question">What happens when expertise leads AI?</div>
+      <h1>Amplify</h1>
+      <div class="subtitle">The Power of Human-Led AI</div>
+      <p class="desc">A hands-on workshop for creatives and small business owners. Use AI to work <em>deeper</em>, not just faster.</p>
+      <div class="info-row">
+        <div class="info-item">
+          <div class="ii-label">When</div>
+          <div class="ii-value">Sat, April 25 <small>10 AM – 2 PM</small></div>
+        </div>
+        <div class="info-item">
+          <div class="ii-label">Where</div>
+          <div class="ii-value">Expressive Arts San Diego <small>3201 Thorn St, San Diego, CA 92104</small></div>
+        </div>
+        <div class="info-item price-box">
+          <div class="ii-label">Early Bird</div>
+          <div class="ii-value">$100</div>
+        </div>
+      </div>
+      <div class="info-item" style="margin-top:12px;">
+        <span class="phone-small" style="font-size:14px; color:rgba(250,243,232,0.5);">619-755-3246 · alex.guillen.music@gmail.com</span>
+      </div>
+    </div>
+    <div class="right-photo">
+      <img src="images/alex-headshot.jpeg" alt="Alex Guillen">
+      <div class="photo-overlay">
+        <div class="name">Alex Guillen</div>
+        <div class="role">Pacific Flow Entertainment</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

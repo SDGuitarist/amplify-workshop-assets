@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amplify Workshop — Print Flyer (8.5x11)</title>
+  <link rel="stylesheet" href="styles-shared.css">
+  <style>
+    body { padding: 0; background: white; }
+
+    .flyer {
+      width: 8.5in;
+      height: 11in;
+      background: var(--gradient-hero);
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Warm glow accents */
+    .flyer::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.1) 0%, transparent 70%);
+    }
+
+    .flyer::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -80px;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(194,120,64,0.08) 0%, transparent 70%);
+    }
+
+    .accent-lines {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .accent-lines::before {
+      content: '';
+      position: absolute;
+      top: 60px;
+      right: -20px;
+      width: 200px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,140,66,0.25));
+      transform: rotate(-15deg);
+    }
+
+    .accent-lines::after {
+      content: '';
+      position: absolute;
+      bottom: 200px;
+      left: -20px;
+      width: 150px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(194,120,64,0.15), transparent);
+      transform: rotate(10deg);
+    }
+
+    .flyer-top {
+      padding: 56px 56px 28px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .question {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+
+    .flyer-title {
+      font-family: var(--font-display);
+      font-size: 72px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.0;
+      margin-bottom: 8px;
+    }
+
+    .flyer-subtitle {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--soft-gold);
+      margin-bottom: 28px;
+    }
+
+    .date-location-strip {
+      display: flex;
+      gap: 36px;
+      padding: 18px 0;
+      border-top: 1px solid rgba(194,120,64,0.2);
+      border-bottom: 1px solid rgba(194,120,64,0.2);
+    }
+
+    .dl-item .dl-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 4px;
+    }
+
+    .dl-item .dl-value {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.4;
+    }
+
+    .dl-item .dl-value small {
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(250,243,232,0.55);
+    }
+
+    .flyer-middle {
+      flex: 1;
+      display: flex;
+      gap: 36px;
+      padding: 32px 56px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .flyer-description {
+      flex: 1;
+    }
+
+    .flyer-description p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: rgba(250,243,232,0.85);
+      margin-bottom: 20px;
+    }
+
+    .flyer-description p em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .flyer-description .for-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--warm-amber);
+      margin-bottom: 8px;
+    }
+
+    .flyer-description .audience-list {
+      font-size: 15px;
+      color: rgba(250,243,232,0.7);
+      line-height: 1.6;
+    }
+
+    .photo-column {
+      width: 210px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .flyer-photo {
+      width: 210px;
+      height: 260px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 12px;
+      border: 2px solid rgba(194,120,64,0.35);
+    }
+
+    .photo-caption {
+      text-align: center;
+    }
+
+    .photo-caption .name {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .photo-caption .role {
+      font-size: 11px;
+      color: rgba(250,243,232,0.5);
+      line-height: 1.4;
+      margin-top: 4px;
+    }
+
+    .flyer-bottom {
+      padding: 24px 56px 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Pricing: early bird is the star */
+    .pricing-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .price-block {
+      text-align: center;
+      padding: 18px 32px;
+    }
+
+    .price-block.early {
+      background: var(--gradient-early-bird);
+      flex: 1.2;
+      position: relative;
+    }
+
+    .price-block.early::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .price-block.early .price-amount {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    .price-block.early .price-detail {
+      font-size: 12px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+      position: relative;
+    }
+
+    .price-block.regular {
+      background: var(--gradient-warm-surface);
+      flex: 0.8;
+    }
+
+    .price-block.regular .price-amount {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 600;
+      color: rgba(250,243,232,0.5);
+    }
+
+    .price-block.regular .price-detail {
+      font-size: 12px;
+      color: rgba(250,243,232,0.35);
+    }
+
+    .price-block.seats {
+      background: var(--terracotta);
+      padding: 18px 24px;
+    }
+
+    .price-block.seats .seats-text {
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* QR + Contact row */
+    .contact-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      padding-top: 14px;
+    }
+
+    .qr-box img {
+      width: 64px;
+      height: 64px;
+      border-radius: 6px;
+      background: var(--cream);
+      padding: 4px;
+    }
+
+    .qr-box .qr-label {
+      font-size: 9px;
+      color: rgba(250,243,232,0.4);
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    .contact-strip {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-size: 13px;
+      color: rgba(250,243,232,0.6);
+    }
+
+    .contact-strip strong {
+      color: var(--bright-amber);
+      font-weight: 500;
+    }
+
+    .contact-strip .phone {
+      font-weight: 600;
+      color: var(--cream);
+      font-size: 15px;
+    }
+
+    @media print {
+      body { padding: 0; background: white; }
+      .flyer { box-shadow: none; }
+      .home-link { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-link">&#8592; All Assets</a>
+
+  <div class="flyer">
+    <div class="accent-lines"></div>
+
+    <div class="flyer-top">
+      <div class="question">What happens when expertise leads AI?</div>
+      <h1 class="flyer-title">Amplify</h1>
+      <div class="flyer-subtitle">The Power of Human-Led AI</div>
+
+      <div class="date-location-strip">
+        <div class="dl-item">
+          <div class="dl-label">Date</div>
+          <div class="dl-value">Saturday, April 25, 2026</div>
+        </div>
+        <div class="dl-item">
+          <div class="dl-label">Time</div>
+          <div class="dl-value">10:00 AM – 2:00 PM</div>
+        </div>
+        <div class="dl-item">
+          <div class="dl-label">Location</div>
+          <div class="dl-value">Expressive Arts San Diego <small>3201 Thorn St, San Diego, CA 92104</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flyer-middle">
+      <div class="flyer-description">
+        <p>A hands-on workshop for artists, creatives, and small business owners who want to use AI to work deeper, not just faster. You'll leave with a practical framework for bringing your expertise into AI — so the output sounds like <em>you</em>, not like everyone else.</p>
+        <p>No tech background needed.</p>
+        <div class="for-label">This is for</div>
+        <div class="audience-list">
+          Artists &amp; Creatives · Small Business Owners · Entrepreneurs · Anyone tired of generic AI output
+        </div>
+      </div>
+      <div class="photo-column">
+        <img src="images/alex-headshot.jpeg" alt="Alex Guillen" class="flyer-photo">
+        <div class="photo-caption">
+          <div class="name">Alex Guillen</div>
+          <div class="role">Entrepreneur, Creative &amp; Founder<br>Pacific Flow Entertainment</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flyer-bottom">
+      <div class="pricing-strip">
+        <div class="price-block early">
+          <div class="price-amount">$100</div>
+          <div class="price-detail">Early Bird (through March 28)</div>
+        </div>
+        <div class="price-block regular">
+          <div class="price-amount">$150</div>
+          <div class="price-detail">Regular Price</div>
+        </div>
+        <div class="price-block seats">
+          <div class="seats-text">Limited to<br>30 Seats</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="qr-box">
+          <img src="images/venmo-qr.png" alt="Venmo QR">
+          <div class="qr-label">Venmo</div>
+        </div>
+        <div class="contact-strip">
+          <span class="phone">619-755-3246</span>
+          <span><strong>alex.guillen.music@gmail.com</strong></span>
+          <span>Venmo: <strong>@Alex-Guillen-Music</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
