@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amplify - Instagram Square Template (1080x1080)</title>
+  <link rel="stylesheet" href="../styles-shared.css">
+  <style>
+    .card {
+      width: 1080px;
+      height: 1080px;
+      background: var(--gradient-hero);
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.08) 0%, transparent 70%);
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(194,120,64,0.06) 0%, transparent 70%);
+    }
+
+    /* === TOP: Hook + Title === */
+    .card-top {
+      padding: 72px 72px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hook {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 96px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.0;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: var(--soft-gold);
+      font-weight: 400;
+    }
+
+    /* === MIDDLE: Photo + Info === */
+    .card-middle {
+      display: flex;
+      align-items: flex-end;
+      gap: 40px;
+      padding: 0 72px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .photo-frame {
+      width: 280px;
+      height: 340px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid rgba(194,120,64,0.35);
+      flex-shrink: 0;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .info-block {
+      flex: 1;
+      padding-bottom: 20px;
+    }
+
+    .info-block .desc {
+      font-size: 20px;
+      line-height: 1.6;
+      color: rgba(250,243,232,0.85);
+      margin-bottom: 24px;
+    }
+
+    .info-block .desc em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .info-block .host {
+      font-size: 14px;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .info-block .host-role {
+      font-size: 13px;
+      color: rgba(250,243,232,0.45);
+    }
+
+    /* === BOTTOM: Details bar === */
+    .card-bottom {
+      padding: 0 72px 56px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .details-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: 28px;
+      border-top: 1px solid rgba(194,120,64,0.2);
+      gap: 16px;
+    }
+
+    .detail { text-align: left; }
+
+    .detail .d-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 4px;
+    }
+
+    .detail .d-value {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .detail .d-value small {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(250,243,232,0.45);
+    }
+
+    /* Early bird badge */
+    .price-highlight {
+      background: var(--gradient-early-bird);
+      border-radius: 12px;
+      padding: 14px 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-highlight::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .price-highlight .d-label {
+      color: rgba(255,255,255,0.85);
+    }
+
+    .price-highlight .d-value {
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    .price-highlight small {
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+      display: block;
+      position: relative;
+    }
+
+    .seats {
+      font-size: 12px;
+      color: var(--terracotta);
+      font-weight: 600;
+      text-align: center;
+      margin-top: 12px;
+      letter-spacing: 1px;
+    }
+
+    /* === VARIANT: Urgency mode (deadline/countdown) === */
+    .card.urgency .price-highlight {
+      padding: 18px 36px;
+    }
+
+    .card.urgency .price-highlight .d-value {
+      font-size: 40px;
+    }
+
+    .card.urgency .seats {
+      font-size: 14px;
+      color: var(--highlight-coral);
+      font-weight: 700;
+    }
+
+    /* === VARIANT: Framework tease (no photo, big text) === */
+    .card.framework .card-middle {
+      display: none;
+    }
+
+    .card.framework .card-top {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 72px;
+    }
+
+    .card.framework h1 {
+      font-size: 64px;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+
+    .card.framework .framework-body {
+      font-size: 26px;
+      line-height: 1.6;
+      color: rgba(250,243,232,0.8);
+      max-width: 900px;
+    }
+
+    .card.framework .framework-body em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    /* === VARIANT: Persona card (who is this for) === */
+    .card.persona .card-middle {
+      display: none;
+    }
+
+    .card.persona .card-top {
+      padding: 72px 72px 40px;
+    }
+
+    .card.persona h1 {
+      font-size: 56px;
+      margin-bottom: 16px;
+    }
+
+    .persona-list {
+      padding: 0 72px;
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .persona-item {
+      background: rgba(194,120,64,0.08);
+      border: 1px solid rgba(194,120,64,0.15);
+      border-radius: 16px;
+      padding: 24px 32px;
+    }
+
+    .persona-item .persona-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 6px;
+    }
+
+    .persona-item .persona-pain {
+      font-size: 17px;
+      color: rgba(250,243,232,0.65);
+      line-height: 1.5;
+    }
+
+    .persona-item .persona-pain em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    TEMPLATE VARIANTS:
+
+    Default: Full card with photo, description, details bar
+    .urgency: Bigger price badge, bolder seat count (deadline posts)
+    .framework: No photo, large quote/framework text fills the card
+    .persona: List of 3 persona cards (who is this for)
+
+    To use: Copy this file, add the variant class to .card,
+    and swap the content in the marked sections below.
+  -->
+
+  <!-- ============================================
+       DEFAULT VARIANT: Launch / General Announcement
+       ============================================ -->
+  <div class="fixed-asset card" data-width="1080">
+    <div class="card-top">
+      <!-- SWAP: Hook line -->
+      <div class="hook">What happens when expertise leads AI?</div>
+      <!-- SWAP: Main title (keep "Amplify" for brand consistency, or swap for framework name) -->
+      <h1>Amplify</h1>
+      <!-- SWAP: Subtitle -->
+      <div class="subtitle">The Power of Human-Led AI</div>
+    </div>
+
+    <div class="card-middle">
+      <div class="photo-frame">
+        <img src="../images/alex-headshot.jpeg" alt="Alex Guillen">
+      </div>
+      <div class="info-block">
+        <!-- SWAP: Description text -->
+        <p class="desc">A hands-on workshop for creatives and small business owners. Use AI to work <em>deeper</em>, not just faster.</p>
+        <div class="host">Led by Alex Guillen</div>
+        <div class="host-role">Founder, Pacific Flow Entertainment</div>
+      </div>
+    </div>
+
+    <div class="card-bottom">
+      <div class="details-bar">
+        <div class="detail">
+          <div class="d-label">When</div>
+          <div class="d-value">Sat, April 25 <small>10 AM – 2 PM</small></div>
+        </div>
+        <div class="detail">
+          <div class="d-label">Where</div>
+          <div class="d-value">Expressive Arts SD <small>3201 Thorn St, San Diego, CA 92104</small></div>
+        </div>
+        <!-- SWAP: Price section (update after March 28 to show $150) -->
+        <div class="detail price-highlight">
+          <div class="d-label">Early Bird</div>
+          <div class="d-value">$100</div>
+          <small>$150 after March 28</small>
+        </div>
+      </div>
+      <!-- SWAP: Seat count (use real numbers only) -->
+      <div class="seats">Limited to 30 Seats · 619-755-3246</div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       FRAMEWORK VARIANT: Quote / Concept Tease
+       Uncomment this block, comment out the default above
+       ============================================
+  <div class="fixed-asset card framework" data-width="1080">
+    <div class="card-top">
+      <div class="hook">SWAP: FRAMEWORK LABEL</div>
+      <h1>SWAP: Framework headline</h1>
+      <p class="framework-body">SWAP: The body text. Use <em>emphasis</em> for the key insight.</p>
+    </div>
+
+    <div class="card-bottom">
+      <div class="details-bar">
+        <div class="detail">
+          <div class="d-label">Workshop</div>
+          <div class="d-value">April 25 <small>Expressive Arts San Diego</small></div>
+        </div>
+        <div class="detail price-highlight">
+          <div class="d-label">Early Bird</div>
+          <div class="d-value">$100</div>
+          <small>Through March 28</small>
+        </div>
+      </div>
+      <div class="seats">AmplifyWorkshop.com</div>
+    </div>
+  </div>
+  -->
+
+  <!-- ============================================
+       PERSONA VARIANT: Who Is This For
+       Uncomment this block, comment out the default above
+       ============================================
+  <div class="fixed-asset card persona" data-width="1080">
+    <div class="card-top">
+      <div class="hook">Amplify Workshop · April 25</div>
+      <h1>Is This For You?</h1>
+    </div>
+
+    <div class="persona-list">
+      <div class="persona-item">
+        <div class="persona-title">SWAP: Persona 1 title</div>
+        <div class="persona-pain">SWAP: Their pain point. What <em>resonates</em>.</div>
+      </div>
+      <div class="persona-item">
+        <div class="persona-title">SWAP: Persona 2 title</div>
+        <div class="persona-pain">SWAP: Their pain point.</div>
+      </div>
+      <div class="persona-item">
+        <div class="persona-title">SWAP: Persona 3 title</div>
+        <div class="persona-pain">SWAP: Their pain point.</div>
+      </div>
+    </div>
+
+    <div class="card-bottom">
+      <div class="details-bar">
+        <div class="detail">
+          <div class="d-label">When</div>
+          <div class="d-value">Sat, April 25 <small>10 AM – 2 PM</small></div>
+        </div>
+        <div class="detail price-highlight">
+          <div class="d-label">Register</div>
+          <div class="d-value">$100</div>
+          <small>Early bird through March 28</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+
+  <script src="../asset-scale.js"></script>
+</body>
+</html>

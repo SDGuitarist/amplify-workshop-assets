@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amplify - LinkedIn Card Template (1200x628)</title>
+  <link rel="stylesheet" href="../styles-shared.css">
+  <style>
+    .card {
+      width: 1200px;
+      height: 628px;
+      background: var(--gradient-hero);
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.05) 0%, transparent 70%);
+    }
+
+    .left {
+      flex: 1;
+      padding: 56px 48px 56px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hook {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 72px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.0;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: var(--soft-gold);
+      font-weight: 400;
+      margin-bottom: 28px;
+    }
+
+    .desc {
+      font-size: 17px;
+      line-height: 1.6;
+      color: rgba(250,243,232,0.75);
+      margin-bottom: 28px;
+      max-width: 520px;
+    }
+
+    .desc em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .meta {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      font-size: 14px;
+      color: rgba(250,243,232,0.55);
+    }
+
+    .meta-item strong {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .meta-price {
+      background: var(--gradient-early-bird);
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .meta-price::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .right {
+      width: 360px;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .right::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 140px;
+      height: 100%;
+      background: linear-gradient(90deg, var(--espresso), transparent);
+      z-index: 1;
+    }
+
+    .right .badge {
+      position: absolute;
+      bottom: 32px;
+      left: 24px;
+      z-index: 2;
+      background: linear-gradient(135deg, rgba(26,15,8,0.9), rgba(42,24,16,0.9));
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(194,120,64,0.2);
+      border-radius: 10px;
+      padding: 10px 18px;
+    }
+
+    .badge .name {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .badge .role {
+      font-size: 11px;
+      color: rgba(250,243,232,0.5);
+    }
+
+    /* === VARIANT: Framework (no photo, centered text) === */
+    .card.framework {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card.framework .right {
+      display: none;
+    }
+
+    .card.framework .left {
+      max-width: 1000px;
+      padding: 56px 80px;
+    }
+
+    .card.framework h1 {
+      font-size: 52px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .card.framework .desc {
+      font-size: 20px;
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    TEMPLATE VARIANTS:
+
+    Default: Photo right, content left, details bar
+    .framework: No photo, centered large text for thought leadership graphics
+
+    To use: Copy this file, swap SWAP sections, add variant class if needed.
+  -->
+
+  <div class="fixed-asset card" data-width="1200">
+    <div class="left">
+      <!-- SWAP: Hook line -->
+      <div class="hook">What happens when expertise leads AI?</div>
+      <!-- SWAP: Title -->
+      <h1>Amplify</h1>
+      <!-- SWAP: Subtitle -->
+      <div class="subtitle">The Power of Human-Led AI</div>
+      <!-- SWAP: Description -->
+      <p class="desc">A hands-on workshop for creatives and small business owners who want to use AI to work <em>deeper</em>, not just faster.</p>
+      <div class="meta">
+        <div class="meta-item"><strong>April 25</strong> · 10 AM – 2 PM</div>
+        <div class="meta-item"><strong>3201 Thorn St, SD 92104</strong></div>
+        <!-- SWAP: Price (update after March 28) -->
+        <div class="meta-price">$100 Early Bird</div>
+      </div>
+    </div>
+    <div class="right">
+      <img src="../images/alex-headshot.jpeg" alt="Alex Guillen">
+      <div class="badge">
+        <div class="name">Alex Guillen</div>
+        <div class="role">Pacific Flow Entertainment</div>
+      </div>
+    </div>
+  </div>
+  <script src="../asset-scale.js"></script>
+</body>
+</html>
