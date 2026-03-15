@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amplify — Curriculum Builder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0b08;
+      --surface: #1a1410;
+      --surface-2: #231c14;
+      --surface-3: #2e2318;
+      --border: rgba(194,120,64,0.15);
+      --border-active: rgba(240,192,94,0.35);
+      --text: #faf3e8;
+      --text-dim: rgba(250,243,232,0.55);
+      --text-mid: rgba(250,243,232,0.75);
+      --amber: #d4883a;
+      --gold: #f0c05e;
+      --coral: #ff6b4a;
+      --green: #4ade80;
+      --green-dim: rgba(74,222,128,0.15);
+      --blue: #60a5fa;
+      --blue-dim: rgba(96,165,250,0.12);
+      --amber-dim: rgba(212,136,58,0.12);
+      --coral-dim: rgba(255,107,74,0.1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .topbar-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #d4883a, #f0c05e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .topbar-divider {
+      width: 1px;
+      height: 20px;
+      background: var(--border);
+    }
+
+    .topbar-file {
+      font-size: 13px;
+      color: var(--text-mid);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .topbar-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--green);
+    }
+
+    .topbar-status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .topbar-meta {
+      font-size: 12px;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* MAIN LAYOUT */
+    .main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* LEFT SIDEBAR */
+    .sidebar {
+      width: 280px;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 20px 0;
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
+
+    .sidebar-header {
+      padding: 0 20px 16px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+
+    .phase-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-left: 2px solid transparent;
+      transition: all 0.2s;
+      user-select: none;
+    }
+
+    .phase-item:hover {
+      background: rgba(212,136,58,0.06);
+    }
+
+    .phase-item.active {
+      background: var(--amber-dim);
+      border-left-color: var(--amber);
+    }
+
+    .phase-item.completed .phase-check {
+      background: var(--green-dim);
+      color: var(--green);
+      border-color: rgba(74,222,128,0.3);
+    }
+
+    .phase-check {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .phase-info { flex: 1; }
+
+    .phase-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .phase-time {
+      font-size: 11px;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .phase-duration {
+      font-size: 10px;
+      color: var(--text-dim);
+      background: var(--surface-2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-top: 4px;
+      display: inline-block;
+    }
+
+    .sidebar-break {
+      margin: 8px 20px;
+      padding: 8px 12px;
+      background: var(--surface-2);
+      border-radius: 8px;
+      font-size: 11px;
+      color: var(--text-dim);
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* CENTER CONTENT */
+    .content {
+      flex: 1;
+      padding: 24px 32px;
+      overflow-y: auto;
+    }
+
+    .phase-content {
+      display: none;
+      flex-direction: column;
+      gap: 24px;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .phase-content.visible {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .content-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .content-header h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #d4883a, #f0c05e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .content-header .phase-badge {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: var(--amber-dim);
+      color: var(--amber);
+      border: 1px solid rgba(212,136,58,0.2);
+    }
+
+    .content-subtitle {
+      font-size: 14px;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+
+    /* CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .card.full { grid-column: 1 / -1; }
+
+    .card-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-label.amber { color: var(--amber); }
+    .card-label.coral { color: var(--coral); }
+    .card-label.green { color: var(--green); }
+    .card-label.blue { color: var(--blue); }
+
+    .card-label .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+    .card-label.amber .dot { background: var(--amber); }
+    .card-label.coral .dot { background: var(--coral); }
+    .card-label.green .dot { background: var(--green); }
+    .card-label.blue .dot { background: var(--blue); }
+
+    /* QUOTE BLOCK */
+    .quote-block {
+      border-left: 2px solid var(--amber);
+      padding: 12px 16px;
+      background: var(--amber-dim);
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text-mid);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .quote-block em {
+      font-style: normal;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .quote-attribution {
+      font-size: 11px;
+      color: var(--text-dim);
+      font-style: normal;
+      margin-top: 8px;
+    }
+
+    /* FRAMEWORK */
+    .framework-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .framework-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 12px;
+      background: var(--surface-2);
+      border-radius: 8px;
+      border: 1px solid transparent;
+    }
+
+    .framework-row.highlight {
+      border-color: var(--border-active);
+      background: var(--amber-dim);
+    }
+
+    .framework-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: 'Space Grotesk', sans-serif;
+      flex-shrink: 0;
+    }
+
+    .framework-icon.i1 { background: linear-gradient(135deg, #ff6b4a, #ff8c42); color: white; }
+    .framework-icon.i2 { background: linear-gradient(135deg, #ff8c42, #f0c05e); color: white; }
+    .framework-icon.i3 { background: linear-gradient(135deg, #f0c05e, #e8a44c); color: #1a0f08; }
+    .framework-icon.i4 { background: linear-gradient(135deg, #e8a44c, #d4883a); color: white; }
+    .framework-icon.i5 { background: linear-gradient(135deg, #d4883a, #c27840); color: white; }
+
+    .framework-text { flex: 1; }
+
+    .framework-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .framework-desc {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    /* EXERCISE */
+    .exercise-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .exercise-step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--amber);
+      flex-shrink: 0;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .step-content {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.5;
+      padding-top: 2px;
+    }
+
+    .step-content strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* PIPELINE */
+    .pipeline {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 0;
+    }
+
+    .pipeline-stage {
+      flex: 1;
+      padding: 12px 14px;
+      background: var(--surface-2);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .pipeline-stage .stage-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .pipeline-stage .stage-desc {
+      font-size: 10px;
+      color: var(--text-dim);
+    }
+
+    .pipeline-arrow {
+      color: var(--amber);
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* NOTES */
+    .note-line {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      padding: 4px 0;
+    }
+
+    .note-line .tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+    }
+
+    .tag.done { background: var(--green-dim); color: var(--green); }
+    .tag.wip { background: var(--amber-dim); color: var(--amber); }
+    .tag.todo { background: var(--coral-dim); color: var(--coral); }
+
+    .cursor-blink {
+      display: inline-block;
+      width: 2px;
+      height: 16px;
+      background: var(--amber);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* SIDE-BY-SIDE */
+    .side-by-side {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .side-panel {
+      background: var(--surface-2);
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .side-panel.bad { border-color: rgba(255,107,74,0.25); }
+    .side-panel.good { border-color: rgba(74,222,128,0.25); }
+
+    .side-panel-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .side-panel.bad .side-panel-label { color: var(--coral); }
+    .side-panel.good .side-panel-label { color: var(--green); }
+
+    .side-panel p {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* THREE QUESTIONS */
+    .three-q {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .three-q-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      background: var(--surface-2);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .three-q-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--amber);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 28px;
+    }
+
+    .three-q-text {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .three-q-sub {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 4px;
+      font-weight: 400;
+    }
+
+    /* RIGHT SIDEBAR */
+    .right-sidebar {
+      width: 280px;
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      padding: 20px;
+      overflow-y: auto;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .stat-block {
+      background: var(--surface-2);
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .stat-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #d4883a, #f0c05e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stat-sub {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+
+    .progress-bar-outer {
+      width: 100%;
+      height: 6px;
+      background: var(--surface-3);
+      border-radius: 3px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar-inner {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--amber), var(--gold));
+      transition: width 0.4s ease;
+    }
+
+    .checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-mid);
+      line-height: 1.4;
+    }
+
+    .check-item .check {
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .check-item.done .check {
+      background: var(--green-dim);
+      border-color: rgba(74,222,128,0.3);
+      color: var(--green);
+    }
+
+    .check-item.done span { color: var(--text-dim); }
+
+    .lens-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .lens-tag {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--surface-3);
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+    }
+
+    .lens-tag.active {
+      background: var(--blue-dim);
+      color: var(--blue);
+      border-color: rgba(96,165,250,0.25);
+    }
+
+    /* ARC BAR */
+    .arc-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 0;
+    }
+
+    .arc-endpoint {
+      text-align: center;
+      flex: 1;
+    }
+
+    .arc-endpoint .label {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .arc-endpoint .sub {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+
+    .arc-gradient {
+      flex: 3;
+      height: 3px;
+      background: linear-gradient(90deg, var(--coral), var(--amber), var(--gold), var(--green));
+      border-radius: 2px;
+    }
+
+    /* TIMELINE MINI */
+    .timeline-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .timeline-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+
+    .timeline-row.current {
+      background: var(--amber-dim);
+      border: 1px solid rgba(212,136,58,0.2);
+    }
+
+    .timeline-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      width: 42px;
+      flex-shrink: 0;
+    }
+
+    .timeline-label {
+      color: var(--text-mid);
+      flex: 1;
+    }
+
+    .timeline-tag {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 3px;
+      background: var(--surface-3);
+      color: var(--text-dim);
+    }
+
+    .timeline-row.current .timeline-tag {
+      background: var(--amber-dim);
+      color: var(--amber);
+    }
+  </style>
+</head>
+<body>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="topbar-logo">Amplify</div>
+      <div class="topbar-divider"></div>
+      <div class="topbar-file">workshop-arc-v2.md</div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-status">Editing</div>
+      <div class="topbar-meta">Last saved 2 min ago</div>
+      <div class="topbar-meta">April 25, 2026</div>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+      <div class="sidebar-header">Workshop Phases</div>
+
+      <div class="phase-item completed active" data-phase="1">
+        <div class="phase-check">✓</div>
+        <div class="phase-info">
+          <div class="phase-name">1. Open</div>
+          <div class="phase-time">10:00 – 10:30</div>
+          <div class="phase-duration">30 min</div>
+        </div>
+      </div>
+
+      <div class="phase-item completed" data-phase="2">
+        <div class="phase-check">✓</div>
+        <div class="phase-info">
+          <div class="phase-name">2. Diagnose</div>
+          <div class="phase-time">10:30 – 10:55</div>
+          <div class="phase-duration">25 min</div>
+        </div>
+      </div>
+
+      <div class="phase-item" data-phase="3">
+        <div class="phase-check">3</div>
+        <div class="phase-info">
+          <div class="phase-name">3. Orient</div>
+          <div class="phase-time">10:55 – 11:20</div>
+          <div class="phase-duration">25 min · laptops open</div>
+        </div>
+      </div>
+
+      <div class="phase-item" data-phase="4">
+        <div class="phase-check">4</div>
+        <div class="phase-info">
+          <div class="phase-name">4. Demonstrate</div>
+          <div class="phase-time">11:20 – 12:00</div>
+          <div class="phase-duration">40 min · live pipeline</div>
+        </div>
+      </div>
+
+      <div class="sidebar-break">☕ Break · 12:00 – 12:30</div>
+
+      <div class="phase-item" data-phase="5">
+        <div class="phase-check">5</div>
+        <div class="phase-info">
+          <div class="phase-name">5. Experience</div>
+          <div class="phase-time">12:30 – 1:00</div>
+          <div class="phase-duration">30 min · hands-on</div>
+        </div>
+      </div>
+
+      <div class="phase-item" data-phase="6">
+        <div class="phase-check">6</div>
+        <div class="phase-info">
+          <div class="phase-name">6. Integrate</div>
+          <div class="phase-time">1:00 – 1:30</div>
+          <div class="phase-duration">30 min · 5 I's reveal</div>
+        </div>
+      </div>
+
+      <div class="phase-item" data-phase="7">
+        <div class="phase-check">7</div>
+        <div class="phase-info">
+          <div class="phase-name">7. Close</div>
+          <div class="phase-time">1:30 – 2:00</div>
+          <div class="phase-duration">30 min · hard start</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTER CONTENT -->
+    <div class="content">
+
+      <!-- PHASE 1: OPEN -->
+      <div class="phase-content visible" id="phase-1">
+        <div class="content-header">
+          <div>
+            <h2>Phase 1 — Open</h2>
+            <div class="content-subtitle">Replace every story participants brought about AI with one true one.</div>
+          </div>
+          <div class="phase-badge">Drafted</div>
+        </div>
+
+        <div class="card full">
+          <div class="card-label amber"><span class="dot"></span> The Wedge — Opening Line</div>
+          <div class="quote-block">
+            "Everyone selling you AI right now is selling you speed. Faster content. Faster responses. Faster everything. That's not what today is about. The advantage doesn't go to the person who works fastest. It goes to the person who works <em>deepest</em>."
+            <div class="quote-attribution">— Alex's first words · 10:00 · No slides</div>
+          </div>
+          <div class="note-line">
+            <span class="tag done">Done</span> This is the line that makes comparison to every other AI workshop irrelevant. Let it land. Move directly to demo.
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-label coral"><span class="dot"></span> The Slop Hook</div>
+            <div class="side-by-side" style="margin-top: 4px;">
+              <div class="side-panel bad">
+                <div class="side-panel-label">Prompt A — Flat</div>
+                <p>"Write a pitch for a wedding photographer."</p>
+              </div>
+              <div class="side-panel good">
+                <div class="side-panel-label">Prompt B — Expert-Led</div>
+                <p>"Write a pitch for a wedding photographer with 12 years in San Diego who specializes in Latin American families. Documentary meets fine art. $4,500–$8,000. Booked 14 months out."</p>
+              </div>
+            </div>
+            <div class="note-line" style="margin-top: 12px;">
+              <span class="tag done">Done</span> Same AI. Completely different result. The difference is expertise, not technology.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label amber"><span class="dot"></span> Timeline — Phase 1</div>
+            <div class="timeline-mini">
+              <div class="timeline-row current">
+                <div class="timeline-time">10:00</div>
+                <div class="timeline-label">Work Deeper, Not Faster</div>
+                <div class="timeline-tag">Wedge</div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">10:05</div>
+                <div class="timeline-label">Slop Hook + Side-by-Side</div>
+                <div class="timeline-tag">Problem</div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">10:15</div>
+                <div class="timeline-label">Pacific Flow (compressed)</div>
+                <div class="timeline-tag">Proof</div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">10:19</div>
+                <div class="timeline-label">Capacity Reframe</div>
+                <div class="timeline-tag">Reframe</div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">10:24</div>
+                <div class="timeline-label">AI Anxiety → AI Agency</div>
+                <div class="timeline-tag">Journey</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card full">
+          <div class="card-label green"><span class="dot"></span> Capacity Reframe</div>
+          <div class="quote-block">
+            "The problem isn't that you don't know enough. You know your business. You know your clients. You know your craft. The problem is <em>capacity</em>. You can't deploy what you know consistently across every lead, every inquiry, every interaction."
+            <div class="quote-attribution">— Capacity Reframe · 10:19 · Grant Consulting lens</div>
+          </div>
+          <div class="note-line">
+            <span class="tag done">Done</span> More respectful than "learn AI." More accurate than "get ahead of the curve." Honors existing expertise.
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 2: DIAGNOSE -->
+      <div class="phase-content" id="phase-2">
+        <div class="content-header">
+          <div>
+            <h2>Phase 2 — Diagnose</h2>
+            <div class="content-subtitle">Participants connect the workshop to their own business before they touch a keyboard.</div>
+          </div>
+          <div class="phase-badge">Drafted</div>
+        </div>
+
+        <div class="card full">
+          <div class="card-label amber"><span class="dot"></span> The Three Questions — Participant Diagnostic</div>
+          <div class="three-q">
+            <div class="three-q-item">
+              <div class="three-q-num">1</div>
+              <div>
+                <div class="three-q-text">Where are you irreplaceable?</div>
+                <div class="three-q-sub">What do you do that requires your specific judgment, relationships, or creative instinct?</div>
+              </div>
+            </div>
+            <div class="three-q-item">
+              <div class="three-q-num">2</div>
+              <div>
+                <div class="three-q-text">Where are you just doing tasks?</div>
+                <div class="three-q-sub">What operational work consumes your time without leveraging what makes you exceptional?</div>
+              </div>
+            </div>
+            <div class="three-q-item">
+              <div class="three-q-num">3</div>
+              <div>
+                <div class="three-q-text">If you had those task-hours back — what would you actually do with them?</div>
+                <div class="three-q-sub">This is the desire question. It reveals motivation.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-label blue"><span class="dot"></span> Format</div>
+            <div class="exercise-steps">
+              <div class="exercise-step">
+                <div class="step-num">1</div>
+                <div class="step-content"><strong>4 min silent writing.</strong> On paper, not laptops. Personal reflection.</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">2</div>
+                <div class="step-content"><strong>Cross-category pair share.</strong> Photographer with caterer, designer with consultant. Brief share: Q1 and Q3.</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">3</div>
+                <div class="step-content"><strong>Room collection.</strong> Alex gathers a few answers. These become live material for the rest of the session.</div>
+              </div>
+            </div>
+            <div class="note-line" style="margin-top: 12px;">
+              <span class="tag wip">WIP</span> Need to pre-assign pairs from intake data before April 25.<span class="cursor-blink"></span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label green"><span class="dot"></span> Design Decisions</div>
+            <div class="exercise-steps">
+              <div class="exercise-step">
+                <div class="step-num">→</div>
+                <div class="step-content"><strong>Cross-category, not random.</strong> Network value from NIWA lens. Different industries see how the framework transfers.</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">→</div>
+                <div class="step-content"><strong>Delegated-ownership moment.</strong> "Even if someone else suggested you come today, write for yourself." From Atomic Sales.</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">→</div>
+                <div class="step-content"><strong>Close with the principle.</strong> "Automate the second. Amplify the first. That's the entire philosophy."</div>
+              </div>
+            </div>
+            <div class="note-line" style="margin-top: 12px;">
+              <span class="tag done">Done</span> This exercise is secretly running desire assessment on the whole room.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 3: ORIENT -->
+      <div class="phase-content" id="phase-3">
+        <div class="content-header">
+          <div>
+            <h2>Phase 3 — Orient</h2>
+            <div class="content-subtitle">Laptops open. First hands-on exercise. The technical orientation.</div>
+          </div>
+          <div class="phase-badge">Currently editing</div>
+        </div>
+
+        <div class="card full">
+          <div class="card-label amber"><span class="dot"></span> Opening Script</div>
+          <div class="quote-block">
+            "Before we go further, I want to make one distinction that will change how you think about everything we do today. There are <em>two ways</em> to use AI."
+            <div class="quote-attribution">— Assistants vs. Agents introduction · 10:55</div>
+          </div>
+          <div class="note-line">
+            <span class="tag wip">WIP</span> Tightening the transition from Diagnose. Need the energy to shift from reflection to action without losing momentum.<span class="cursor-blink"></span>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-label green"><span class="dot"></span> Expert-First Exercise</div>
+            <div class="exercise-steps">
+              <div class="exercise-step">
+                <div class="step-num">1</div>
+                <div class="step-content"><strong>Flat prompt.</strong> "Write a response to a client inquiry about [their service]." 2 min.</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">2</div>
+                <div class="step-content"><strong>State your credential.</strong> "I have [X] years doing [Y]. My approach is [Z]."</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">3</div>
+                <div class="step-content"><strong>Define the nuance.</strong> "Generic responses fail because [specific reason]."</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">4</div>
+                <div class="step-content"><strong>Command the synthesis.</strong> Rewrite and run. 4 min.</div>
+              </div>
+            </div>
+            <div class="note-line" style="margin-top: 12px;">
+              <span class="tag done">Done</span> Tested timing. Works in 15 min with room share.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label coral"><span class="dot"></span> Assistants vs. Agents</div>
+            <div class="side-by-side" style="margin-top: 4px;">
+              <div class="side-panel bad">
+                <div class="side-panel-label">Assistant Mode</div>
+                <p>"Help me write this email." Conversational. On demand. Useful but limited.</p>
+              </div>
+              <div class="side-panel good">
+                <div class="side-panel-label">Agent Mode</div>
+                <p>"Every lead: extract facts, classify, draft response, check 9 criteria, tell me if ready to send."</p>
+              </div>
+            </div>
+            <div class="note-line" style="margin-top: 12px;">
+              <span class="tag done">Done</span> This sets up the live pipeline demo in Phase 4.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 4: DEMONSTRATE -->
+      <div class="phase-content" id="phase-4">
+        <div class="content-header">
+          <div>
+            <h2>Phase 4 — Demonstrate</h2>
+            <div class="content-subtitle">Alex runs the full pipeline live. Room participates but doesn't build individually.</div>
+          </div>
+          <div class="phase-badge">In Progress</div>
+        </div>
+
+        <div class="card full">
+          <div class="card-label coral"><span class="dot"></span> Pipeline Architecture</div>
+          <div class="pipeline">
+            <div class="pipeline-stage">
+              <div class="stage-name">Extractor</div>
+              <div class="stage-desc">Fact capture only</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-stage">
+              <div class="stage-name">Classifier</div>
+              <div class="stage-desc">Premium / Standard / Qualify</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-stage">
+              <div class="stage-name">Writer</div>
+              <div class="stage-desc">Draft response</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-stage">
+              <div class="stage-name">QA Gate</div>
+              <div class="stage-desc">9 criteria check</div>
+            </div>
+          </div>
+          <div class="quote-block" style="margin-top: 16px;">
+            "The AI isn't making judgment calls about my business. I made those calls when I built the system. The AI is executing <em>my judgment consistently</em>, every time, at speed."
+            <div class="quote-attribution">— Pipeline walkthrough · 11:20</div>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-label amber"><span class="dot"></span> Live Demo — Two Leads</div>
+            <div class="side-by-side" style="margin-top: 4px;">
+              <div class="side-panel bad">
+                <div class="side-panel-label">Lead A — Flat Input</div>
+                <p>Generic, vague inquiry. Minimal info. Run through all 3 stages. Show QA flags. Count the failures.</p>
+              </div>
+              <div class="side-panel good">
+                <div class="side-panel-label">Lead B — Dimensional</div>
+                <p>Same type, rewritten with context. Domain knowledge loaded. Show the QA report. Night and day.</p>
+              </div>
+            </div>
+            <div class="note-line" style="margin-top: 12px;">
+              <span class="tag wip">WIP</span> Preparing 2 demo leads. Need the QA flag difference to be visually obvious on screen.<span class="cursor-blink"></span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label green"><span class="dot"></span> The One Question Rule</div>
+            <div class="quote-block">
+              "Every response this system writes follows one rule: zero questions or one question. Never two. When you ask a client two questions, you make them work. When you ask <em>one precise question</em>, you look like an expert."
+              <div class="quote-attribution">— One Question Rule · 11:50</div>
+            </div>
+            <div class="note-line">
+              <span class="tag done">Done</span> Room exercise: ambiguous lead on screen → "Which ONE question unlocks everything else?"
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 5: EXPERIENCE -->
+      <div class="phase-content" id="phase-5">
+        <div class="content-header">
+          <div>
+            <h2>Phase 5 — Experience</h2>
+            <div class="content-subtitle">Participants apply dual literacy themselves. The transformation phase.</div>
+          </div>
+          <div class="phase-badge">Drafting</div>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-label green"><span class="dot"></span> Your Lead, Your Expertise</div>
+            <div class="exercise-steps">
+              <div class="exercise-step">
+                <div class="step-num">A</div>
+                <div class="step-content"><strong>Real lead.</strong> Use an actual past inquiry. Write an Expert-First prompt with their context, voice, and standards.</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">B</div>
+                <div class="step-content"><strong>Sample lead.</strong> Use one from the handout but customize for their domain, pricing, and client base.</div>
+              </div>
+            </div>
+            <div class="note-line" style="margin-top: 12px;">
+              <span class="tag wip">WIP</span> Alex circulates. Key question: "What would you normally say that no AI would know to include?"
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label coral"><span class="dot"></span> Permission Check-In</div>
+            <div class="quote-block">
+              "If part of you feels uneasy about how well that worked — if something in you is saying 'this feels like cheating' — <em>that's your standards talking.</em> It means you care about authenticity. That's the instinct that makes you good at what you do."
+              <div class="quote-attribution">— Permission Check-In · 12:45 · Atomic Sales lens</div>
+            </div>
+            <div class="note-line">
+              <span class="tag done">Done</span> 2-3 min. Don't dwell. Don't skip. Catches people pulling back right when they need to lean in.
+            </div>
+          </div>
+
+          <div class="card full">
+            <div class="card-label amber"><span class="dot"></span> Five Evaluation Questions</div>
+            <div class="exercise-steps">
+              <div class="exercise-step">
+                <div class="step-num">1</div>
+                <div class="step-content">Is it <strong>accurate</strong> enough?</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">2</div>
+                <div class="step-content">Is it <strong>specific</strong> enough?</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">3</div>
+                <div class="step-content">Does it <strong>sound like me</strong>?</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">4</div>
+                <div class="step-content">Is it <strong>emotionally credible</strong>?</div>
+              </div>
+              <div class="exercise-step">
+                <div class="step-num">5</div>
+                <div class="step-content">Does it <strong>add value</strong> — or just save time while lowering quality?</div>
+              </div>
+            </div>
+            <div class="note-line" style="margin-top: 12px;">
+              <span class="tag todo">TODO</span> If draft fails Q3 or Q5 → revise the prompt (not the output). Teaches the right reflex.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 6: INTEGRATE -->
+      <div class="phase-content" id="phase-6">
+        <div class="content-header">
+          <div>
+            <h2>Phase 6 — Integrate</h2>
+            <div class="content-subtitle">Name the framework underneath everything they've done. The implicit becomes explicit.</div>
+          </div>
+          <div class="phase-badge">Drafting</div>
+        </div>
+
+        <div class="card full">
+          <div class="card-label blue"><span class="dot"></span> The 5 I's — The Reveal</div>
+          <div class="quote-block">
+            "Everything you did today — from the Three Questions to the Expert-First prompt to evaluating your own output — you were following a framework the whole time. You just didn't have a <em>name for it</em>."
+            <div class="quote-attribution">— 5 I's introduction · 1:00</div>
+          </div>
+          <div class="framework-list" style="margin-top: 12px;">
+            <div class="framework-row highlight">
+              <div class="framework-icon i1">I</div>
+              <div class="framework-text">
+                <div class="framework-name">Intent</div>
+                <div class="framework-desc">"When you answered 'where are you irreplaceable,' you were defining Intent."</div>
+              </div>
+            </div>
+            <div class="framework-row">
+              <div class="framework-icon i2">I</div>
+              <div class="framework-text">
+                <div class="framework-name">Identity</div>
+                <div class="framework-desc">"When you stated your credential in Expert-First prompting, you were protecting Identity."</div>
+              </div>
+            </div>
+            <div class="framework-row">
+              <div class="framework-icon i3">I</div>
+              <div class="framework-text">
+                <div class="framework-name">Inference</div>
+                <div class="framework-desc">"When you moved from a flat prompt to a rich one, that was Inference."</div>
+              </div>
+            </div>
+            <div class="framework-row">
+              <div class="framework-icon i4">I</div>
+              <div class="framework-text">
+                <div class="framework-name">Iteration</div>
+                <div class="framework-desc">"When your output didn't pass the five questions and you revised your prompt — that was Iteration. Not failure. Craft."</div>
+              </div>
+            </div>
+            <div class="framework-row">
+              <div class="framework-icon i5">I</div>
+              <div class="framework-text">
+                <div class="framework-name">Integrity</div>
+                <div class="framework-desc">"When you asked 'can I actually prove this?' and removed what you couldn't — that was Integrity."</div>
+              </div>
+            </div>
+          </div>
+          <div class="note-line" style="margin-top: 12px;">
+            <span class="tag done">Done</span> Each I ties directly to an exercise they already completed. Reveal, not lecture.
+          </div>
+        </div>
+
+        <div class="card full">
+          <div class="card-label amber"><span class="dot"></span> Naming Dual Literacy</div>
+          <div class="quote-block">
+            "AI fluency without human literacy produces slop. Human literacy without AI fluency leaves you doing everything manually. <em>Both together?</em> That's what we built today. And that's what gives you agency."
+            <div class="quote-attribution">— Dual Literacy thesis · 1:15</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 7: CLOSE -->
+      <div class="phase-content" id="phase-7">
+        <div class="content-header">
+          <div>
+            <h2>Phase 7 — Close</h2>
+            <div class="content-subtitle">Complete the emotional journey. Hard start at 1:30 regardless of what happened earlier.</div>
+          </div>
+          <div class="phase-badge">Drafting</div>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-label amber"><span class="dot"></span> The Floor and the Ceiling</div>
+            <div class="quote-block">
+              "AI raises the floor. Anyone can generate content now. What most people miss is what that means for the ceiling. When the floor comes up — <em>genuine creativity stands out more</em>. Real human attention becomes premium."
+              <div class="quote-attribution">— Intellectual close · 1:30</div>
+            </div>
+            <div class="note-line">
+              <span class="tag done">Done</span> "Don't compete with AI on efficiency. Compete on humanity."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label coral"><span class="dot"></span> The Mirror</div>
+            <div class="quote-block">
+              "The fear most people have is that AI will show them they're replaceable. Here's what actually happened. The AI started reflecting my expertise back to me in ways <em>I couldn't see before</em>. It showed me patterns in how I qualify leads. It showed me what my best responses have in common."
+              <div class="quote-attribution">— Emotional peak · 1:40 · Let it land.</div>
+            </div>
+            <div class="note-line">
+              <span class="tag done">Done</span> Peak emotional resonance. Move directly into commitment. No cooling period.
+            </div>
+          </div>
+        </div>
+
+        <div class="card full">
+          <div class="card-label green"><span class="dot"></span> Commit + Take-Home</div>
+          <div class="exercise-steps">
+            <div class="exercise-step">
+              <div class="step-num">1</div>
+              <div class="step-content"><strong>Hand out the one-pager.</strong> 5 I's, Expert-First method, Five Evaluation Questions, One Question Rule.</div>
+            </div>
+            <div class="exercise-step">
+              <div class="step-num">2</div>
+              <div class="step-content"><strong>14-day tracker.</strong> Five real leads. Three columns: what you prompted, what it looked like, what you changed. The third column is what makes it compound.</div>
+            </div>
+            <div class="exercise-step">
+              <div class="step-num">3</div>
+              <div class="step-content"><strong>Buddy system.</strong> Reconnect cross-category pairs. Exchange numbers. Accountability for 14 days.</div>
+            </div>
+            <div class="exercise-step">
+              <div class="step-num">4</div>
+              <div class="step-content"><strong>Commitment question.</strong> "What's the one thing you're going to do differently starting Monday?"</div>
+            </div>
+          </div>
+          <div class="note-line" style="margin-top: 12px;">
+            <span class="tag todo">TODO</span> Design the 14-day tracker with compound step column. Print one-pager for handout.
+          </div>
+        </div>
+
+        <div class="card full">
+          <div class="card-label amber"><span class="dot"></span> Final Words</div>
+          <div class="quote-block">
+            "You came in today wondering whether AI was going to make you obsolete. You're leaving with something more valuable than a tool — you're leaving with a <em>lens</em>. You are the expert in the loop. You always were. Now you have the framework to prove it."
+            <div class="quote-attribution">— Closing line · 2:00</div>
+          </div>
+        </div>
+
+        <!-- ARC OVERVIEW -->
+        <div class="card full">
+          <div class="card-label amber"><span class="dot"></span> Emotional Arc — The Invisible Architecture</div>
+          <div class="arc-bar">
+            <div class="arc-endpoint">
+              <div class="label" style="color: var(--coral);">AI Anxiety</div>
+              <div class="sub">"Am I behind?"</div>
+              <div class="sub">"Will this replace me?"</div>
+            </div>
+            <div class="arc-gradient"></div>
+            <div class="arc-endpoint">
+              <div class="label" style="color: var(--green);">AI Agency</div>
+              <div class="sub">"My expertise is the advantage."</div>
+              <div class="sub">"I lead this. AI follows."</div>
+            </div>
+          </div>
+          <div style="font-size: 12px; color: var(--text-dim); font-style: italic; text-align: center; padding-top: 4px;">
+            Dual Literacy: AI fluency + human literacy = agency. One without the other doesn't work.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <div class="right-sidebar">
+      <div class="stat-block">
+        <div class="stat-label">Curriculum Progress</div>
+        <div class="stat-value" id="progress-pct">71%</div>
+        <div class="stat-sub" id="progress-sub">5 of 7 phases drafted</div>
+        <div class="progress-bar-outer">
+          <div class="progress-bar-inner" id="progress-bar" style="width: 71%;"></div>
+        </div>
+      </div>
+
+      <div class="stat-block">
+        <div class="stat-label">Days to Workshop</div>
+        <div class="stat-value">42</div>
+        <div class="stat-sub">Saturday, April 25</div>
+      </div>
+
+      <div class="stat-block">
+        <div class="stat-label">Cross-Project Lenses</div>
+        <div class="lens-tags">
+          <span class="lens-tag active">Medical Advocacy</span>
+          <span class="lens-tag active">Grant Consulting</span>
+          <span class="lens-tag active">Atomic Sales</span>
+          <span class="lens-tag active">Claude Code</span>
+          <span class="lens-tag active">Sales Psychology</span>
+          <span class="lens-tag active">NIWA</span>
+          <span class="lens-tag active">Dual Literacy</span>
+        </div>
+      </div>
+
+      <div class="stat-block">
+        <div class="stat-label">Prep Checklist</div>
+        <div class="checklist">
+          <div class="check-item done"><span class="check">✓</span> <span>Workshop arc v2 restructured</span></div>
+          <div class="check-item done"><span class="check">✓</span> <span>Slop Hook + side-by-side demo</span></div>
+          <div class="check-item done"><span class="check">✓</span> <span>Three Questions diagnostic</span></div>
+          <div class="check-item done"><span class="check">✓</span> <span>Expert-First exercise flow</span></div>
+          <div class="check-item done"><span class="check">✓</span> <span>5 I's reveal sequence</span></div>
+          <div class="check-item"><span class="check"></span> <span>One-page take-home handout</span></div>
+          <div class="check-item"><span class="check"></span> <span>14-day tracker with compound step</span></div>
+          <div class="check-item"><span class="check"></span> <span>Domain-specific examples (3)</span></div>
+          <div class="check-item"><span class="check"></span> <span>Rescue project (Claude backup)</span></div>
+          <div class="check-item"><span class="check"></span> <span>Cross-category pair assignments</span></div>
+        </div>
+      </div>
+
+      <div class="stat-block">
+        <div class="stat-label">Key Principle</div>
+        <div style="font-size: 14px; color: var(--gold); font-style: italic; line-height: 1.5;">
+          "The prompt isn't the art. The judgment behind the prompt is the art."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Phase navigation
+    const phases = document.querySelectorAll('.phase-item[data-phase]');
+    const contents = document.querySelectorAll('.phase-content');
+
+    phases.forEach(item => {
+      item.addEventListener('click', () => {
+        const phaseNum = item.dataset.phase;
+
+        // Update sidebar active state
+        phases.forEach(p => p.classList.remove('active'));
+        item.classList.add('active');
+
+        // Show matching content
+        contents.forEach(c => {
+          c.classList.remove('visible');
+          // Force re-trigger animation
+          void c.offsetWidth;
+        });
+        const target = document.getElementById('phase-' + phaseNum);
+        if (target) target.classList.add('visible');
+
+        // Scroll content to top
+        document.querySelector('.content').scrollTop = 0;
+      });
+    });
+
+    // Keyboard navigation (left/right arrows)
+    document.addEventListener('keydown', (e) => {
+      const current = document.querySelector('.phase-item.active');
+      if (!current) return;
+      const num = parseInt(current.dataset.phase);
+
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+        e.preventDefault();
+        const next = document.querySelector(`.phase-item[data-phase="${num + 1}"]`);
+        if (next) next.click();
+      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const prev = document.querySelector(`.phase-item[data-phase="${num - 1}"]`);
+        if (prev) prev.click();
+      }
+    });
+  </script>
+</body>
+</html>

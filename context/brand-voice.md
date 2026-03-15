@@ -12,7 +12,7 @@ He's not a tech influencer. He's not an AI evangelist. He's a working creative w
 
 **Register:** Peer-to-peer. Alex talks like a colleague who's a few steps ahead, not a guru looking down. Warm but direct. Confident without being salesy.
 
-**Rhythm:** Short sentences mixed with longer ones. Fragments are fine. Dashes over semicolons. Casual punctuation. Not sloppy, just human.
+**Rhythm:** Short sentences mixed with longer ones. Fragments are fine. Periods over semicolons. Casual punctuation. Not sloppy, just human.
 
 **Energy:** Grounded enthusiasm. He's genuinely excited about what he's built, but he doesn't oversell. He leads with what it's done for him, not what it'll do for you.
 
@@ -20,15 +20,15 @@ He's not a tech influencer. He's not an AI evangelist. He's a working creative w
 
 ---
 
-## Voice Samples
+## Voice Samples (Lead Outreach)
 
-These are Alex's actual words from lead outreach and validated messaging. Use these as calibration. Match the tone, not the exact phrasing.
+These are Alex's actual words from lead outreach and validated messaging. Use as calibration. Match the tone, not the exact phrasing.
 
 ### Sample 1 — Peer musician (casual, direct)
 > Hey Mike. Thanks man. Yeah I think you'd dig it. Honestly the stuff I've been building has been a game changer for me. Not just saving time. Better leads, smarter follow-ups, staying top of mind with venues in a way I couldn't keep up with before. Figured it's time to start teaching what's been working.
 
 ### Sample 2 — Warm lead, less technical (encouraging, inclusive)
-> You're exactly who I had in mind when I designed this. I built it to be super easy and understandable for any level. We go through everything step-by-step together. The lead creation and optimization system I've built has completely changed how I run my business.
+> You're exactly who I had in mind when I designed this. I built it to be super easy and understandable for any level. We go through everything step-by-step together. The lead creation and optimization system I've built has completely changed how I run my business. And I really think what I've learned over the past few years could help you with the quartet too. All that business stuff that takes time away from actually playing.
 
 ### Sample 3 — Entrepreneur peer (practical, no-nonsense)
 > This is exactly what the workshop is about. Practical stuff you can actually apply to your business, not just AI theory. I've been using it to streamline how I handle leads and follow-ups, and it's freed up a lot of my time.
@@ -47,6 +47,69 @@ These are Alex's actual words from lead outreach and validated messaging. Use th
 
 ---
 
+## Voice Samples (Social Media — March 13 Launch Posts)
+
+All three posted March 13, 2026. These are the strongest social media voice references.
+
+### LinkedIn (7:30 AM PT)
+> What happens when expertise leads AI?
+>
+> Tuesday afternoon. A lead comes in. You read it, start drafting a response, get interrupted, come back an hour later, send something that's fine but not your best. Meanwhile three more inquiries sit in your inbox aging.
+>
+> That was my life running Pacific Flow Entertainment for years. 2,500 gigs. Berklee degree. Thirty years of reading the room. And still losing deals because I couldn't deploy that knowledge fast enough across every lead, every follow-up, every venue relationship.
+>
+> So I built AI systems around what I already knew. Not generic templates. My pricing logic. My qualifying instincts. My voice. Five apps now, all connected, all running on my actual expertise.
+>
+> The leads didn't get better because AI is smart. They got better because I finally had the capacity to show up as myself in every single interaction.
+>
+> That's what I'm teaching on April 25. Not "how to use AI." How to take the expertise you've already spent years building and make it show up consistently, without burning out.
+>
+> Hands-on. 30 seats. 10 AM to 2 PM at Expressive Arts San Diego. $100 early bird through March 28.
+>
+> Interested? Link in comments.
+
+### Facebook (9:00 AM PT)
+> I've been building something I want to tell you about.
+>
+> For the last year or so, I've been quietly figuring out how to use AI to run my music business better. Not the hype version. The real version. The kind where a lead comes in at 11 PM and by the time I wake up, there's a draft response waiting that sounds like me, knows my pricing, and asks the right follow-up question.
+>
+> I built that. From scratch. Five apps that handle my leads, prep my gigs, track venue intel, and talk to each other. I'm not an engineer. I'm a musician who got tired of losing gigs because the business side ate all the hours that belonged to the creative side.
+>
+> Here's what surprised me. The AI didn't make me faster. It made me more consistent. It let me show up as the version of myself that wins the gig, every time, not just when I had the energy.
+>
+> And I kept thinking: this isn't just a music thing. This is a photographer thing. A designer thing. A consultant thing. Anyone who runs a business on their own expertise and can't clone themselves to keep up with the demand.
+>
+> So I'm teaching it.
+>
+> Saturday, April 25. 10 AM to 2 PM. Expressive Arts San Diego. Hands-on, small group, 30 seats. We're going to work through how to take what you already know about your business and build AI around it. Not the other way around.
+>
+> $100 early bird through March 28. $150 after.
+>
+> If this sounds like something you need, message me or comment below. And if someone you know came to mind while reading this, send it their way.
+
+### Instagram (10:00 AM PT)
+> What happens when expertise leads AI?
+>
+> Most people use AI to work faster. I built AI systems to work deeper. Around my actual expertise. My pricing. My voice. My 30 years of reading the room.
+>
+> The result: a music business that runs on my standards instead of running me into the ground.
+>
+> Now I'm teaching it.
+>
+> Amplify: The Power of Human-Led AI
+> Saturday, April 25 | 10 AM to 2 PM
+> Expressive Arts San Diego
+>
+> Hands-on. 30 seats.
+>
+> $100 early bird through March 28. $150 after.
+>
+> This is for creatives, consultants, photographers, planners, anyone who runs a business on their expertise and wants AI to amplify it, not flatten it.
+>
+> Link in bio.
+
+---
+
 ## Platform Voice Adjustments
 
 ### Instagram
@@ -61,13 +124,13 @@ These are Alex's actual words from lead outreach and validated messaging. Use th
 - Can be longer. People read on Facebook if the opening pulls them in.
 - End with a share ask: "Know someone who'd benefit? Send this their way."
 - Warmer, more storytelling-oriented than Instagram.
-- Hashtags: Skip them. Hashtags don't drive discovery on Facebook. They just clutter the post.
+- Hashtags: Skip them. Hashtags don't drive discovery on Facebook.
 
 ### LinkedIn
 - Thought leadership angle. Lead with the Wedge ("work deeper, not faster").
 - Professional register but still Alex. Not corporate, not stiff.
 - Can reference the market gap (tech voices vs. traditional creatives).
-- Hashtags: 3-5 max. Professional, discoverable. Too many looks spammy on LinkedIn.
+- Hashtags: 3-5 max. Professional, discoverable. Too many looks spammy.
 - More framework language is acceptable here.
 
 ---
@@ -90,7 +153,8 @@ These are Alex's actual words from lead outreach and validated messaging. Use th
 **Core phrase:** "Human-Led AI"
 **Primary tagline:** "AI that assists, not replaces"
 **Supporting taglines:** "Lead AI, don't just use it" / "Automate tasks. Amplify humanity."
-**The Wedge:** "Work deeper, not faster". This is the line that makes competitor comparison irrelevant.
+**The Wedge:** "Work deeper, not faster." This is the line that makes competitor comparison irrelevant.
+**The Thesis Line:** "Thoughtful Human-Led AI with intent will always beat fast AI without oversight."
 
 **Counter-narrative (use sparingly, high-impact moments):**
 AI raises the floor, which makes the ceiling matter more. When anyone can generate content, real creativity stands out. Don't compete with AI on efficiency. Compete on humanity.
@@ -141,7 +205,7 @@ AI raises the floor, which makes the ceiling matter more. When anyone can genera
 
 Heather Hilton (endorsement, can quote or paraphrase):
 - "You are so good at making AI seem less threatening."
-- "AI that assists, not replaces". She used this language unprompted.
+- "AI that assists, not replaces." She used this language unprompted.
 - "This offering is going to add so much value for my business."
 
 These are real quotes from a real person. Do not invent additional testimonials.

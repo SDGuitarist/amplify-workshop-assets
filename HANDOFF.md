@@ -88,29 +88,12 @@ All 7 posts have `GRAPHIC:` metadata line:
 
 ## Next Actions (Priority Order)
 
-### P0 — Credibility Portfolio (Every Outreach)
-Alex is building a credibility portfolio to pitch Every (every.to) for writing, podcast, and online workshop opportunities. This is a multi-session effort.
+### P0 — Credibility Portfolio (COMPLETE)
+Portfolio complete and moved to its own project: `~/Projects/every-outreach/`
 
-**What exists:**
-- `~/Documents/dev-notes/every-resume.md` — full portfolio resume with stats (10 projects, 1,301 commits, 103 solution docs in 40 days)
-- Research data from 3 agents covering: all git histories, journal growth arc, solution docs inventory
-
-**What's next:**
-1. Alex will paste project extractions (7-section format from each project) into the next session
-2. Build `context/credibility-portfolio.md` with 5 layers:
-   - LAYER 1: THE STORY — background, 2+ years of project evolution (some at v4.0), teaching history
-   - LAYER 2: THE FRAMEWORK — AI Dual Literacy thesis, Human-Led AI philosophy, trust-before-agents, all original frameworks. Key point: he has NOT built end-to-end automations intentionally. Diagnosis first, trust the system before letting it run autonomously.
-   - LAYER 3: THE BUILDS — every project by status, technical sophistication
-   - LAYER 4: THE IMPACT — real results, no fabrication
-   - LAYER 5: THE REACH — workshop, speaking, education, partnerships
-3. Build `.claude/commands/credibility.md` — takes audience parameter (educator/publication/business/speaking/general), reads the portfolio, outputs tailored document
-4. Must also document: custom skills, commands, processes, workflows Alex created himself to fill gaps beyond the compound engineering plugin (session-kickoff agent, code-explainer agent, pre-commit-check agent, Feed-Forward Framework, Plan Quality Gate, Codex integration workflow, promo-post command, mood variant system, etc.)
-
-**Important context — two distinct eras:**
-- **Claude Projects (web chat, 2+ years):** Where Alex developed frameworks, iterated on ideas (some to v4.0+), built the AI Dual Literacy thesis, and matured his thinking. The extractions he'll paste come from here.
-- **Claude Code (CLI, 40 days since Feb 2, 2026):** Where ideas became shipped code. 10 repos, 1,301 commits, 103 solution docs. The `every-resume.md` covers this era.
-- The credibility portfolio combines BOTH eras. Claude Projects = intellectual foundation. Claude Code = production execution.
-- Follow brand-voice.md rules. No em-dashes. No overclaiming. Confident about experience, never about perfection.
+The credibility portfolio, all 6 outreach commands, voice rules, custom tools doc, and pitch targets now live in the every-outreach repo. This project retains pointer files at:
+- `context/credibility-portfolio.md` (pointer to canonical source)
+- `.claude/commands/credibility.md` (pointer to canonical source)
 
 ### P1 — Content Pipeline
 1. **Generate Week 2 posts before Mar 20** — 6 posts (Three Questions x2, Never Fabricate, Before/After, Expert-First, Early Bird Soft)
