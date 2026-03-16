@@ -1,15 +1,15 @@
 # Amplify Workshop — Content Pipeline Handoff
 
-**Date:** 2026-03-15
+**Date:** 2026-03-16
 **Branch:** main
-**Phase:** Operational setup (Cycle 1 of Claude Project integration)
-**Last session:** Landing page conversion optimizations, Claude Project integration brainstorm + Cycle 1 work
+**Phase:** Lead import complete (Cycle 2 of Claude Project integration)
+**Last session:** Lead import, personalized outreach messages, Heather endorsement, action unblocking
 
 ---
 
 ## Current State
 
-Content pipeline fully operational. 48 cron jobs installed. 9 posts generated and formatted (Mar 13 launch x3, Mar 14 x3, Mar 17 x2, Apr 5 x1). Mood variant system built (5 moods x 2 intensities). Per-post graphics created for all Week 1 posts. `/promo-post` command updated with mood auto-assignment and new tinyurl. Landing page updated with 10 conversion optimizations. Claude Project integration brainstorm complete. Cycle 1 operational setup complete — action backlog created, leads updated, HANDOFF refreshed.
+Content pipeline fully operational. 48 cron jobs installed. 9 posts generated and formatted (Mar 13 launch x3, Mar 14 x3, Mar 17 x2, Apr 5 x1). Mood variant system built (5 moods x 2 intensities). Landing page updated with 10 conversion optimizations. Claude Project integration Cycles 1-2 complete. Lead pipeline: 10 total (2 interested, 7 outreach ready with personalized messages, 1 needs context). Heather's full endorsement added to brand-voice.md. Actions #1, #5, #8-12 unblocked.
 
 ### What Was Done This Session (Mar 13)
 
@@ -30,6 +30,14 @@ Content pipeline fully operational. 48 cron jobs installed. 9 posts generated an
 3. **Interactive curriculum workspace** — `output/graphics/2026-03-14-curriculum-workspace.html` for IG Story filming
 4. **Leads tracker created** — `leads.md` with segments, messaging templates, engagement logs
 5. **First lead tracked** — Lynn Gahman (Writer, FB DM, INTERESTED)
+
+### What Was Done (Mar 16)
+
+1. **8 lead profiles imported** — Mike, Heather, Jane, Priscilla, Thelma, Tony, Agustin, Dean added to `leads.md` with full profiles
+2. **7 personalized outreach messages** — ready to copy-paste and send. Voice-checked against expanded brand-voice.md (5 tiers). Dean has placeholder (needs Alex context).
+3. **Heather's full endorsement** — replaced placeholder in `brand-voice.md` with actual public quote
+4. **Actions unblocked** — #1, #5, #8-12 updated to DONE in `docs/actions.md`. #13 (Dean) to NEEDS CONTEXT.
+5. **Cross-reference audit** — verified consistency across leads.md, actions.md, HANDOFF.md
 
 ### What Was Done (Mar 15)
 
@@ -122,10 +130,11 @@ The credibility portfolio, all 6 outreach commands, voice rules, custom tools do
 3. **After March 28:** Update all templates and command to $150, remove "early bird" language
 
 ### P1 — Lead Outreach (See `docs/actions.md` for full backlog)
-4. **Import 8 network lead profiles** — BLOCKED, source text in `docs/legacy-batch-imports.md` (Batch 1). Import into `leads.md`, then generate personalized messages.
+4. **Send outreach messages** — 7 personalized messages ready in `leads.md` "Outreach Messages" section. Alex: review and send.
 5. **Follow up with Lynn and Miriam** — both INTERESTED, awaiting responses. Due Mar 18.
 6. **Confirm Heather attendance** — DM to confirm: attending or just championing? Due Mar 18.
-7. **Send org outreach by March 22 checkpoint** — SD & Imperial WBC, NAWBO, NLBWA, Hera Hub. If not sent by Mar 22, escalate or accept miss.
+7. **Decide on Dean LeCrone** — needs context from Alex. Worth pursuing or let it ride?
+8. **Send org outreach by March 22 checkpoint** — SD & Imperial WBC, NAWBO, NLBWA, Hera Hub. If not sent by Mar 22, escalate or accept miss.
 
 ---
 

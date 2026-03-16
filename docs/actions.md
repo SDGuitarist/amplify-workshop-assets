@@ -1,6 +1,6 @@
 # Amplify Workshop — Action Backlog
 
-**Last updated:** 2026-03-15
+**Last updated:** 2026-03-16
 **Early bird deadline:** March 28, 2026
 **Workshop day:** April 25, 2026
 
@@ -21,11 +21,11 @@ At 30 seats:
 
 | # | Action | Status | Next Step | Due |
 |---|--------|--------|-----------|-----|
-| 1 | Send updated messages to 8 network leads | BLOCKED | Import lead profiles from Batch 1 (saved in `docs/legacy-batch-imports.md`, "Lead Profiles" section). See [plan Missing Inputs](docs/plans/2026-03-15-feat-claude-project-integration-cycle-1-plan.md). | Mar 22 |
+| 1 | Send updated messages to 8 network leads | DONE | Profiles imported. 7 personalized messages + 1 placeholder in `leads.md` "Outreach Messages" section. | Mar 22 |
 | 2 | Confirm Heather Hilton attendance via DM | TODO | DM Heather: attending or just championing? | Mar 18 |
 | 3 | Follow up with Lynn Gahman | TODO | Waiting on her response to "#1 goal for AI" question (asked Mar 14) | Mar 18 |
 | 4 | Follow up with Miriam Aguilar Escobar | TODO | She commented "checking my calendar...interested." Send registration details via DM if she follows up. | Mar 18 |
-| 5 | Send Jane Hare the April 25 details | BLOCKED | Import lead profile from Batch 1 (`docs/legacy-batch-imports.md`, "Firm Leads > Jane Hare"). She asked for the date — this is a simple close. | Mar 18 |
+| 5 | Send Jane Hare the April 25 details | DONE | Profile imported. Message ready in `leads.md` "Outreach Messages" section. Simple close. | Mar 18 |
 | 6 | Read fine print on Tish's venue contract and rental agreement | TODO | Do this week. If something needs negotiation, you want time. | Mar 18 |
 | 7 | Sign and return contract, rental agreement, and COI to Tish | TODO | Blocked by #6 | Mar 22 |
 
@@ -37,12 +37,12 @@ At 30 seats:
 
 | # | Lead | Temperature | Segment | Status | Next Step |
 |---|------|------------|---------|--------|-----------|
-| 8 | Mike Myrdal | Firm | Performers & Creatives | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Firm Leads"), rewrite draft with current details |
-| 9 | Priscilla Norris | Warm | Performers & Creatives | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Warm Leads"), rewrite draft with current details |
-| 10 | Thelma C. Rufolo | Warm | Consultants & Service Providers | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Warm Leads"), rewrite draft with current details |
-| 11 | Tony Cox | Warm | Performers & Creatives | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Warm Leads"), rewrite draft with current details |
-| 12 | Agustin El Moro | Soft | Performers & Creatives | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Soft Leads"), rewrite draft with current details |
-| 13 | Dean LeCrone | Soft | Unknown | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Soft Leads"). Get context from Alex — worth pursuing or let it ride? |
+| 8 | Mike Myrdal | Firm | Performers & Creatives | DONE | Profile imported. Message ready in `leads.md`. |
+| 9 | Priscilla Norris | Warm | Performers & Creatives | DONE | Profile imported. Message ready in `leads.md`. |
+| 10 | Thelma C. Rufolo | Warm | Consultants & Service Providers | DONE | Profile imported. Message ready in `leads.md`. |
+| 11 | Tony Cox | Warm | Performers & Creatives | DONE | Profile imported. Message ready in `leads.md`. |
+| 12 | Agustin El Moro | Soft | Performers & Creatives | DONE | Profile imported. Message ready in `leads.md`. |
+| 13 | Dean LeCrone | Soft | Unknown | NEEDS CONTEXT | Profile imported. Placeholder message in `leads.md`. Alex decides: worth pursuing or let it ride? |
 
 ### Promotional Hub Contacts
 

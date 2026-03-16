@@ -231,6 +231,7 @@ Heather Hilton (endorsement, can quote or paraphrase):
 - "AI that assists, not replaces." She used this language unprompted.
 - "This offering is going to add so much value for my business."
 
-**Extended endorsement (pending import):** Heather wrote a longer public endorsement beginning "Being a creative and having a business mind is a gift..." that covers Alex's credibility as both tech-savvy and a working creative, the "AI that assists, not replaces" positioning, and her personal excitement about the workshop. Full text saved in `docs/legacy-batch-imports.md` (Batch 1, "Key Social Proof" section). Do not paraphrase until the actual quote is added here.
+**Full endorsement (Heather Hilton, public post):**
+> "Being a creative and having a business mind is a gift. Alex Guillen is offering a valuable workshop to learn a helpful approach to learn how to navigate using AI for a good tool, to help creatives thrive. If you or a friend is interested in learning more about how to have AI assist (not replace), you on your creative journey, Alex is a safe bet. Alex himself is not only 'tech savvy', but a very talented creative. His music presentations are as authentic as they get. I don't know about my other, entrepreneur friends.. but I can say for myself that this offering is going add so much value for my business. I'm excited to learn more."
 
 These are real quotes from a real person. Do not invent additional testimonials.
