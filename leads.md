@@ -27,6 +27,21 @@ Segments help target messaging. One lead can belong to multiple segments.
 | 1 | Lynn Gahman | Writers & Content Creators | Facebook DM (replied to story) | 2026-03-14 | INTERESTED | Writer, speaker, advocate for survivors of sexual abuse and at-risk teens. Runs "The blank screen" (writing/editing, 25+ yrs). Edited 4 self-published books for others. Memoir chapter produced at North Coast Repertory Theatre. Toastmaster, mentored at-risk teens at Abraxas. San Diego local, 32 mutual friends. Responded "Yes please" to FB story. Alex asked her #1 goal for AI — awaiting response. |
 | 2 | Miriam Aguilar Escobar | Writers & Content Creators | Facebook comment (BTS post) | 2026-03-15 | INTERESTED | Writer, children's literature author (miriamaguilarescobar.com, since 2023). Equity and equality advocate. Chula Vista, CA. 56 mutual friends. Education: Early childhood ed (SD Community College District), Admin Assistant cert (Southwestern College), National University. Commented "checking my calendar...interested." |
 
+### Pending Import (From Legacy Claude Project)
+
+8 additional leads from Alex's direct network need profiles imported. Source text saved to `docs/legacy-batch-imports.md` (Batch 1). See also: brainstorm [Missing Inputs section](docs/brainstorms/2026-03-15-claude-project-integration-brainstorm.md).
+
+| # | Name | Temperature | Status |
+|---|------|------------|--------|
+| 3 | Mike Myrdal | Firm | PENDING IMPORT |
+| 4 | Heather Hilton | Firm | PENDING IMPORT |
+| 5 | Jane Hare | Firm | PENDING IMPORT |
+| 6 | Priscilla Norris | Warm | PENDING IMPORT |
+| 7 | Thelma C. Rufolo | Warm | PENDING IMPORT |
+| 8 | Tony Cox | Warm | PENDING IMPORT |
+| 9 | Agustin El Moro | Soft | PENDING IMPORT |
+| 10 | Dean LeCrone | Soft | PENDING IMPORT |
+
 ---
 
 ## Segment-Specific Messaging Templates
@@ -49,11 +64,11 @@ Segments help target messaging. One lead can belong to multiple segments.
 - **Mar 14, 11:01 AM** — Replied "Yes please" to Alex's Facebook story about the workshop
 - **Mar 14, 2:59 PM** — Alex replied "Hi Lynn!"
 - **Mar 14, 4:19 PM** — Alex sent follow-up: "I'd love to have you attend the workshop on April 25th. What is the number one goal that you would like AI to help you accomplish this year?"
-- **Waiting on:** Her response to the goal question. When she replies, connect her answer to a specific workshop phase.
+- **Waiting on:** Her response to the goal question. When she replies, connect her answer to a specific workshop phase. Follow up by Mar 18 if no response (see `docs/actions.md` #3).
 
 ### Miriam Aguilar Escobar
 - **Mar 15** — Commented "checking my calendar...interested." on Alex's Facebook BTS post
-- **Next:** Alex replied. If she follows up, send registration details via DM. As a children's lit author, AI could help with drafting, outreach to publishers/schools, or marketing her books.
+- **Next:** Alex replied. If she follows up, send registration details via DM. As a children's lit author, AI could help with drafting, outreach to publishers/schools, or marketing her books. Follow up by Mar 18 if no response (see `docs/actions.md` #4).
 
 ---
 
@@ -61,6 +76,7 @@ Segments help target messaging. One lead can belong to multiple segments.
 - **Total interested:** 2
 - **Total registered:** 0
 - **Seats remaining:** 30
+- **Pending import:** 8 additional leads from legacy project (3 firm, 3 warm, 2 soft)
 
 ### By Segment
 | Segment | Interested | Registered |

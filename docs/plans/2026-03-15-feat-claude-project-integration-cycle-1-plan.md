@@ -1,7 +1,7 @@
 ---
 title: "feat: Claude Project Integration — Cycle 1 (Operational Setup)"
 type: feat
-status: active
+status: completed
 date: 2026-03-15
 origin: docs/brainstorms/2026-03-15-claude-project-integration-brainstorm.md
 feed_forward:
@@ -202,18 +202,18 @@ These items already exist in `docs/workshop-tweaks-runbook-feel.md` (7 items, ~2
 
 ## Acceptance Criteria
 
-- [ ] `docs/actions.md` exists with P1 actions (#1-7), P2 actions (#8-20), and workshop-tweaks references (#21-27)
-- [ ] P2 org outreach items (#17-20) have March 22 anti-deferral checkpoint noted
-- [ ] Revenue projections included in actions file
-- [ ] Workshop-tweaks prep items (#21-27) reference the source file, not duplicate detail
-- [ ] `leads.md` has "Pending Import" section with 8 names, temperatures, and PENDING IMPORT status
-- [ ] `leads.md` Lynn and Miriam engagement logs have updated follow-up actions
-- [ ] `brand-voice.md` has Heather extended endorsement placeholder with "pending import" flag
-- [ ] `brand-voice.md` preserves "Do not invent additional testimonials" warning
-- [ ] `HANDOFF.md` date updated to 2026-03-15
-- [ ] `HANDOFF.md` says 9 posts (not 7)
-- [ ] `.claude/CLAUDE.md` is NOT modified (no new context files this cycle)
-- [ ] Blocked steps clearly reference which missing inputs they need (see Missing Inputs section)
+- [x] `docs/actions.md` exists with P1 actions (#1-7), P2 actions (#8-20), and workshop-tweaks references (#21-27)
+- [x] P2 org outreach items (#17-20) have March 22 anti-deferral checkpoint noted
+- [x] Revenue projections included in actions file
+- [x] Workshop-tweaks prep items (#21-27) reference the source file, not duplicate detail
+- [x] `leads.md` has "Pending Import" section with 8 names, temperatures, and PENDING IMPORT status
+- [x] `leads.md` Lynn and Miriam engagement logs have updated follow-up actions
+- [x] `brand-voice.md` has Heather extended endorsement placeholder with "pending import" flag
+- [x] `brand-voice.md` preserves "Do not invent additional testimonials" warning
+- [x] `HANDOFF.md` date updated to 2026-03-15
+- [x] `HANDOFF.md` says 9 posts (not 7)
+- [x] `.claude/CLAUDE.md` is NOT modified (no new context files this cycle)
+- [x] Blocked steps clearly reference which missing inputs they need (see Missing Inputs section)
 
 ## How We'll Know It Worked
 

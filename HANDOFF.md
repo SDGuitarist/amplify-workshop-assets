@@ -1,15 +1,15 @@
 # Amplify Workshop — Content Pipeline Handoff
 
-**Date:** 2026-03-13
+**Date:** 2026-03-15
 **Branch:** main
-**Phase:** Content generation (Week 1 complete, Week 2 next)
-**Last session:** Mood variant system build, URL migration, graphic feedback round 1
+**Phase:** Operational setup (Cycle 1 of Claude Project integration)
+**Last session:** Landing page conversion optimizations, Claude Project integration brainstorm + Cycle 1 work
 
 ---
 
 ## Current State
 
-Content pipeline fully operational. 48 cron jobs installed. 7 posts generated and formatted (Mar 13 launch x3, Mar 14 x2, Mar 17 x2). Mood variant system built (5 moods x 2 intensities). Per-post graphics created for all Week 1 posts. `/promo-post` command updated with mood auto-assignment and new tinyurl.
+Content pipeline fully operational. 48 cron jobs installed. 9 posts generated and formatted (Mar 13 launch x3, Mar 14 x3, Mar 17 x2, Apr 5 x1). Mood variant system built (5 moods x 2 intensities). Per-post graphics created for all Week 1 posts. `/promo-post` command updated with mood auto-assignment and new tinyurl. Landing page updated with 10 conversion optimizations. Claude Project integration brainstorm complete. Cycle 1 operational setup complete — action backlog created, leads updated, HANDOFF refreshed.
 
 ### What Was Done This Session (Mar 13)
 
@@ -22,6 +22,27 @@ Content pipeline fully operational. 48 cron jobs installed. 7 posts generated an
 7. **`/promo-post` updated** — auto-assigns mood, adds GRAPHIC: line and MOOD: to QA summary
 8. **Per-post graphics created** (`output/graphics/`) — 6 real + 2 samples
 9. **First feedback round applied** — price badge sizing, AI visibility, overclaiming fix
+
+### What Was Done (Mar 14)
+
+1. **LinkedIn Saturday BTS post** — `output/2026-03-14-linkedin-bts.txt` + graphic
+2. **Instagram BTS graphic** — `output/graphics/2026-03-14-instagram-bts.html`
+3. **Interactive curriculum workspace** — `output/graphics/2026-03-14-curriculum-workspace.html` for IG Story filming
+4. **Leads tracker created** — `leads.md` with segments, messaging templates, engagement logs
+5. **First lead tracked** — Lynn Gahman (Writer, FB DM, INTERESTED)
+
+### What Was Done (Mar 15)
+
+1. **Landing page conversion optimizations** — 10 changes to `07-website-hero.html`: redesigned registration flow (3-step Venmo), Pay with Venmo CTA, date/location above fold, sticky mobile CTA, countdown timer, social proof section, enhanced host bio, FAQ, mid-page CTA, confirmation copy
+2. **Contact email updated** — `alex@alexguillenmusic.com` (contact) vs `alex.guillen.music@gmail.com` (Zelle payment)
+3. **Second lead tracked** — Miriam Aguilar Escobar (Writer, FB comment, INTERESTED)
+4. **Claude Projects handoff doc** — `docs/claude-projects-handoff.md` (comprehensive context for legacy project)
+5. **Legacy batch imports saved** — `docs/legacy-batch-imports.md` (7 batches of content from older Claude Project preserved)
+6. **Brainstorm complete** — `docs/brainstorms/2026-03-15-claude-project-integration-brainstorm.md` (8 key decisions, 3-cycle integration plan)
+7. **Cycle 1 plan complete** — `docs/plans/2026-03-15-feat-claude-project-integration-cycle-1-plan.md`
+8. **Action backlog created** — `docs/actions.md` (P1/P2 actions, revenue projections, workshop-tweaks references, anti-deferral checkpoint)
+9. **Leads updated** — 8 pending imports flagged, Lynn/Miriam follow-up actions added
+10. **Brand-voice updated** — Heather extended endorsement placeholder added
 
 ---
 
@@ -99,6 +120,12 @@ The credibility portfolio, all 6 outreach commands, voice rules, custom tools do
 1. **Generate Week 2 posts before Mar 20** — 6 posts (Three Questions x2, Never Fabricate, Before/After, Expert-First, Early Bird Soft)
 2. **Create matching graphics for Week 2 posts** using mood map assignments
 3. **After March 28:** Update all templates and command to $150, remove "early bird" language
+
+### P1 — Lead Outreach (See `docs/actions.md` for full backlog)
+4. **Import 8 network lead profiles** — BLOCKED, source text in `docs/legacy-batch-imports.md` (Batch 1). Import into `leads.md`, then generate personalized messages.
+5. **Follow up with Lynn and Miriam** — both INTERESTED, awaiting responses. Due Mar 18.
+6. **Confirm Heather attendance** — DM to confirm: attending or just championing? Due Mar 18.
+7. **Send org outreach by March 22 checkpoint** — SD & Imperial WBC, NAWBO, NLBWA, Hera Hub. If not sent by Mar 22, escalate or accept miss.
 
 ---
 
