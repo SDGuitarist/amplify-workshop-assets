@@ -21,11 +21,11 @@ At 30 seats:
 
 | # | Action | Status | Next Step | Due |
 |---|--------|--------|-----------|-----|
-| 1 | Send updated messages to 8 network leads | BLOCKED | Import lead profiles from legacy batch (see Missing Inputs in brainstorm) | Mar 22 |
+| 1 | Send updated messages to 8 network leads | BLOCKED | Import lead profiles from Batch 1 (saved in `docs/legacy-batch-imports.md`, "Lead Profiles" section). See [plan Missing Inputs](docs/plans/2026-03-15-feat-claude-project-integration-cycle-1-plan.md). | Mar 22 |
 | 2 | Confirm Heather Hilton attendance via DM | TODO | DM Heather: attending or just championing? | Mar 18 |
 | 3 | Follow up with Lynn Gahman | TODO | Waiting on her response to "#1 goal for AI" question (asked Mar 14) | Mar 18 |
 | 4 | Follow up with Miriam Aguilar Escobar | TODO | She commented "checking my calendar...interested." Send registration details via DM if she follows up. | Mar 18 |
-| 5 | Send Jane Hare the April 25 details | BLOCKED | Import lead profile first. She asked for the date — this is a simple close. | Mar 18 |
+| 5 | Send Jane Hare the April 25 details | BLOCKED | Import lead profile from Batch 1 (`docs/legacy-batch-imports.md`, "Firm Leads > Jane Hare"). She asked for the date — this is a simple close. | Mar 18 |
 | 6 | Read fine print on Tish's venue contract and rental agreement | TODO | Do this week. If something needs negotiation, you want time. | Mar 18 |
 | 7 | Sign and return contract, rental agreement, and COI to Tish | TODO | Blocked by #6 | Mar 22 |
 
@@ -37,29 +37,29 @@ At 30 seats:
 
 | # | Lead | Temperature | Segment | Status | Next Step |
 |---|------|------------|---------|--------|-----------|
-| 8 | Mike Myrdal | Firm | Performers & Creatives | BLOCKED | Import profile, rewrite draft with current details |
-| 9 | Priscilla Norris | Warm | Performers & Creatives | BLOCKED | Import profile, rewrite draft with current details |
-| 10 | Thelma C. Rufolo | Warm | Consultants & Service Providers | BLOCKED | Import profile, rewrite draft with current details |
-| 11 | Tony Cox | Warm | Performers & Creatives | BLOCKED | Import profile, rewrite draft with current details |
-| 12 | Agustin El Moro | Soft | Performers & Creatives | BLOCKED | Import profile, rewrite draft with current details |
-| 13 | Dean LeCrone | Soft | Unknown | BLOCKED | Get context from Alex — worth pursuing or let it ride? |
+| 8 | Mike Myrdal | Firm | Performers & Creatives | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Firm Leads"), rewrite draft with current details |
+| 9 | Priscilla Norris | Warm | Performers & Creatives | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Warm Leads"), rewrite draft with current details |
+| 10 | Thelma C. Rufolo | Warm | Consultants & Service Providers | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Warm Leads"), rewrite draft with current details |
+| 11 | Tony Cox | Warm | Performers & Creatives | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Warm Leads"), rewrite draft with current details |
+| 12 | Agustin El Moro | Soft | Performers & Creatives | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Soft Leads"), rewrite draft with current details |
+| 13 | Dean LeCrone | Soft | Unknown | BLOCKED | Import profile from Batch 1 (`docs/legacy-batch-imports.md`, "Soft Leads"). Get context from Alex — worth pursuing or let it ride? |
 
 ### Promotional Hub Contacts
 
 | # | Contact | Network | Status | Next Step |
 |---|---------|---------|--------|-----------|
-| 14 | Floyd Smith | Business owners, AI-interested | TODO | Send workshop details + ask to share with network |
-| 15 | Blanca | Nonprofit for artists/wellness | TODO | Send workshop details + partnership angle |
-| 16 | Amanda | Photographer/photography business | TODO | Send workshop details + photography persona angle |
+| 14 | Floyd Smith | Business owners, AI-interested | TODO | Send workshop details + ask to share with network. Contact details in Batch 4/6 (`docs/legacy-batch-imports.md`, "Marketing Channels > Active Channels"). |
+| 15 | Blanca | Nonprofit for artists/wellness | TODO | Send workshop details + partnership angle. Contact details in Batch 4/6 (`docs/legacy-batch-imports.md`, "Marketing Channels > Active Channels"). |
+| 16 | Amanda | Photographer/photography business | TODO | Send workshop details + photography persona angle. Contact details in Batch 4/6 (`docs/legacy-batch-imports.md`, "Marketing Channels > Active Channels"). |
 
 ### Women-Focused Organizations
 
 | # | Organization | Status | Next Step |
 |---|-------------|--------|-----------|
-| 17 | SD & Imperial Women's Business Center | TODO | Send outreach draft (programming partnership angle, Randstad AI gender gap hook) |
-| 18 | NAWBO San Diego | TODO | Send outreach draft (peer credibility angle) |
-| 19 | NLBWA San Diego | TODO | Send outreach draft (Spanish open + cultural alignment angle) |
-| 20 | Hera Hub | TODO | Send outreach draft (Business Booster strategy + direct workshop pitch) |
+| 17 | SD & Imperial Women's Business Center | TODO | Send outreach draft (programming partnership angle, Randstad AI gender gap hook). Drafts in Batch 4/6 (`docs/legacy-batch-imports.md`, "Marketing Channels > Active Channels > Women-focused organizations"). |
+| 18 | NAWBO San Diego | TODO | Send outreach draft (peer credibility angle). Drafts in Batch 4/6 (`docs/legacy-batch-imports.md`). |
+| 19 | NLBWA San Diego | TODO | Send outreach draft (Spanish open + cultural alignment angle). Drafts in Batch 4/6 (`docs/legacy-batch-imports.md`). |
+| 20 | Hera Hub | TODO | Send outreach draft (Business Booster strategy + direct workshop pitch). Drafts in Batch 4/6 (`docs/legacy-batch-imports.md`). |
 
 **Anti-deferral checkpoint: March 22.** If P2 org outreach (#17-20) is not sent by March 22, decision required: escalate to P1 or accept the miss with a post-early-bird plan at $150 pricing.
 
