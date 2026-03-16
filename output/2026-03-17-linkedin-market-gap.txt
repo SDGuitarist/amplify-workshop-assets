@@ -3,23 +3,26 @@ GRAPHIC: mood-framework mood-bold | linkedin
 
 ---
 
-There are two camps in AI education right now.
+Most AI education falls into two camps.
+Tech voices who've never run a creative business. And creatives who've never gone deep with the tools.
 
-Tech voices who've never built a creative business. And creatives who've never gone deep with the tools.
+I've spent the last year in neither camp. I'm a working musician who built five AI systems from scratch to run a music consultancy. Here's what each one actually does.
 
-I'm neither.
+The Lead Responder takes an inquiry, extracts the facts, classifies it against my pricing logic, drafts a response in my voice, and checks it against nine criteria before I ever see it. The leads didn't get better because AI is smart. They got better because I finally had the capacity to show up as myself in every interaction.
 
-I'm a working musician with 30 years of performance and a Berklee degree. I run a Latin music consultancy in San Diego. And over the past year, I built five interconnected apps that handle my leads, prep my gigs, track venue intel, and connect everything together.
+GigPrep pulls everything I need for a performance into one place. Song lists, client preferences, venue notes, gear requirements. The kind of thing I used to keep in my head and occasionally forget at the worst possible moment.
 
-I didn't go to school for this. I used AI-powered development tools to build real, working systems. And I got good at it.
+The Research Agent watches for patterns across venues and markets I'd never have time to track manually. It doesn't replace my instincts about where to focus. It gives my instincts better data.
 
-Here's what I've learned: the advantage in 2026 doesn't go to the person who works fastest with AI. It goes to the person who works deepest. Speed without expertise just produces more noise.
+The pattern across all five: the AI isn't making judgment calls. I made those calls when I built the systems. The AI executes my judgment consistently, at speed, while I focus on the work that actually requires me in the room.
 
-That's the gap I'm teaching into. April 25, I'm running a hands-on half-day workshop called Amplify for creatives and small business owners who want to use AI without losing what makes them irreplaceable.
+That's the gap nobody's filling. Not "how to use ChatGPT." How to take expertise you already have and build AI around it so it shows up every time, not just when you have the energy.
 
-30 seats. $100 early bird through March 28.
+I'm teaching this on April 25 in San Diego. Hands-on, 30 seats, real systems. Not slides about AI. The actual pipeline, running live.
 
-#HumanLedAI #AIworkshop #CreativeBusiness #SanDiego #AmplifyWorkshop
+If you've built AI into your own workflow, what was the first thing that actually stuck?
+
+#HumanLedAI #AIforCreatives #AmplifyWorkshop #SanDiego #SmallBusinessAI
 
 ---
 

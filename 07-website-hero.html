@@ -149,6 +149,18 @@
       .hero-text .subtitle { font-size: 28px; margin-bottom: 32px; }
     }
 
+    .hero-text .hero-meta {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: rgba(250,243,232,0.6);
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-text .hero-meta { font-size: 14px; margin-bottom: 24px; }
+    }
+
     .hero-text .hero-desc {
       font-size: 16px;
       line-height: 1.7;
@@ -755,6 +767,364 @@
       color: var(--deep-brown);
       font-size: 18px;
     }
+
+    /* ===== MID-PAGE CTA ===== */
+    .mid-cta {
+      text-align: center;
+      padding: 0 24px 48px;
+    }
+
+    @media (min-width: 768px) {
+      .mid-cta { padding: 0 48px 64px; }
+    }
+
+    .mid-cta .hero-cta {
+      display: inline-flex;
+    }
+
+    /* ===== SOCIAL PROOF ===== */
+    .proof-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      font-family: var(--font-body);
+    }
+
+    @media (min-width: 768px) {
+      .proof-section { padding: 64px 48px; }
+    }
+
+    @media (min-width: 1024px) {
+      .proof-section { padding: 80px 64px; }
+    }
+
+    .proof-section h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--deep-brown);
+      margin-bottom: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .proof-section h2 { font-size: 32px; }
+    }
+
+    .proof-section .proof-sub {
+      font-size: 16px;
+      color: var(--cognac);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 768px) {
+      .proof-section .proof-sub { font-size: 18px; margin-bottom: 40px; }
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .proof-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+
+    @media (min-width: 1024px) {
+      .proof-grid { grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+    }
+
+    .proof-item {
+      padding: 24px;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e8ddd0;
+    }
+
+    .proof-item .pi-number {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .proof-item .pi-label {
+      font-size: 15px;
+      color: var(--deep-brown);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    /* ===== COUNTDOWN ===== */
+    .countdown-bar {
+      text-align: center;
+      padding: 16px 24px;
+      font-family: var(--font-body);
+    }
+
+    .countdown-bar .countdown-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 8px;
+    }
+
+    .countdown-timer {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .countdown-unit {
+      text-align: center;
+    }
+
+    .countdown-unit .cu-num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--deep-brown);
+    }
+
+    @media (min-width: 768px) {
+      .countdown-unit .cu-num { font-size: 36px; }
+    }
+
+    .countdown-unit .cu-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--cognac);
+    }
+
+    /* ===== REGISTRATION FLOW ===== */
+    .register-flow {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 32px 24px 0;
+    }
+
+    .register-flow h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--deep-brown);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .register-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+
+    .register-steps li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 12px 0;
+      font-size: 15px;
+      color: #4a3828;
+      line-height: 1.5;
+    }
+
+    .register-steps li + li {
+      border-top: 1px solid #e8ddd0;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--gradient-early-bird);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .register-cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 16px 28px;
+      background: var(--gradient-early-bird);
+      color: white;
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(255,107,74,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .register-cta::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .register-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(255,107,74,0.4);
+    }
+
+    .register-confirm {
+      text-align: center;
+      font-size: 14px;
+      color: var(--cognac);
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    .register-alt {
+      text-align: center;
+      font-size: 14px;
+      color: rgba(74,56,40,0.6);
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #e8ddd0;
+    }
+
+    .register-alt a {
+      color: var(--copper);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      font-family: var(--font-body);
+    }
+
+    @media (min-width: 768px) {
+      .faq-section { padding: 64px 48px; }
+    }
+
+    @media (min-width: 1024px) {
+      .faq-section { padding: 80px 64px; }
+    }
+
+    .faq-section h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--deep-brown);
+      margin-bottom: 28px;
+    }
+
+    @media (min-width: 768px) {
+      .faq-section h2 { font-size: 32px; margin-bottom: 36px; }
+    }
+
+    .faq-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .faq-list { grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+
+    .faq-item {
+      padding: 24px;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e8ddd0;
+    }
+
+    .faq-item .faq-q {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--deep-brown);
+      margin-bottom: 8px;
+    }
+
+    .faq-item .faq-a {
+      font-size: 15px;
+      color: #4a3828;
+      line-height: 1.6;
+    }
+
+    /* ===== STICKY MOBILE CTA ===== */
+    .sticky-cta {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      .sticky-cta {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 12px 16px;
+        padding-bottom: calc(12px + env(safe-area-inset-bottom));
+        background: rgba(26,15,8,0.95);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-top: 1px solid rgba(194,120,64,0.3);
+        justify-content: center;
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+      }
+
+      .sticky-cta.hidden {
+        transform: translateY(100%);
+      }
+
+      .sticky-cta a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        max-width: 360px;
+        padding: 14px 24px;
+        background: var(--gradient-early-bird);
+        color: white;
+        font-family: var(--font-display);
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(255,107,74,0.3);
+      }
+
+      .sticky-cta .price-tag {
+        font-size: 13px;
+        font-weight: 400;
+        opacity: 0.85;
+      }
+
+      /* Add bottom padding to body so content isn't hidden behind sticky bar */
+      body {
+        padding-bottom: 72px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -766,6 +1136,7 @@
         <div class="question">What happens when expertise leads AI?</div>
         <h1>Amplify</h1>
         <div class="subtitle">The Power of Human-Led AI</div>
+        <div class="hero-meta">April 25, 2026 · San Diego, CA</div>
         <p class="hero-desc">A hands-on workshop for artists, creatives, and small business owners who want to use AI to work <em>deeper</em>, not just faster. No tech background needed.</p>
         <a href="#pricing" class="hero-cta">
           Reserve Your Seat <span class="price-tag">· $100 Early Bird</span>
@@ -829,6 +1200,13 @@
     </div>
   </section>
 
+  <!-- MID-PAGE CTA -->
+  <div class="mid-cta">
+    <a href="#pricing" class="hero-cta">
+      Reserve Your Seat <span class="price-tag">· $100 Early Bird</span>
+    </a>
+  </div>
+
   <!-- HOST -->
   <section class="host-section">
     <div class="host-inner">
@@ -836,18 +1214,81 @@
       <div class="host-text">
         <h2>Meet Your Host</h2>
         <div class="host-title">Alex Guillen, Entrepreneur, Creative &amp; Founder of Pacific Flow Entertainment</div>
-        <p>Not an AI engineer. A business owner who built his own AI-powered systems and is teaching what actually works. Alex brings a creative-first perspective to AI. Practical tools for real people doing real work.</p>
+        <p>Not an AI engineer. A working musician and entrepreneur who built five AI-powered business systems from scratch, including an automated lead responder, a gig preparation tool, and a research agent. 12,000+ connections in the hospitality industry. Over a decade running Pacific Flow Entertainment in San Diego. Alex teaches what he actually uses every day. Practical tools for real people doing real work.</p>
       </div>
     </div>
   </section>
 
-  <!-- PRICING -->
+  <!-- SOCIAL PROOF -->
+  <section class="proof-section">
+    <h2>Why This Workshop</h2>
+    <p class="proof-sub">This isn't theory from someone who read about AI. It's a system built from real business problems.</p>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <div class="pi-number">5</div>
+        <div class="pi-label">AI-powered business systems built and running in production</div>
+      </div>
+      <div class="proof-item">
+        <div class="pi-number">12,000+</div>
+        <div class="pi-label">Hospitality industry connections on LinkedIn</div>
+      </div>
+      <div class="proof-item">
+        <div class="pi-number">10+</div>
+        <div class="pi-label">Years running Pacific Flow Entertainment in San Diego</div>
+      </div>
+      <div class="proof-item">
+        <div class="pi-number">4 hrs</div>
+        <div class="pi-label">Hands-on working session. You leave with something built.</div>
+      </div>
+      <div class="proof-item">
+        <div class="pi-number">30</div>
+        <div class="pi-label">Maximum seats. Small enough for real conversation.</div>
+      </div>
+      <div class="proof-item">
+        <div class="pi-number">0</div>
+        <div class="pi-label">Slides. All live demos with real business data.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <h2>Common Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Do I need technical experience?</div>
+        <div class="faq-a">No. If you can use a web browser, you can do this workshop. We start from scratch and build up.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What should I bring?</div>
+        <div class="faq-a">A laptop. That's it. We'll set up everything you need during the session.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is food included?</div>
+        <div class="faq-a">Light refreshments will be provided. The workshop runs 10 AM to 2 PM, so eat breakfast beforehand.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What about parking?</div>
+        <div class="faq-a">Free street parking is available around the venue on Thorn St. You'll get specific details in your confirmation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if I can't make it after I register?</div>
+        <div class="faq-a">Full refund if you cancel 7+ days before the event. Within 7 days, you can transfer your seat to someone else.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will there be follow-up support?</div>
+        <div class="faq-a">Yes. All attendees get access to a follow-up Q&A session and resource list after the workshop.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING + REGISTRATION -->
   <section class="pricing-section" id="pricing">
     <div class="pricing-cards">
       <div class="p-card early">
         <div class="p-label">Early Bird (through March 28)</div>
         <div class="p-amount">$100</div>
-        <div class="p-note">Best value, limited time</div>
+        <div class="p-note">Save $50 before the deadline</div>
       </div>
       <div class="p-card regular">
         <div class="p-label">Regular Price</div>
@@ -855,19 +1296,109 @@
         <div class="p-note">After March 28</div>
       </div>
     </div>
+
+    <!-- Countdown Timer -->
+    <div class="countdown-bar" id="countdown-bar">
+      <div class="countdown-label">Early bird pricing ends in</div>
+      <div class="countdown-timer" id="countdown-timer"></div>
+    </div>
+
     <div class="seats-note">Limited to 30 Seats</div>
 
-    <div class="contact-block">
-      <div class="qr-section">
-        <img src="images/venmo-qr.png" alt="Venmo QR Code">
-        <div class="qr-label">Scan to Pay via Venmo</div>
+    <!-- Registration Flow -->
+    <div class="register-flow">
+      <h3>How to Register</h3>
+      <ol class="register-steps">
+        <li>
+          <span class="step-num">1</span>
+          <span>Tap the button below or scan the QR code to open Venmo</span>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <span>Send <strong>$100</strong> to <strong>@Alex-Guillen-Music</strong> with the note <strong>"Amplify Workshop"</strong></span>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <span>You'll get a confirmation text within 24 hours with parking details and what to bring</span>
+        </li>
+      </ol>
+
+      <a href="https://venmo.com/Alex-Guillen-Music" class="register-cta">
+        Pay with Venmo · $100
+      </a>
+
+      <div class="register-confirm">
+        After you pay, Alex will text you a confirmation with everything you need to know.
       </div>
-      <div class="contact-details">
-        <a href="tel:+16197553246" class="phone" style="text-decoration:none;color:inherit">619-755-3246</a><br>
-        <a href="mailto:alex.guillen.music@gmail.com">alex.guillen.music@gmail.com</a><br>
-        Venmo: <a href="https://venmo.com/Alex-Guillen-Music">@Alex-Guillen-Music</a>
+
+      <div class="contact-block" style="margin-top: 24px;">
+        <div class="qr-section">
+          <img src="images/venmo-qr.png" alt="Venmo QR Code">
+          <div class="qr-label">Scan to pay</div>
+        </div>
+      </div>
+
+      <div class="register-alt">
+        Prefer another way? Text <a href="sms:+16197553246">619-755-3246</a> or email <a href="mailto:alex@alexguillenmusic.com">alex@alexguillenmusic.com</a>
       </div>
     </div>
   </section>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="#pricing">
+      Reserve Your Seat <span class="price-tag">· $100</span>
+    </a>
+  </div>
+
+  <script>
+    // Countdown timer to March 28, 2026 midnight PT
+    (function() {
+      var deadline = new Date('2026-03-28T23:59:59-07:00').getTime();
+      var timerEl = document.getElementById('countdown-timer');
+      var barEl = document.getElementById('countdown-bar');
+
+      function update() {
+        var now = Date.now();
+        var diff = deadline - now;
+
+        if (diff <= 0) {
+          barEl.style.display = 'none';
+          return;
+        }
+
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+        timerEl.innerHTML =
+          '<div class="countdown-unit"><div class="cu-num">' + days + '</div><div class="cu-label">Days</div></div>' +
+          '<div class="countdown-unit"><div class="cu-num">' + hours + '</div><div class="cu-label">Hours</div></div>' +
+          '<div class="countdown-unit"><div class="cu-num">' + mins + '</div><div class="cu-label">Min</div></div>';
+      }
+
+      update();
+      setInterval(update, 60000);
+    })();
+
+    // Sticky CTA — hide when pricing section is visible
+    (function() {
+      var sticky = document.getElementById('sticky-cta');
+      var pricing = document.getElementById('pricing');
+      if (!sticky || !pricing) return;
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            sticky.classList.add('hidden');
+          } else {
+            sticky.classList.remove('hidden');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      observer.observe(pricing);
+    })();
+  </script>
 </body>
 </html>
