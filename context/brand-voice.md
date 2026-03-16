@@ -175,23 +175,46 @@ AI raises the floor, which makes the ceiling matter more. When anyone can genera
 
 **No em-dashes.** Never use them in any output. Use periods, commas, or line breaks instead. Alex's natural writing uses short sentences and fragments, not long clauses joined by dashes.
 
-**No overused AI vocabulary.** The following words and phrases are banned from all copy:
-- "Unlock" / "Unleash" / "Supercharge" / "Turbocharge"
-- "Game-changing" / "Revolutionary" / "Cutting-edge"
-- "Leverage" (use "use" instead)
-- "Harness the power of"
-- "Deep dive" / "Double down"
-- "Seamless" / "Seamlessly"
-- "Elevate" (except in the workshop title context)
-- "Journey" (when describing a workshop or product)
-- "Transform your" + [noun] as a marketing formula
-- "In today's fast-paced world" or any variation
-- "Navigate the landscape"
-- "Empower" / "Empowering"
-- "Delve" / "Delve into"
-- "Robust" / "Comprehensive" / "Holistic"
-- "Passionate about"
-- "It's not just about X, it's about Y" (overused structure)
+**No overused AI vocabulary.** The following words and phrases are banned from all copy. This list is based on GPTZero's analysis of 3.3M texts and cross-referenced with Jodie Cook, Blake Stockton, Ruben Hassid, and the Field Guide to AI Slop.
+
+**Tier 1 — Absolute ban (these scream "AI wrote this"):**
+
+Single words: delve, tapestry, realm, leverage, utilize, harness, unlock, embark, unleash, elevate (except in workshop title context), foster, beacon, synergy, groundbreaking, cutting-edge, unprecedented, seamless, pivotal, intricate, robust, transformative, revolutionize, supercharge, streamline, game-changer, empower, innovative, paradigm, comprehensive, bespoke, holistic, turbocharge, meticulous, multifaceted, commendable, noteworthy
+
+Phrases: "In today's fast-paced world" (or any variation), "It's worth noting," "In a world where," "At the end of the day," "It's important to note," "Let's dive in/dive into," "Not just X, but also Y," "In conclusion," "Moreover," "Furthermore," "Indeed," "First and foremost," "Harness the power of," "Navigate the landscape," "Deep dive," "Double down," "Transform your [noun]," "It's not just about X, it's about Y," "Passionate about," "Journey" (when describing a workshop or product)
+
+**Tier 2 — Hedge words (remove unless Alex would actually say them):**
+
+quite, rather, somewhat, arguably, seemingly, potentially, essentially, basically, certainly, literally
+
+**Tier 3 — Performative directness (sounds like a LinkedIn influencer):**
+
+"Honestly?", "Here's the breakdown," "But here's the thing," "Here's the kicker," "The bottom line"
+
+**Tier 4 — Therapist mode (not Alex's register):**
+
+"You're not alone," "It's okay to feel," "Give yourself permission"
+
+**Tier 5 — Business LinkedIn slop:**
+
+enable, crucial, essential, distinct, aligned/align, proactive, nuanced, intersection, elevated, agile, dynamic, best-in-class, next-generation, future-proof, scalable, tailored
+
+**Banned structural patterns (from the Field Guide to AI Slop):**
+
+These sentence shapes are AI tells even when the individual words are fine:
+- Cinematic setup: "In a world where..."
+- False binary: "Most people do X. The few who Y..."
+- Habit swap: "Stop X. Start Y."
+- Triple strawman: "Not this. Not that. But this."
+- FOMO framing: "If you're not doing X, you're behind"
+- False revelation: "The real work is..."
+- Minimalist reframe: "You don't need X. You need Y."
+- Paradox era: "It's never been easier/harder"
+- Unearned profundity: "Something shifted. Everything changed." (dramatic fragments with no setup)
+- Snappy triads: "Fast, efficient, and reliable" used reflexively
+
+**Self-check protocol (add to end of any generation prompt):**
+Before finalizing, verify: no Tier 1 words appear, no banned structural patterns, paragraph lengths vary, concrete details replace abstract claims, and reading it aloud sounds like Alex talking to a peer.
 
 **No hype punctuation.** Limit exclamation marks to one per post maximum. Zero is better. Alex's energy comes through word choice, not punctuation.
 
