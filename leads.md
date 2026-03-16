@@ -3,12 +3,17 @@
 30 seats total. $100 early bird through March 28, $150 after.
 
 ## Status Key
-- **INTERESTED** — expressed interest, not yet paid
+- **OUTREACH READY** — message drafted, ready for Alex to send
+- **OUTREACH SENT** — message sent, awaiting response
+- **INTERESTED** — expressed interest on their own (social media, DM), not yet in conversation about registration
+- **ENGAGED** — in active conversation, responded positively, hasn't paid yet
 - **REGISTERED** — paid, confirmed seat
 - **DECLINED** — was interested, decided not to attend
 - **WAITLIST** — if seats fill up
-- **OUTREACH READY** — message drafted, ready for Alex to send
 - **NEEDS CONTEXT** — not enough info to act on
+
+**Lead progression:** OUTREACH READY → OUTREACH SENT → ENGAGED → REGISTERED
+For inbound leads: INTERESTED → ENGAGED → REGISTERED
 
 ## Segments
 
@@ -28,9 +33,9 @@ Segments help target messaging. One lead can belong to multiple segments.
 |---|------|---------|--------|------|--------|-------|
 | 1 | Lynn Gahman | Writers & Content Creators | Facebook DM (replied to story) | 2026-03-14 | INTERESTED | Writer, speaker, advocate. Runs "The blank screen" (writing/editing, 25+ yrs). Edited 4 self-published books. Memoir chapter at North Coast Rep. Toastmaster. San Diego local, 32 mutual friends. |
 | 2 | Miriam Aguilar Escobar | Writers & Content Creators | Facebook comment (BTS post) | 2026-03-15 | INTERESTED | Children's literature author (miriamaguilarescobar.com, since 2023). Equity/equality advocate. Chula Vista, CA. 56 mutual friends. |
-| 3 | Mike Myrdal | Performers & Creatives | Direct network | 2026-03-15 | OUTREACH READY | Fellow guitarist/singer-songwriter. Regular gigs at Catamaran plus weddings and corporate. Long-time performer. Referral relationship with Alex. Said "Definitely interested!" |
-| 4 | Heather Hilton | Consultants & Service Providers | Direct network (shared post) | 2026-03-15 | OUTREACH READY | Strongest advocate. Creative and businesswoman, part of Alex's "creative team." Values wellbeing, cautious about tech/trust. Wrote full public endorsement. Need to confirm: attending or just championing? |
-| 5 | Jane Hare | Consultants & Service Providers | Via Heather's share | 2026-03-15 | OUTREACH READY | Came via Heather. Said "Let me know the date!" Date is locked. Simple close. May refer others. |
+| 3 | Mike Myrdal | Performers & Creatives | Direct network (Facebook DM) | 2026-03-16 | ENGAGED | Fellow guitarist/singer-songwriter. Regular gigs at Catamaran plus weddings and corporate. Long-time performer. Referral relationship with Alex. Message sent Mar 16, responded with thumbs up + "Thank you!" Awaiting payment. Nurture follow-up: Mar 20. |
+| 4 | Heather Hilton | Consultants & Service Providers | Direct network (Facebook DM) | 2026-03-16 | OUTREACH SENT | Strongest advocate. Creative and businesswoman, part of Alex's "creative team." Values wellbeing, cautious about tech/trust. Wrote full public endorsement. Message sent Mar 16 asking: attending or championing? Awaiting response. |
+| 5 | Jane Hare | Consultants & Service Providers | Via Heather's share (Facebook DM) | 2026-03-16 | OUTREACH SENT | Came via Heather. Said "Let me know the date!" Message sent Mar 16 with full details. Awaiting response. |
 | 6 | Priscilla Norris | Performers & Creatives | Direct network | 2026-03-15 | OUTREACH READY | Classical cellist, performs solo and with her quartet. Alex built her quartet website. Non-tech person. Asked "Would this work for me?" |
 | 7 | Thelma C. Rufolo | Consultants & Service Providers | Direct network | 2026-03-15 | OUTREACH READY | Fellow entrepreneur with large network. She and Alex have helped each other out. Her son helped Alex at a gig. Said she's "grossly underutilizing" AI. |
 | 8 | Tony Cox | Consultants & Service Providers | Direct network | 2026-03-15 | OUTREACH READY | Friend of Alex, recently laid off. Sales background, doing gig work. Also an actor getting commercial work. Currently in transition. Said "Keep me posted." |
@@ -170,6 +175,48 @@ All messages updated with current details: Saturday April 25, 10 AM to 2 PM, Exp
 
 ---
 
+## Nurture Sequence (For ENGAGED Leads Who Haven't Paid)
+
+When someone responds positively but doesn't register, use this sequence. Keep it casual. Don't re-pitch. Assume they're busy, not uninterested.
+
+### Step 0 — Immediate confirmation (send right after they engage)
+
+This is the reply when someone gives you a thumbs up, "count me in," "sounds good," or any positive signal. Don't just say "Thank you!" Make the next step clear and easy.
+
+**If they already have the full details (date, venue, price, link):**
+> Got you down. Whenever you're ready, Venmo @Alex-Guillen-Music or Zelle alex.guillen.music@gmail.com. Once I see it come through I'll send you a confirmation with parking and what to bring. Looking forward to having you there.
+
+**If they don't have full details yet (e.g., responded to a social post, not a DM with details):**
+> Awesome. I got you down. Whenever you're ready, you can register here: https://tinyurl.com/Amplify-AI
+>
+> $100 early bird through March 28. Venmo @Alex-Guillen-Music or Zelle alex.guillen.music@gmail.com. Once I see the payment come through I'll send you a confirmation with parking details and what to bring.
+>
+> Looking forward to it.
+
+**Why this matters:** A thumbs up is not a registration. This message bridges the gap between "I'm interested" and "I've paid." It confirms you heard them, gives them the exact next action, and tells them what happens after they pay. No friction, no re-selling.
+
+**Rules:** Don't repeat info they already have. Don't add a second ask (no "share with your network" here — that was in the first message). Match the tone of your original message to them.
+
+**Day 4 after response — Soft check-in:**
+> Hey [name]. Just checking in. Did you have any questions about the workshop? Happy to answer anything. No pressure.
+
+**Day 8 after response — Value nudge (only if early bird is still active):**
+> Hey [name]. Quick heads up. The early bird price ($100) ends March 28. After that it goes to $150. Just wanted to make sure you knew in case you're planning to come.
+
+**Day 12 after response — Final touch (casual, no guilt):**
+> Hey [name]. Last one from me on this. If the timing works, I'd love to have you there. If not, no worries at all. Here's the link if you want to grab a spot: https://tinyurl.com/Amplify-AI
+
+**After early bird deadline (March 28+) — adjusted messaging:**
+Replace "early bird $100" references with "$150" in all follow-ups. Drop the urgency. Lead with value instead.
+
+**Rules:**
+- Max 3 follow-ups total. After that, let it go.
+- Never guilt-trip. Never say "I noticed you haven't signed up."
+- Match the original tone of your first message to them.
+- If they respond at any point with a question or pushback, have a real conversation. Drop the sequence.
+
+---
+
 ## Engagement Log
 
 ### Lynn Gahman
@@ -184,15 +231,24 @@ All messages updated with current details: Saturday April 25, 10 AM to 2 PM, Exp
 
 ### Mike Myrdal
 - **Pre-Mar 13** — Said "Definitely interested!" in direct conversation
-- **Next:** Send outreach message (see Ready to Send section above). He said yes. Confirm and send details.
+- **Mar 16, 9:39 AM** — Alex sent outreach message via Facebook DM with April 25 details + registration link
+- **Mar 16, 9:39 AM** — Mike responded: thumbs up + "Thank you!"
+- **Mar 16** — Alex sent Step 0 confirmation:
+  > "Got you down. Whenever you're ready, Venmo @Alex-Guillen-Music or Zelle alex.guillen.music@gmail.com. Once I see it come through I'll send you a confirmation with parking and what to bring. Looking forward to having you there."
+- **Nurture status:** Step 0 SENT. Next: Day 4 soft check-in (Mar 20) if no payment received.
+- **Awaiting:** Payment via Venmo or Zelle.
 
 ### Heather Hilton
 - **Pre-Mar 13** — Shared Alex's workshop post. Wrote full public endorsement. Strongest advocate.
-- **Next:** DM to confirm: attending or just championing? (see `docs/actions.md` #2)
+- **Mar 16** — Alex sent outreach via Facebook DM:
+  > "Hey Heather. I wanted to ask you. Are you planning to come to the workshop on April 25, or are you more in champion mode spreading the word? Either way I appreciate you. Your endorsement has already brought people in. If you're coming: Saturday April 25, 10 AM to 2 PM, Expressive Arts San Diego. $100 early bird through March 28. Register: https://tinyurl.com/Amplify-AI Venmo @Alex-Guillen-Music or Zelle alex.guillen.music@gmail.com Let me know either way."
+- **Awaiting:** Response. Her answer determines next step (Step 0 confirmation if attending, or thank-you if championing only). Follow up by Mar 20 if no response.
 
 ### Jane Hare
 - **Pre-Mar 13** — Said "Let me know the date!" via Heather's share
-- **Next:** Send the April 25 details. Simple close. She already asked for the date.
+- **Mar 16** — Alex sent outreach via Facebook DM:
+  > "Hey Jane. You asked about the date. Here it is. Saturday, April 25. 10 AM to 2 PM. Expressive Arts San Diego, 3201 Thorn St. Hands-on workshop. I walk through the actual AI systems I built to run my music business. You leave with a framework you can apply to your own work. 30 seats, small group. $100 early bird through March 28. $150 after. Register here: https://tinyurl.com/Amplify-AI Venmo @Alex-Guillen-Music or Zelle alex.guillen.music@gmail.com. Want me to save you a spot?"
+- **Awaiting:** Response. She already asked for the date, so this should be a quick close. If positive → Step 0 confirmation (short version, she has all details). Follow up by Mar 20 if no response.
 
 ### Priscilla Norris
 - **Pre-Mar 13** — Asked "Would this work for me?" Alex built her quartet website. Non-tech.
@@ -217,9 +273,11 @@ All messages updated with current details: Saturday April 25, 10 AM to 2 PM, Exp
 ---
 
 ## Summary
-- **Total pipeline:** 10 (2 interested + 7 outreach ready + 1 needs context)
-- **Total interested:** 2 (Lynn, Miriam — expressed interest, awaiting confirmation)
-- **Total outreach ready:** 7 (Mike, Heather, Jane, Priscilla, Thelma, Tony, Agustin — messages drafted)
+- **Total pipeline:** 10 (2 interested + 1 engaged + 2 outreach sent + 4 outreach ready + 1 needs context)
+- **Total interested:** 2 (Lynn, Miriam — inbound, awaiting response)
+- **Total engaged:** 1 (Mike — responded positively, awaiting payment)
+- **Total outreach sent:** 2 (Heather, Jane — message sent, awaiting response)
+- **Total outreach ready:** 4 (Priscilla, Thelma, Tony, Agustin — messages drafted)
 - **Total needs context:** 1 (Dean — Alex decides)
 - **Total registered:** 0
 - **Seats remaining:** 30
