@@ -21,11 +21,11 @@ At 30 seats:
 
 | # | Action | Status | Next Step | Due |
 |---|--------|--------|-----------|-----|
-| 1 | Send updated messages to 8 network leads | DONE | Profiles imported. 7 personalized messages + 1 placeholder in `leads.md` "Outreach Messages" section. | Mar 22 |
-| 2 | Confirm Heather Hilton attendance via DM | TODO | DM Heather: attending or just championing? | Mar 18 |
-| 3 | Follow up with Lynn Gahman | TODO | Waiting on her response to "#1 goal for AI" question (asked Mar 14) | Mar 18 |
-| 4 | Follow up with Miriam Aguilar Escobar | TODO | She commented "checking my calendar...interested." Send registration details via DM if she follows up. | Mar 18 |
-| 5 | Send Jane Hare the April 25 details | DONE | Profile imported. Message ready in `leads.md` "Outreach Messages" section. Simple close. | Mar 18 |
+| 1 | Send updated messages to 8 network leads | IN PROGRESS | 3 sent (Mike, Heather, Jane). 4 remaining (Priscilla, Thelma, Tony, Agustin). 1 placeholder (Dean). See `leads.md` for per-lead status. | Mar 22 |
+| 2 | Confirm Heather Hilton attendance via DM | OUTREACH SENT | DM sent Mar 16 asking: attending or championing? Awaiting response. See `leads.md`. | Mar 20 |
+| 3 | Follow up with Lynn Gahman | TODO | Waiting on her response to "#1 goal for AI" question (asked Mar 14). See `leads.md`. | Mar 18 |
+| 4 | Follow up with Miriam Aguilar Escobar | TODO | She commented "checking my calendar...interested." Follow up if no response. See `leads.md`. | Mar 18 |
+| 5 | Send Jane Hare the April 25 details | OUTREACH SENT | Message sent Mar 16 with full details. Awaiting response. See `leads.md`. | Mar 20 |
 | 6 | Read fine print on Tish's venue contract and rental agreement | TODO | Do this week. If something needs negotiation, you want time. | Mar 18 |
 | 7 | Sign and return contract, rental agreement, and COI to Tish | TODO | Blocked by #6 | Mar 22 |
 
@@ -33,16 +33,16 @@ At 30 seats:
 
 ## P2 Actions (Before March 28)
 
-### Network Leads (Blocked — Awaiting Source Profiles)
+### Network Leads
 
 | # | Lead | Temperature | Segment | Status | Next Step |
 |---|------|------------|---------|--------|-----------|
-| 8 | Mike Myrdal | Firm | Performers & Creatives | DONE | Profile imported. Message ready in `leads.md`. |
-| 9 | Priscilla Norris | Warm | Performers & Creatives | DONE | Profile imported. Message ready in `leads.md`. |
-| 10 | Thelma C. Rufolo | Warm | Consultants & Service Providers | DONE | Profile imported. Message ready in `leads.md`. |
-| 11 | Tony Cox | Warm | Performers & Creatives | DONE | Profile imported. Message ready in `leads.md`. |
-| 12 | Agustin El Moro | Soft | Performers & Creatives | DONE | Profile imported. Message ready in `leads.md`. |
-| 13 | Dean LeCrone | Soft | Unknown | NEEDS CONTEXT | Profile imported. Placeholder message in `leads.md`. Alex decides: worth pursuing or let it ride? |
+| 8 | Mike Myrdal | Firm | Performers & Creatives | ENGAGED | Step 0 sent. Awaiting payment. Day 4 follow-up Mar 20. See `leads.md`. |
+| 9 | Priscilla Norris | Warm | Performers & Creatives | OUTREACH READY | Message drafted in `leads.md`. Alex: send when ready. |
+| 10 | Thelma C. Rufolo | Warm | Consultants & Service Providers | OUTREACH READY | Message drafted in `leads.md`. Alex: send when ready. |
+| 11 | Tony Cox | Warm | Performers & Creatives | OUTREACH READY | Message drafted in `leads.md`. Alex: send when ready. |
+| 12 | Agustin El Moro | Soft | Performers & Creatives | OUTREACH READY | Message drafted in `leads.md`. Alex: send when ready. |
+| 13 | Dean LeCrone | Soft | Unknown | NEEDS CONTEXT | Placeholder message in `leads.md`. Alex decides: worth pursuing or let it ride? |
 
 ### Promotional Hub Contacts
 

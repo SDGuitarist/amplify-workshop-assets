@@ -31,8 +31,8 @@ Segments help target messaging. One lead can belong to multiple segments.
 
 | # | Name | Segment | Source | Date | Status | Notes |
 |---|------|---------|--------|------|--------|-------|
-| 1 | Lynn Gahman | Writers & Content Creators | Facebook DM (replied to story) | 2026-03-14 | INTERESTED | Writer, speaker, advocate. Runs "The blank screen" (writing/editing, 25+ yrs). Edited 4 self-published books. Memoir chapter at North Coast Rep. Toastmaster. San Diego local, 32 mutual friends. |
-| 2 | Miriam Aguilar Escobar | Writers & Content Creators | Facebook comment (BTS post) | 2026-03-15 | INTERESTED | Children's literature author (miriamaguilarescobar.com, since 2023). Equity/equality advocate. Chula Vista, CA. 56 mutual friends. |
+| 1 | Lynn Gahman | Writers & Content Creators | Facebook DM (replied to story) | 2026-03-14 | INTERESTED | Writer, speaker, advocate. Runs "The blank screen" (writing/editing, 25+ yrs). Edited 4 self-published books. Memoir chapter at North Coast Rep. Toastmaster. San Diego local, 32 mutual friends. Inbound Step 2 sent. Nurture Step 3 due Mar 20. |
+| 2 | Miriam Aguilar Escobar | Writers & Content Creators | Facebook comment (BTS post) | 2026-03-15 | INTERESTED | Children's literature author (miriamaguilarescobar.com, since 2023). Equity/equality advocate. Chula Vista, CA. 56 mutual friends. Inbound Step 1 sent (public reply). Nurture Step 2 DM pivot due Mar 18. |
 | 3 | Mike Myrdal | Performers & Creatives | Direct network (Facebook DM) | 2026-03-16 | ENGAGED | Fellow guitarist/singer-songwriter. Regular gigs at Catamaran plus weddings and corporate. Long-time performer. Referral relationship with Alex. Message sent Mar 16, responded with thumbs up + "Thank you!" Awaiting payment. Nurture follow-up: Mar 20. |
 | 4 | Heather Hilton | Consultants & Service Providers | Direct network (Facebook DM) | 2026-03-16 | OUTREACH SENT | Strongest advocate. Creative and businesswoman, part of Alex's "creative team." Values wellbeing, cautious about tech/trust. Wrote full public endorsement. Message sent Mar 16 asking: attending or championing? Awaiting response. |
 | 5 | Jane Hare | Consultants & Service Providers | Via Heather's share (Facebook DM) | 2026-03-16 | OUTREACH SENT | Came via Heather. Said "Let me know the date!" Message sent Mar 16 with full details. Awaiting response. |
@@ -175,9 +175,55 @@ All messages updated with current details: Saturday April 25, 10 AM to 2 PM, Exp
 
 ---
 
-## Nurture Sequence (For ENGAGED Leads Who Haven't Paid)
+## Inbound Nurture Sequence (INTERESTED → ENGAGED)
 
-When someone responds positively but doesn't register, use this sequence. Keep it casual. Don't re-pitch. Assume they're busy, not uninterested.
+For leads who expressed interest on their own (social media comment, DM, story reply) but went quiet after Alex's initial response. The goal is to re-engage without being pushy. These people came to you first. They're interested. They're just busy.
+
+**Key difference from outreach nurture:** These leads already showed intent. Don't re-pitch. Don't repeat what you already told them. Bridge to a personal connection or make the registration step frictionless.
+
+### Inbound Step 1 — Immediate reply (within hours)
+Acknowledge their interest. Keep it warm. Include early bird pricing. Don't overload with details.
+
+**If they replied via DM/story:**
+> Hey [name]. I'd love to have you there. What's the number one thing you'd want AI to help you with this year?
+
+**If they commented on a post:**
+> That's great. Would love to have you there. Let me know if you have any questions. Early bird is $100 through March 28
+
+### Inbound Step 2 — Second touch (Day 2 if no response to Step 1)
+Shorter. Add pricing and early bird if you didn't in Step 1. Don't ask another question. Make it easy.
+
+> Would love to have you there. Let me know if you have any questions. Early bird is $100 through March 28
+
+### Inbound Step 3 — Value bridge (Day 4-5 after initial interest)
+Connect the workshop to something specific about THEM. This is where segment knowledge matters. Don't repeat pricing. Show you paid attention to who they are.
+
+**Writers & Content Creators:**
+> Hey [name]. Been thinking about how the workshop could help with [their specific work]. A big part of it is about keeping your voice intact while using AI for the stuff that eats your time. Drafting, outreach, marketing. We go through it hands-on. Here's the link if you want to grab a spot: https://tinyurl.com/Amplify-AI
+
+**Performers & Creatives:**
+> Hey [name]. The workshop is really about the business side. Lead response, follow-ups, all the stuff that takes time away from [their creative work]. I built systems for that and I'm showing how on April 25. https://tinyurl.com/Amplify-AI if you're in.
+
+**Consultants & Service Providers:**
+> Hey [name]. A lot of what I cover is about deploying your expertise consistently without burning out on the operational side. I think it'd connect with [their work]. https://tinyurl.com/Amplify-AI
+
+### Inbound Step 4 — Final touch (Day 8-10 after initial interest)
+Last one. Casual. No guilt. Include the link one more time.
+
+> Hey [name]. Last mention from me on the workshop. April 25, 30 seats, hands-on. If the timing works I'd love to see you there. If not, no worries. https://tinyurl.com/Amplify-AI
+
+**Rules:**
+- Max 4 touches total (including the initial reply). After Step 4, let it go.
+- If they commented publicly, move to DM by Step 3. Public threads feel pushy after one reply.
+- If they respond at ANY step with a question, engagement, or pushback, drop the sequence and have a real conversation.
+- Never say "I noticed you haven't responded" or "just following up again."
+- Always confirm with Alex: "Have you sent the previous step?" before drafting the next one.
+
+---
+
+## Outreach Nurture Sequence (ENGAGED → REGISTERED)
+
+For leads who responded positively to your outreach but haven't paid yet. They said yes (thumbs up, "sounds good," "count me in") but no payment came through. The goal is to make the payment step frictionless without re-selling.
 
 ### Step 0 — Immediate confirmation (send right after they engage)
 
@@ -221,13 +267,21 @@ Replace "early bird $100" references with "$150" in all follow-ups. Drop the urg
 
 ### Lynn Gahman
 - **Mar 14, 11:01 AM** — Replied "Yes please" to Alex's Facebook story about the workshop
-- **Mar 14, 2:59 PM** — Alex replied "Hi Lynn!"
-- **Mar 14, 4:19 PM** — Alex sent follow-up: "I'd love to have you attend the workshop on April 25th. What is the number one goal that you would like AI to help you accomplish this year?"
-- **Waiting on:** Her response to the goal question. When she replies, connect her answer to a specific workshop phase. Follow up by Mar 18 if no response (see `docs/actions.md` #3).
+- **Mar 14, 2:59 PM** — Alex replied:
+  > "Hi Lynn!"
+- **Mar 14, 4:19 PM** — Alex sent follow-up:
+  > "Hi Lynn, I'd love to have you attend the workshop on April 25th. What is the number one goal that you would like AI to help you accomplish this year?"
+- **Mar 16, 11:44 AM** — Alex sent second follow-up (no response to first):
+  > "Would love to have you there. Let me know if you have any questions. Early bird is $100 through March 28"
+- **Status:** INTERESTED (went quiet). Two follow-ups sent. Has pricing + early bird info but no registration link yet.
+- **Nurture stage:** Inbound Step 2 SENT. Next: Inbound Step 3 value bridge (Mar 20) if no response. See Inbound Nurture Sequence below.
 
 ### Miriam Aguilar Escobar
-- **Mar 15** — Commented "checking my calendar...interested." on Alex's Facebook BTS post
-- **Next:** Alex replied. If she follows up, send registration details via DM. As a children's lit author, AI could help with drafting, outreach to publishers/schools, or marketing her books. Follow up by Mar 18 if no response (see `docs/actions.md` #4).
+- **Mar 15** — Commented "checking my calendar...interested." on Alex's Facebook BTS post (2 reactions: thumbs up + heart)
+- **Mar 15** — Alex replied publicly:
+  > "That's great. Would love to have you there. Let me know if you have any questions. Early bird is $100 through March 28"
+- **Status:** INTERESTED (no response to reply). Has pricing + early bird info but no registration link. Public comment thread, not DM.
+- **Nurture stage:** Inbound Step 1 SENT. Next: Inbound Step 2 DM pivot (Mar 18) if no response. See Inbound Nurture Sequence below.
 
 ### Mike Myrdal
 - **Pre-Mar 13** — Said "Definitely interested!" in direct conversation
