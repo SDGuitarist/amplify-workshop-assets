@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mar 24 — Instagram Lazy vs Human-Led</title>
+  <link rel="stylesheet" href="../../styles-shared.css">
+  <style>
+    .card {
+      width: 1080px;
+      height: 1080px;
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--gradient-hero);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.08) 0%, transparent 70%);
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(194,120,64,0.06) 0%, transparent 70%);
+    }
+
+    .card-top {
+      padding: 72px 72px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hook {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .stat-line {
+      font-size: 20px;
+      color: rgba(250,243,232,0.7);
+      line-height: 1.5;
+    }
+
+    .stat-line em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .comparison {
+      padding: 0 72px;
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .compare-item {
+      border-radius: 16px;
+      padding: 28px 32px;
+    }
+
+    .compare-item.lazy {
+      background: rgba(255,80,60,0.08);
+      border: 1px solid rgba(255,80,60,0.2);
+    }
+
+    .compare-item.expert {
+      background: rgba(194,120,64,0.12);
+      border: 1px solid rgba(194,120,64,0.25);
+    }
+
+    .compare-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .lazy .compare-label {
+      color: rgba(255,120,100,0.8);
+    }
+
+    .expert .compare-label {
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .compare-text {
+      font-size: 20px;
+      color: rgba(250,243,232,0.8);
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    .compare-result {
+      font-size: 15px;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    .lazy .compare-result {
+      color: rgba(255,120,100,0.7);
+    }
+
+    .expert .compare-result {
+      color: var(--soft-gold);
+    }
+
+    .card-bottom {
+      padding: 0 72px 56px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .details-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: 28px;
+      border-top: 1px solid rgba(194,120,64,0.2);
+      gap: 16px;
+    }
+
+    .detail { text-align: left; }
+
+    .detail .d-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 4px;
+    }
+
+    .detail .d-value {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .detail .d-value small {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(250,243,232,0.45);
+    }
+
+    .price-highlight {
+      background: var(--gradient-early-bird);
+      border-radius: 12px;
+      padding: 14px 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-highlight::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .price-highlight .d-label { color: white; font-size: 12px; font-weight: 700; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+    .price-highlight .d-value {
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: relative;
+    }
+    .price-highlight small {
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+      display: block;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <!-- MOOD: mood-framework mood-bold | instagram-square -->
+  <div class="fixed-asset card mood-framework mood-bold" data-width="1080">
+    <div class="card-top">
+      <div class="hook">Same AI. Different results.</div>
+      <h1>Lazy vs. Human-Led</h1>
+      <div class="stat-line"><em>82%</em> of people react negatively to generic AI output.</div>
+    </div>
+
+    <div class="comparison">
+      <div class="compare-item lazy">
+        <div class="compare-label">Lazy Prompt</div>
+        <div class="compare-text">"Write a response to a client inquiry."</div>
+        <div class="compare-result">Generic. Forgettable. Could be anyone.</div>
+      </div>
+      <div class="compare-item expert">
+        <div class="compare-label">Expert-Led Prompt</div>
+        <div class="compare-text">"I have 12 years of experience. My approach is X. Use my voice and standards."</div>
+        <div class="compare-result">Specific. Sounds like you. Worth sending.</div>
+      </div>
+    </div>
+
+    <div class="card-bottom">
+      <div class="details-bar">
+        <div class="detail">
+          <div class="d-label">Workshop</div>
+          <div class="d-value">April 25 <small>Expressive Arts San Diego</small></div>
+        </div>
+        <div class="detail price-highlight">
+          <div class="d-label">Early Bird</div>
+          <div class="d-value">$100</div>
+          <small>Through March 28</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../asset-scale.js"></script>
+</body>
+</html>

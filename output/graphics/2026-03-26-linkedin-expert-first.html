@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mar 26 — LinkedIn Expert-First</title>
+  <link rel="stylesheet" href="../../styles-shared.css">
+  <style>
+    .card {
+      width: 1200px;
+      height: 628px;
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-hero);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.05) 0%, transparent 70%);
+    }
+
+    .content {
+      max-width: 1000px;
+      padding: 56px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hook {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+
+    .steps {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .step {
+      flex: 1;
+      background: rgba(194,120,64,0.08);
+      border: 1px solid rgba(194,120,64,0.15);
+      border-radius: 12px;
+      padding: 20px 24px;
+    }
+
+    .step .s-num {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .step .s-title {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 4px;
+    }
+
+    .step .s-desc {
+      font-size: 13px;
+      color: rgba(250,243,232,0.6);
+      line-height: 1.5;
+    }
+
+    .stat-line {
+      font-size: 16px;
+      color: rgba(250,243,232,0.6);
+      margin-bottom: 24px;
+    }
+
+    .stat-line em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .meta {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .meta-item {
+      font-size: 14px;
+      color: rgba(250,243,232,0.55);
+    }
+
+    .meta-item strong {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .meta-price {
+      background: var(--gradient-early-bird);
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .meta-price::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- MOOD: mood-framework | linkedin -->
+  <div class="fixed-asset card mood-framework" data-width="1200">
+    <div class="content">
+      <div class="hook">The Expert-First Method</div>
+      <h1>The prompt isn't the art.<br>Your expertise is the art.</h1>
+      <div class="steps">
+        <div class="step">
+          <div class="s-num">01</div>
+          <div class="s-title">State your credential</div>
+          <div class="s-desc">Give AI the context of your experience</div>
+        </div>
+        <div class="step">
+          <div class="s-num">02</div>
+          <div class="s-title">Define the nuance</div>
+          <div class="s-desc">What does generic get wrong in your field?</div>
+        </div>
+        <div class="step">
+          <div class="s-num">03</div>
+          <div class="s-title">Command the synthesis</div>
+          <div class="s-desc">Your voice. Your standards. Your philosophy.</div>
+        </div>
+      </div>
+      <div class="stat-line"><em>96%</em> of organizations require human approval for AI. The expert in the loop is the standard.</div>
+      <div class="meta">
+        <div class="meta-item"><strong>April 25</strong> · 10 AM – 2 PM</div>
+        <div class="meta-item"><strong>Expressive Arts SD</strong></div>
+        <div class="meta-price">$100 Early Bird</div>
+      </div>
+    </div>
+  </div>
+  <script src="../../asset-scale.js"></script>
+</body>
+</html>

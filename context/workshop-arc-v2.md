@@ -95,6 +95,8 @@ Land the thesis:
 
 > "Slop isn't an AI problem. It's a human leadership problem. The difference between those two outputs isn't the tool. It's the expertise behind the prompt. That's what we're here to build."
 
+*Facilitator note: 82% of people react negatively to generic AI content. Mentions of "slop" surged 200% last year. Drop naturally if the room energy supports it: "There's actually a word for this now..."*
+
 ---
 
 **10:15–10:19 | 3–4 min**
@@ -124,6 +126,8 @@ Bridge from Alex's story to the room's reality.
 > "That's what we're actually solving today. Not 'learn AI.' Deploy what you already know — faster, more consistently, without burning out."
 
 This reframe (from the grant consulting lens) is more respectful than "learn AI" and more accurate than "get ahead of the curve." It honors their existing expertise.
+
+*Facilitator note: 96% of organizations require human approval for AI actions. Only 4% go fully autonomous. Use if helpful: "Even the biggest companies in the world haven't gone fully auto. The human in the loop is the design, not the limitation."*
 
 ---
 
@@ -335,6 +339,8 @@ After the first successful outputs, pause the room. This is where Permission blo
 
 Two minutes. Don't dwell. But don't skip it. This catches the participants who are starting to pull back right at the moment they need to lean in.
 
+*Facilitator note: The "graduated trust model" is how enterprises approach AI. Even Fortune 500 companies start with low-risk, human-approved tasks and scale slowly. Only 4% allow unsupervised AI. Permission to go slow is the professional standard, not a sign of being behind.*
+
 ---
 
 **12:48–1:00 | 12 min**
@@ -438,6 +444,8 @@ The intellectual close. Stakes language for the macro context.
 > "What most people miss is what that means for the ceiling. When the floor comes up and everyone sounds competent — genuine creativity stands out more. Real human attention becomes premium. Authentic expertise becomes rare. The ceiling went up too."
 
 > "Don't compete with AI on efficiency. You will lose that race. Compete on humanity. Use AI to clear the operational load so you can double down on what only you can deliver. That's not a defensive strategy. That's the offensive strategy for the next decade of your career."
+
+*Facilitator note: The research calls this "content commoditization." When everyone sounds competent, genuine expertise becomes premium. 82% negative reaction to generic AI output validates the ceiling argument. Optional: "The research backs this up. When anyone can generate content, 82% of people react negatively to the generic stuff. Real expertise stands out more, not less."*
 
 ---
 
@@ -555,6 +563,8 @@ Practical and direct. Channel the emotional energy into action.
 - Collect compound step data (what did participants change in their systems?)
 - Conversion autopsy: who used it after day 7? Who didn't? Why?
 - Identify which phases created the actual shift vs. which were intellectually elegant but optional
+- **Research stat debrief:** Which research-backed talking points landed? Which fell flat? Did participants respond more to stats or personal stories? (See `docs/workshop-talking-points.md` for the stat list)
+- **Post-workshop content:** Pick 2-3 hooks from `docs/post-workshop-content-hooks.md` and pair with real participant outcomes
 
 ---
 

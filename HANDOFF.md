@@ -2,8 +2,8 @@
 
 **Date:** 2026-03-16
 **Branch:** main
-**Phase:** Lead import complete (Cycle 2 of Claude Project integration)
-**Last session:** Lead import, personalized outreach messages, Heather endorsement, action unblocking
+**Phase:** Research extraction complete + Week 2 posts generated
+**Last session:** Research insights applied, Week 2 posts, talking points, curriculum updates, AV checklist, bonus posts
 
 ---
 
@@ -31,7 +31,22 @@ Content pipeline fully operational. 48 cron jobs installed. 9 posts generated an
 4. **Leads tracker created** — `leads.md` with segments, messaging templates, engagement logs
 5. **First lead tracked** — Lynn Gahman (Writer, FB DM, INTERESTED)
 
-### What Was Done (Mar 16)
+### What Was Done (Mar 16 — Session 2: Research Extraction)
+
+1. **Research insights doc** — `docs/research-insights-applied.md` (7 applicable insights, 8 usable stats, from two 2026 event market research reports)
+2. **Research extraction plan** — `docs/plans/2026-03-16-research-extraction-plan.md` (13 deliverables, 5 priority tiers)
+3. **6 Week 2 posts generated** — Three Questions (LI+IG), Never Fabricate (FB, uses 64% stat), Lazy vs Human-Led (IG, uses 82%/200% slop stats), Expert-First (LI, uses 96%/4% human-in-loop stat), Early Bird Soft (FB, value-first framing)
+4. **4 bonus research-backed posts** — Human-in-the-Loop (LI), AI Slop Stat (IG), Clients Use AI (LI), Sound=Trust (LI). Saved as `output/2026-03-research-bonus-*.txt` for flexible scheduling.
+5. **Workshop talking points** — `docs/workshop-talking-points.md` (stats mapped to 8 specific workshop phases with exact drop-in language)
+6. **Curriculum micro-updates** — 4 facilitator notes added to `context/workshop-arc-v2.md` at Slop Hook, Capacity Reframe, Floor/Ceiling, Permission Check-In
+7. **Sound/AV prep checklist** — `docs/sound-av-prep-checklist.md` (pre-event acoustics visit, equipment decisions, day-of setup)
+8. **Landing page value updates** — Pricing note changed from "Save $50 before the deadline" to "4 hours of hands-on AI training with live systems". "What You'll Walk Away With" section made more specific (diagnostic, Expert-First method, take-home framework + accountability partner).
+9. **Content calendar updates** — Value-first framing rule added to Urgency Triggers section. 4 new framework hooks added to Framework Bank (AI Slop, Human-in-the-Loop, Algorithmic Literacy, Audio=Trust).
+10. **Post-workshop content hooks** — `docs/post-workshop-content-hooks.md` (5 pre-planned hooks pairing research stats with real participant outcomes)
+11. **Handout enhancement notes** — `docs/handout-enhancement-notes.md` (suggested stats sidebar for one-pager)
+12. **Debrief template updated** — Research stat debrief + post-workshop content items added to facilitation prep notes
+
+### What Was Done (Mar 16 — Session 1: Lead Import)
 
 1. **8 lead profiles imported** — Mike, Heather, Jane, Priscilla, Thelma, Tony, Agustin, Dean added to `leads.md` with full profiles
 2. **7 personalized outreach messages** — ready to copy-paste and send. Voice-checked against expanded brand-voice.md (5 tiers). Dean has placeholder (needs Alex context).
@@ -125,8 +140,8 @@ The credibility portfolio, all 6 outreach commands, voice rules, custom tools do
 - `.claude/commands/credibility.md` (pointer to canonical source)
 
 ### P1 — Content Pipeline
-1. **Generate Week 2 posts before Mar 20** — 6 posts (Three Questions x2, Never Fabricate, Before/After, Expert-First, Early Bird Soft)
-2. **Create matching graphics for Week 2 posts** using mood map assignments
+1. ~~**Generate Week 2 posts before Mar 20**~~ DONE — 6 posts + 4 bonus research-backed posts generated
+2. ~~**Create matching graphics for Week 2 posts**~~ DONE — 6 graphics matching mood map assignments
 3. **After March 28:** Update all templates and command to $150, remove "early bird" language
 
 ### P1 — Lead Outreach (See `docs/actions.md` for full backlog)

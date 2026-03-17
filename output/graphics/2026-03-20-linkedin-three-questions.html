@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mar 20 — LinkedIn Three Questions</title>
+  <link rel="stylesheet" href="../../styles-shared.css">
+  <style>
+    .card {
+      width: 1200px;
+      height: 628px;
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-hero);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.05) 0%, transparent 70%);
+    }
+
+    .content {
+      max-width: 1000px;
+      padding: 56px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hook {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.15;
+      margin-bottom: 32px;
+    }
+
+    .questions {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .q-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .q-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gradient-early-bird);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .q-text {
+      font-size: 20px;
+      line-height: 1.5;
+      color: rgba(250,243,232,0.85);
+      padding-top: 4px;
+    }
+
+    .q-text em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .meta {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .meta-item {
+      font-size: 14px;
+      color: rgba(250,243,232,0.55);
+    }
+
+    .meta-item strong {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .meta-price {
+      background: var(--gradient-early-bird);
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .meta-price::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- MOOD: mood-framework mood-bold | linkedin -->
+  <div class="fixed-asset card mood-framework mood-bold" data-width="1200">
+    <div class="content">
+      <div class="hook">Amplify Workshop · The Diagnosis</div>
+      <h1>Three questions before you touch AI.</h1>
+      <div class="questions">
+        <div class="q-item">
+          <div class="q-num">1</div>
+          <div class="q-text">Where are you <em>irreplaceable</em>?</div>
+        </div>
+        <div class="q-item">
+          <div class="q-num">2</div>
+          <div class="q-text">Where are you just doing <em>tasks</em>?</div>
+        </div>
+        <div class="q-item">
+          <div class="q-num">3</div>
+          <div class="q-text">If you got those hours back, <em>what would you do</em>?</div>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><strong>April 25</strong> · 10 AM – 2 PM</div>
+        <div class="meta-item"><strong>Expressive Arts SD</strong></div>
+        <div class="meta-price">$100 Early Bird</div>
+      </div>
+    </div>
+  </div>
+  <script src="../../asset-scale.js"></script>
+</body>
+</html>

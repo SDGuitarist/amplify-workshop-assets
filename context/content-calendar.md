@@ -143,10 +143,16 @@ Each framework from the workshop arc can generate 1-3 posts. Pull from this bank
 | The Mirror | "The real question isn't what AI can do for you. It's what you've been too busy to do." | FB, IG |
 | Counter-Narrative | "AI raises the floor. That makes the ceiling matter more." | LI, FB |
 | Dual Literacy | "AI fluency without human literacy is just automation. Both together is power." | LI |
+| AI Slop Stat | "82% of people react negatively to generic AI output. There's a word for it now: slop." | IG, LI |
+| Human-in-the-Loop | "96% of organizations require human approval for AI. That's not a bug. That's the design." | LI |
+| Algorithmic Literacy | "64% of your clients use AI daily. They know what generated looks like." | LI, FB |
+| Audio = Trust | "Poor audio drops speaker credibility by 19%. I've spent 30 years making sure people hear what I intend." | LI |
 
 ---
 
 ## Urgency Triggers
+
+**Value-first framing rule (from 2026 market research):** Every urgency post must lead with what the price gets you, not just the deadline. 73% of buyers value price transparency above all else. Frame the early bird as an investment in specific outcomes, not a countdown. Pair every deadline mention with explicit value articulation. Example: "Here's what $100 gets you" before "Price goes up Saturday."
 
 | Date | Day | Trigger | Messaging |
 |------|-----|---------|-----------|
