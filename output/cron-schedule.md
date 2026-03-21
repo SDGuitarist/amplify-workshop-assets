@@ -16,6 +16,7 @@ Posts marked [REMINDER] are spontaneous (Stories, live moments) and open a remin
 | 5 | 10:45 AM | 11:00 AM | IG | 2026-03-14-instagram-bts-story.txt | REMINDER |
 | 6 | 8:45 AM | 9:00 AM | IG | 2026-03-17-instagram-why-i-built-this.txt | TODO |
 | 7 | 9:45 AM | 10:00 AM | LI | 2026-03-17-linkedin-market-gap.txt | TODO |
+| 7.5 | 8:45 AM | 9:00 AM | FB | 2026-03-19-facebook-people-angle.txt | DONE |
 
 ## Week 2: Mar 20-26
 
