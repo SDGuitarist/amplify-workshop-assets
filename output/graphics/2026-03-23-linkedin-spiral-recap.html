@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mar 23 — LinkedIn Spiral Operator Recap</title>
+  <link rel="stylesheet" href="../../styles-shared.css">
+  <style>
+    .card {
+      width: 1200px;
+      height: 628px;
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-hero);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.05) 0%, transparent 70%);
+    }
+
+    .content {
+      max-width: 1060px;
+      padding: 48px 72px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hook {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 42px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+      margin-bottom: 28px;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .stat {
+      background: rgba(194,120,64,0.08);
+      border: 1px solid rgba(194,120,64,0.15);
+      border-radius: 12px;
+      padding: 16px 24px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(250,243,232,0.55);
+      margin-top: 4px;
+    }
+
+    .insight {
+      font-size: 20px;
+      line-height: 1.5;
+      color: rgba(250,243,232,0.85);
+      margin-bottom: 28px;
+    }
+
+    .insight em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .meta {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .meta-item {
+      font-size: 14px;
+      color: rgba(250,243,232,0.55);
+    }
+
+    .meta-item strong {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .meta-price {
+      background: var(--gradient-early-bird);
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .meta-price::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- MOOD: mood-framework mood-bold | linkedin -->
+  <div class="fixed-asset card mood-framework mood-bold" data-width="1200">
+    <div class="content">
+      <div class="hook">Amplify Workshop · This Week's Build</div>
+      <h1>The voice was easy. The judgment took 17 rounds.</h1>
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-value">22</div>
+          <div class="stat-label">Knowledge Docs</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">17</div>
+          <div class="stat-label">Tests Run</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">18/18</div>
+          <div class="stat-label">Capabilities at 90%+</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">30s</div>
+          <div class="stat-label">Per Response</div>
+        </div>
+      </div>
+      <div class="insight">Teaching AI your <em>voice</em> takes an afternoon. Teaching it your <em>expertise</em> takes the real work.</div>
+      <div class="meta">
+        <div class="meta-item"><strong>April 25</strong> · 10 AM - 2 PM</div>
+        <div class="meta-item"><strong>Expressive Arts SD</strong></div>
+        <div class="meta-price">$100 Early Bird</div>
+      </div>
+    </div>
+  </div>
+  <script src="../../asset-scale.js"></script>
+</body>
+</html>

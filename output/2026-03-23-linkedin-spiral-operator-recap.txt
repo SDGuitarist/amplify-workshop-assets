@@ -1,0 +1,38 @@
+LinkedIn | March 23, 2026 | 10:00 AM PT
+GRAPHIC: mood-framework mood-bold | linkedin
+
+---
+
+I spent a session this week training an AI writing tool to respond to gig leads in my voice.
+
+Not "write like a musician." My voice. My pricing logic. My cultural instincts from 30 years of booking Latin music in San Diego.
+
+It started at about 60% accuracy. It sounded like me but priced wrong, ignored budget mismatches, and wrote 160-word responses when the lead had 7 competitors and needed 60 words.
+
+So I built 22 knowledge documents. Ran 17 tests. Each one designed to break a specific capability. When it failed, I wrote the fix and tested again.
+
+By the end: 18 capabilities scoring above 90%. Pricing calibration. Cultural genre corrections. Competition-driven compression. Follow-up sequences. Objection handling. All in my voice, all in under 30 seconds.
+
+Here's what surprised me. The AI got the voice right on the first try. What it couldn't do was make judgment calls. It didn't know that a Mexican family requesting flamenco actually needs mariachi. It didn't know that a 120-person event at a La Jolla resort is a stealth premium lead even if the budget says $800.
+
+The voice was easy. The judgment took 17 rounds of testing.
+
+That's the part nobody talks about. Teaching AI your voice takes an afternoon. Teaching it your expertise takes the real work. And that real work is what makes the system actually useful.
+
+This is what we build at the workshop on April 25. Not generic prompts. Your judgment, encoded into systems that run on it.
+
+What's the one decision in your business that only you can make?
+
+#HumanLedAI #AIforCreatives #AmplifyWorkshop #SanDiego #SmallBusinessAI
+
+---
+
+FIRST COMMENT -- Post immediately:
+
+Registration and details: https://tinyurl.com/Amplify-AI
+
+30 seats. $100 early bird through March 28. $150 after.
+Venmo @Alex-Guillen-Music | Zelle alex.guillen.music@gmail.com
+619-755-3246 | alex@alexguillenmusic.com
+
+Happy to answer any questions.

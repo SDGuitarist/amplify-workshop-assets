@@ -22,12 +22,15 @@ Posts marked [REMINDER] are spontaneous (Stories, live moments) and open a remin
 
 | # | Opens | Post Time | Platform | File | Status |
 |---|-------|-----------|----------|------|--------|
-| 8 | 9:45 AM | 10:00 AM | LI | 2026-03-20-linkedin-three-questions.txt | TODO |
-| 9 | 9:45 AM | 10:00 AM | IG | 2026-03-20-instagram-three-questions.txt | TODO |
-| 10 | 8:45 AM | 9:00 AM | FB | 2026-03-24-facebook-never-fabricate.txt | TODO |
-| 11 | 8:45 AM | 9:00 AM | IG | 2026-03-24-instagram-before-after.txt | TODO |
-| 12 | 9:45 AM | 10:00 AM | LI | 2026-03-26-linkedin-expert-first.txt | TODO |
-| 13 | 8:45 AM | 9:00 AM | FB | 2026-03-26-facebook-early-bird-soft.txt | TODO |
+| 8 | 9:45 AM | 10:00 AM | LI | 2026-03-20-linkedin-three-questions.txt | DONE |
+| 9 | 9:45 AM | 10:00 AM | IG | 2026-03-20-instagram-three-questions.txt | DONE |
+| 9.5 | 8:45 AM | 9:00 AM | FB | 2026-03-23-facebook-spiral-story.txt | DONE |
+| 9.6 | 9:45 AM | 10:00 AM | LI | 2026-03-23-linkedin-spiral-recap.txt | DONE |
+| 10 | 8:45 AM | 9:00 AM | FB | 2026-03-24-facebook-never-fabricate.txt | DONE |
+| 11 | 8:45 AM | 9:00 AM | IG | 2026-03-24-instagram-lazy-vs-human-led.txt | DONE |
+| 11.5 | 8:45 AM | 9:00 AM | IG | 2026-03-25-instagram-voice-vs-judgment.txt | DONE |
+| 12 | 9:45 AM | 10:00 AM | LI | 2026-03-26-linkedin-expert-first.txt | DONE |
+| 13 | 8:45 AM | 9:00 AM | FB | 2026-03-26-facebook-early-bird-soft.txt | DONE |
 
 ## Week 3: Mar 27 - Apr 2
 
