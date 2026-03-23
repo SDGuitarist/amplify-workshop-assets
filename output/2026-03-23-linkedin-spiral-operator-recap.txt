@@ -3,27 +3,25 @@ GRAPHIC: mood-framework mood-bold | linkedin
 
 ---
 
-I spent a session this week training an AI writing tool to respond to gig leads in my voice.
+Something clicked for me this week and I want to share it.
 
-Not "write like a musician." My voice. My pricing logic. My cultural instincts from 30 years of booking Latin music in San Diego.
+I write a lot for my business. Emails, proposals, follow-ups. And I'm good at it when I have the time to sit down and think. The problem is I don't always have the time. So some messages get my best thinking and some get whatever I can fire off between gigs.
 
-It started at about 60% accuracy. It sounded like me but priced wrong, ignored budget mismatches, and wrote 160-word responses when the lead had 7 competitors and needed 60 words.
+I sat down with an AI writing tool this week and tried to fix that. I taught it how I actually write. Not just to "write well," but how I write and the rhythms I fall into. How I open differently depending on who I'm talking to. How I know when to be brief and when someone needs the full picture.
 
-So I built 22 knowledge documents. Ran 17 tests. Each one designed to break a specific capability. When it failed, I wrote the fix and tested again.
+It picked up my voice in the first five minutes. Sounded like me almost immediately.
 
-By the end: 18 capabilities scoring above 90%. Pricing calibration. Cultural genre corrections. Competition-driven compression. Follow-up sequences. Objection handling. All in my voice, all in under 30 seconds.
+But it couldn't make the calls I make without thinking. It didn't know when a draft was technically fine but felt off. It had no instinct for which detail to cut and which one to keep because it changes everything. Those decisions come from years of doing the work, and they were the hardest part to teach.
 
-Here's what surprised me. The AI got the voice right on the first try. What it couldn't do was make judgment calls. It didn't know that a Mexican family requesting flamenco actually needs mariachi. It didn't know that a 120-person event at a La Jolla resort is a stealth premium lead even if the budget says $800.
+17 rounds of testing later, it got there. And now the thing I never had enough hours for just works. My best thinking shows up in every message, not just the ones I have time to write carefully.
 
-The voice was easy. The judgment took 17 rounds of testing.
+That's the real benefit of teaching AI your judgment. Not speed. Consistency. The version of you that wins when you're focused, showing up even when you're stretched thin.
 
-That's the part nobody talks about. Teaching AI your voice takes an afternoon. Teaching it your expertise takes the real work. And that real work is what makes the system actually useful.
+April 25. That's what we're working on together. Your instincts, built into something that runs on them.
 
-This is what we build at the workshop on April 25. Not generic prompts. Your judgment, encoded into systems that run on it.
+Know someone who writes for their work and would get something out of this? Send it their way.
 
-What's the one decision in your business that only you can make?
-
-#HumanLedAI #AIforCreatives #AmplifyWorkshop #SanDiego #SmallBusinessAI
+#HumanLedAI #AIforCreatives #AmplifyWorkshop #SanDiego
 
 ---
 
