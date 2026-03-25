@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mar 25 — FB/LinkedIn Voice vs Judgment</title>
+  <link rel="stylesheet" href="../../styles-shared.css">
+  <style>
+    .card {
+      width: 1200px;
+      height: 628px;
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 56px 72px;
+      background: var(--gradient-hero);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -60px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,140,66,0.06) 0%, transparent 70%);
+    }
+
+    .top {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hook {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      background: var(--gradient-amber-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 46px;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.15;
+      max-width: 900px;
+    }
+
+    .middle {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .stat-pair {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .stat {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-voice .stat-number {
+      color: rgba(250,243,232,0.55);
+    }
+
+    .stat-judgment .stat-number {
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .stat-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .stat-voice .stat-label {
+      color: rgba(250,243,232,0.55);
+    }
+
+    .stat-judgment .stat-label {
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-desc {
+      font-size: 15px;
+      color: rgba(250,243,232,0.5);
+    }
+
+    .stat-judgment .stat-desc {
+      color: rgba(250,243,232,0.65);
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 56px;
+      background: rgba(194,120,64,0.2);
+    }
+
+    .bottom {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: 24px;
+      border-top: 1px solid rgba(194,120,64,0.15);
+    }
+
+    .thesis {
+      font-size: 20px;
+      line-height: 1.5;
+      color: rgba(250,243,232,0.7);
+      max-width: 700px;
+    }
+
+    .thesis em {
+      font-style: normal;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+
+    .meta-item {
+      font-size: 14px;
+      color: rgba(250,243,232,0.5);
+    }
+
+    .meta-item strong {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .price-badge {
+      background: var(--gradient-early-bird);
+      border-radius: 8px;
+      padding: 8px 20px;
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-badge::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- MOOD: mood-framework mood-bold | facebook/linkedin landscape -->
+  <div class="fixed-asset card mood-framework mood-bold" data-width="1200">
+    <div class="top">
+      <div class="hook">Amplify Workshop</div>
+      <h1>My AI nailed my voice. Then it wrote a perfectly-worded wrong answer.</h1>
+    </div>
+
+    <div class="middle">
+      <div class="stat-pair">
+        <div class="stat stat-voice">
+          <div class="stat-number">5m</div>
+          <div class="stat-text">
+            <div class="stat-label">Voice</div>
+            <div class="stat-desc">The easy part</div>
+          </div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat stat-judgment">
+          <div class="stat-number">17</div>
+          <div class="stat-text">
+            <div class="stat-label">Rounds of judgment</div>
+            <div class="stat-desc">The real work</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="thesis">Knowing what to say is one skill. Knowing what not to say is another. <em>The second one is what makes your writing yours.</em></div>
+      <div class="meta">
+        <div class="meta-item"><strong>April 25</strong> · 30 seats</div>
+        <div class="price-badge">$100 Early Bird</div>
+      </div>
+    </div>
+  </div>
+  <script src="../../asset-scale.js"></script>
+</body>
+</html>
