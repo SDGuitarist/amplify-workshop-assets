@@ -142,7 +142,18 @@ The credibility portfolio, all 6 outreach commands, voice rules, custom tools do
 ### P1 — Content Pipeline
 1. ~~**Generate Week 2 posts before Mar 20**~~ DONE — 6 posts + 4 bonus research-backed posts generated
 2. ~~**Create matching graphics for Week 2 posts**~~ DONE — 6 graphics matching mood map assignments
-3. **After March 28:** Update all templates and command to $150, remove "early bird" language
+3. **Update all templates and command to $150** — early bird ended Mar 28. Remove "early bird" language.
+4. ~~**Generate Week 3-4 posts (Mar 31, Apr 5, Apr 7)**~~ DONE (Mar 29) — Content Pipeline agent team produced 7 posts:
+   - `2026-03-31-linkedin-thought-leadership.txt` — Wedge + capacity, long-form
+   - `2026-03-31-facebook-personal-story.txt` — Lead Responder origin story
+   - `2026-04-05-facebook-bts-prep.txt` — Behind-the-scenes prep
+   - `2026-04-05-instagram-bts-story.txt` — Question sticker
+   - `2026-04-07-linkedin-who-is-this-for.txt` — 3 personas (photographer, designer, consultant)
+   - `2026-04-07-instagram-who-is-this-for.txt` — 5-slide carousel
+   - `2026-04-07-facebook-who-is-this-for.txt` — Narrative + group tags
+   - All 7 fact-checked (0 corrections) and voice-QA'd (2 fixes applied: banned phrase + stacked CTA)
+   - All use $150 pricing
+5. **Generate Week 5-6 posts (Apr 9-24)** — next batch
 
 ### P1 — Lead Outreach (See `docs/actions.md` for full backlog)
 4. **Send outreach messages** — 7 personalized messages ready in `leads.md` "Outreach Messages" section. Alex: review and send.
