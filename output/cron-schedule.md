@@ -12,10 +12,10 @@ Posts marked [REMINDER] are spontaneous (Stories, live moments) and open a remin
 | 1 | 7:15 AM | 7:30 AM | LI | 2026-03-13-linkedin-launch.txt | DONE |
 | 2 | 8:45 AM | 9:00 AM | FB | 2026-03-13-facebook-launch.txt | DONE |
 | 3 | 9:45 AM | 10:00 AM | IG | 2026-03-13-instagram-launch.txt | DONE |
-| 4 | 8:45 AM | 9:00 AM | FB | 2026-03-14-facebook-bts.txt | TODO |
-| 5 | 10:45 AM | 11:00 AM | IG | 2026-03-14-instagram-bts-story.txt | REMINDER |
-| 6 | 8:45 AM | 9:00 AM | IG | 2026-03-17-instagram-why-i-built-this.txt | TODO |
-| 7 | 9:45 AM | 10:00 AM | LI | 2026-03-17-linkedin-market-gap.txt | TODO |
+| 4 | 8:45 AM | 9:00 AM | FB | 2026-03-14-facebook-bts.txt | DONE |
+| 5 | 10:45 AM | 11:00 AM | IG | 2026-03-14-instagram-bts-story.txt | DONE |
+| 6 | 8:45 AM | 9:00 AM | IG | 2026-03-17-instagram-why-i-built-this.txt | DONE |
+| 7 | 9:45 AM | 10:00 AM | LI | 2026-03-17-linkedin-market-gap.txt | DONE |
 | 7.5 | 8:45 AM | 9:00 AM | FB | 2026-03-19-facebook-people-angle.txt | DONE |
 
 ## Week 2: Mar 20-26
@@ -36,27 +36,27 @@ Posts marked [REMINDER] are spontaneous (Stories, live moments) and open a remin
 
 | # | Opens | Post Time | Platform | File | Status |
 |---|-------|-----------|----------|------|--------|
-| 14 | 8:45 AM | 9:00 AM | IG | 2026-03-27-instagram-early-bird-countdown.txt | TODO |
-| 15 | 8:45 AM | 9:00 AM | FB | 2026-03-27-facebook-early-bird-countdown.txt | TODO |
-| 16 | 9:45 AM | 10:00 AM | LI | 2026-03-27-linkedin-early-bird-value.txt | TODO |
-| 17 | 7:45 AM | 8:00 AM | LI | 2026-03-28-linkedin-deadline-day.txt | TODO |
-| 18 | 8:45 AM | 9:00 AM | FB | 2026-03-28-facebook-deadline-day.txt | TODO |
-| 19 | 9:45 AM | 10:00 AM | IG | 2026-03-28-instagram-deadline-day.txt | TODO |
-| 20 | 6:45 PM | 7:00 PM | IG | 2026-03-28-instagram-deadline-evening.txt | TODO |
-| 21 | 9:45 AM | 10:00 AM | LI | 2026-03-31-linkedin-thought-leadership.txt | TODO |
-| 22 | 8:45 AM | 9:00 AM | FB | 2026-03-31-facebook-personal-story.txt | TODO |
+| 14 | 8:45 AM | 9:00 AM | IG | 2026-03-27-instagram-early-bird-countdown.txt | SKIPPED |
+| 15 | 8:45 AM | 9:00 AM | FB | 2026-03-27-facebook-early-bird-countdown.txt | SKIPPED |
+| 16 | 9:45 AM | 10:00 AM | LI | 2026-03-27-linkedin-early-bird-value.txt | SKIPPED |
+| 17 | 7:45 AM | 8:00 AM | LI | 2026-03-28-linkedin-deadline-day.txt | DONE |
+| 18 | 8:45 AM | 9:00 AM | FB | 2026-03-28-facebook-deadline-day.txt | DONE |
+| 19 | 9:45 AM | 10:00 AM | IG | 2026-03-28-instagram-deadline-day.txt | DONE |
+| 20 | 6:45 PM | 7:00 PM | IG | 2026-03-28-instagram-deadline-evening.txt | SKIPPED |
+| 21 | 9:45 AM | 10:00 AM | LI | 2026-03-31-linkedin-thought-leadership.txt | DONE |
+| 22 | 8:45 AM | 9:00 AM | FB | 2026-03-31-facebook-personal-story.txt | DONE |
 
 ## Week 4: Apr 3-9
 
 | # | Opens | Post Time | Platform | File | Status |
 |---|-------|-----------|----------|------|--------|
-| 23 | 8:45 AM | 9:00 AM | FB | 2026-04-05-facebook-bts-prep.txt | TODO |
-| 24 | 10:45 AM | 11:00 AM | IG | 2026-04-05-instagram-bts-story.txt | REMINDER |
-| 25 | 9:45 AM | 10:00 AM | LI | 2026-04-07-linkedin-who-is-this-for.txt | TODO |
-| 26 | 8:45 AM | 9:00 AM | IG | 2026-04-07-instagram-who-is-this-for.txt | TODO |
-| 27 | 8:45 AM | 9:00 AM | FB | 2026-04-07-facebook-who-is-this-for.txt | TODO |
-| 28 | 8:45 AM | 9:00 AM | FB | 2026-04-09-facebook-dual-literacy.txt | TODO |
-| 29 | 9:45 AM | 10:00 AM | LI | 2026-04-09-linkedin-capacity-reframe.txt | TODO |
+| 23 | 8:45 AM | 9:00 AM | FB | 2026-04-05-facebook-bts-prep.txt | DONE |
+| 24 | 10:45 AM | 11:00 AM | IG | 2026-04-05-instagram-bts-story.txt | DONE |
+| 25 | 9:45 AM | 10:00 AM | LI | 2026-04-07-linkedin-who-is-this-for.txt | DONE |
+| 26 | 8:45 AM | 9:00 AM | IG | 2026-04-07-instagram-who-is-this-for.txt | DONE |
+| 27 | 8:45 AM | 9:00 AM | FB | 2026-04-07-facebook-who-is-this-for.txt | DONE |
+| 28 | 8:45 AM | 9:00 AM | FB | 2026-04-09-facebook-dual-literacy.txt | DONE |
+| 29 | 9:45 AM | 10:00 AM | LI | 2026-04-09-linkedin-capacity-reframe.txt | DONE |
 
 ## Week 5: Apr 10-16
 
