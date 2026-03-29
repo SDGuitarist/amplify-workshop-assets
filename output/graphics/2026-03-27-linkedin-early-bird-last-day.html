@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mar 27 — Early Bird Last Day</title>
+  <link rel="stylesheet" href="../../styles-shared.css">
+  <style>
+    .card {
+      width: 1200px;
+      height: 628px;
+      font-family: var(--font-body);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: -120px;
+      left: -80px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+    }
+
+    .content {
+      max-width: 1040px;
+      width: 100%;
+      padding: 56px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .deadline-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ff6b4a, #ff8c42);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 1px 8px rgba(255,107,74,0.4));
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.12;
+      margin-bottom: 28px;
+      background: linear-gradient(135deg, #ffffff 0%, #ffe0a0 40%, #ffcc66 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 2px 16px rgba(255,200,100,0.3));
+    }
+
+    .subtitle {
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(250,243,232,0.85);
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 36px;
+    }
+
+    .price-current {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .price-current .amount {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 700;
+      background: var(--gradient-early-bird);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .price-current .label {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(250,243,232,0.5);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .price-arrow {
+      font-size: 24px;
+      color: rgba(250,243,232,0.25);
+    }
+
+    .price-after {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 600;
+      color: rgba(250,243,232,0.3);
+      text-decoration: line-through;
+      text-decoration-color: rgba(255,107,74,0.4);
+    }
+
+    .meta {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .meta-item {
+      font-size: 14px;
+      color: rgba(250,243,232,0.5);
+    }
+
+    .meta-item strong {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .story-divider {
+      width: 48px;
+      height: 3px;
+      border-radius: 2px;
+      margin-bottom: 28px;
+    }
+  </style>
+</head>
+<body>
+  <!-- MOOD: mood-urgency | linkedin -->
+  <div class="fixed-asset card mood-urgency mood-bold" data-width="1200">
+    <div class="content">
+      <div class="deadline-tag">Last day. Tomorrow it's gone.</div>
+      <h1>Early bird ends<br>March 28.</h1>
+      <div class="story-divider"></div>
+      <div class="subtitle">Amplify: The Power of Human-Led AI. Hands-on workshop for creatives and small business owners. Not slides. Not theory. Real tools, real workflows.</div>
+      <div class="price-row">
+        <div class="price-current">
+          <span class="amount">$100</span>
+          <span class="label">through<br>tomorrow</span>
+        </div>
+        <div class="price-arrow">&rarr;</div>
+        <div class="price-after">$150</div>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><strong>April 25</strong> · 10 AM to 2 PM</div>
+        <div class="meta-item"><strong>Expressive Arts San Diego</strong></div>
+      </div>
+    </div>
+  </div>
+  <script src="../../asset-scale.js"></script>
+</body>
+</html>
