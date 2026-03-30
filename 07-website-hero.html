@@ -383,6 +383,184 @@
       .detail-card .dc-sub { font-size: 15px; }
     }
 
+    /* ===== WHAT YOU'LL ACTUALLY DO ===== */
+    .agenda-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      font-family: var(--font-body);
+    }
+
+    @media (min-width: 768px) {
+      .agenda-section { padding: 64px 48px; }
+    }
+
+    @media (min-width: 1024px) {
+      .agenda-section { padding: 80px 64px; }
+    }
+
+    .agenda-section h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--deep-brown);
+      margin-bottom: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .agenda-section h2 { font-size: 32px; margin-bottom: 12px; }
+    }
+
+    @media (min-width: 1024px) {
+      .agenda-section h2 { font-size: 36px; }
+    }
+
+    .agenda-section .agenda-sub {
+      font-size: 16px;
+      color: var(--cognac);
+      margin-bottom: 28px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 768px) {
+      .agenda-section .agenda-sub { font-size: 18px; margin-bottom: 40px; }
+    }
+
+    .agenda-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .agenda-list { gap: 16px; }
+    }
+
+    .agenda-item {
+      display: flex;
+      gap: 16px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #e8ddd0;
+    }
+
+    @media (min-width: 768px) {
+      .agenda-item { gap: 20px; padding: 24px; border-radius: 12px; }
+    }
+
+    .agenda-item .ai-time {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--terracotta);
+      white-space: nowrap;
+      min-width: 56px;
+    }
+
+    @media (min-width: 768px) {
+      .agenda-item .ai-time { font-size: 14px; min-width: 64px; }
+    }
+
+    .agenda-item .ai-content h3 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--deep-brown);
+      margin: 0 0 4px;
+    }
+
+    @media (min-width: 768px) {
+      .agenda-item .ai-content h3 { font-size: 18px; }
+    }
+
+    .agenda-item .ai-content p {
+      font-size: 14px;
+      color: #4a3828;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      .agenda-item .ai-content p { font-size: 15px; }
+    }
+
+    /* ===== IS THIS FOR YOU ===== */
+    .for-you-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      font-family: var(--font-body);
+    }
+
+    @media (min-width: 768px) {
+      .for-you-section { padding: 64px 48px; }
+    }
+
+    @media (min-width: 1024px) {
+      .for-you-section { padding: 80px 64px; }
+    }
+
+    .for-you-section h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--deep-brown);
+      margin-bottom: 28px;
+    }
+
+    @media (min-width: 768px) {
+      .for-you-section h2 { font-size: 32px; margin-bottom: 36px; }
+    }
+
+    @media (min-width: 1024px) {
+      .for-you-section h2 { font-size: 36px; }
+    }
+
+    .for-you-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .for-you-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+
+    .for-you-item {
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #e8ddd0;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 768px) {
+      .for-you-item { padding: 24px; border-radius: 12px; }
+    }
+
+    .for-you-item .fy-who {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--deep-brown);
+      margin-bottom: 6px;
+    }
+
+    @media (min-width: 768px) {
+      .for-you-item .fy-who { font-size: 17px; }
+    }
+
+    .for-you-item .fy-desc {
+      font-size: 14px;
+      color: #4a3828;
+    }
+
+    @media (min-width: 768px) {
+      .for-you-item .fy-desc { font-size: 15px; }
+    }
+
     /* ===== WHAT YOU'LL GET ===== */
     .what-section {
       max-width: 1200px;
@@ -1172,6 +1350,79 @@
         <div class="dc-label">Who It's For</div>
         <div class="dc-value">Creatives &amp; Business Owners</div>
         <div class="dc-sub">Artists, entrepreneurs, and anyone tired of generic AI output</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU'LL ACTUALLY DO -->
+  <section class="agenda-section">
+    <h2>What You'll Actually Do</h2>
+    <p class="agenda-sub">Four hours. No slides. You'll watch real AI systems run on real business data, then apply what you see to your own work.</p>
+    <div class="agenda-list">
+      <div class="agenda-item">
+        <div class="ai-time">10:00 AM</div>
+        <div class="ai-content">
+          <h3>The Reframe</h3>
+          <p>We start by looking at two AI outputs side by side. Same task, completely different results. You'll see exactly why most AI output sounds generic and what to do about it.</p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="ai-time">10:30 AM</div>
+        <div class="ai-content">
+          <h3>Find Your Leverage Points</h3>
+          <p>Laptops open. You'll map where your time actually goes and identify which tasks AI should handle, which it should assist, and which it should never touch.</p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="ai-time">11:00 AM</div>
+        <div class="ai-content">
+          <h3>Live System Demo</h3>
+          <p>Alex runs his actual business systems live: an AI that responds to client inquiries in his voice, a tool that preps him for gigs, and a research agent that finds opportunities. Real data, not a rehearsed demo.</p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="ai-time">12:00 PM</div>
+        <div class="ai-content">
+          <h3>Break</h3>
+          <p>30 minutes. Light refreshments provided.</p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="ai-time">12:30 PM</div>
+        <div class="ai-content">
+          <h3>Build With Your Own Work</h3>
+          <p>You'll take what you just saw and apply it to your business. Write prompts using your expertise, test them, and leave with something you can use Monday morning.</p>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="ai-time">1:30 PM</div>
+        <div class="ai-content">
+          <h3>Lock It In</h3>
+          <p>Name what you learned. Build a 14-day action plan. Leave with a clear next step, not just inspiration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IS THIS FOR YOU -->
+  <section class="for-you-section">
+    <h2>Is This For You?</h2>
+    <div class="for-you-grid">
+      <div class="for-you-item">
+        <div class="fy-who">Freelancers and Solopreneurs</div>
+        <div class="fy-desc">You're juggling client emails, invoices, proposals, and creative work. You need systems that handle the business side so you can focus on the work that matters.</div>
+      </div>
+      <div class="for-you-item">
+        <div class="fy-who">Musicians, Writers, and Creatives</div>
+        <div class="fy-desc">You've tried AI tools but everything comes out sounding generic. You want output that sounds like you, not like a template.</div>
+      </div>
+      <div class="for-you-item">
+        <div class="fy-who">Small Business Owners</div>
+        <div class="fy-desc">You spend hours every week on tasks that should take minutes. Lead follow-ups, scheduling, research. You want to automate the repetitive stuff without losing the personal touch.</div>
+      </div>
+      <div class="for-you-item">
+        <div class="fy-who">AI-Curious but Overwhelmed</div>
+        <div class="fy-desc">You keep hearing about AI but don't know where to start. No tech background needed. If you can use a web browser, you can do this.</div>
       </div>
     </div>
   </section>
