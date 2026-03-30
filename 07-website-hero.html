@@ -7,7 +7,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Amplify: The Power of Human-Led AI">
-  <meta property="og:description" content="A hands-on workshop for creatives and small business owners. Use AI to work deeper, not just faster. April 25, San Diego. $100 early bird.">
+  <meta property="og:description" content="A hands-on workshop for creatives and small business owners. Use AI to work deeper, not just faster. April 25, San Diego. $150.">
   <meta property="og:image" content="https://sdguitarist.github.io/amplify-workshop-assets/images/alex-headshot.jpeg">
   <meta property="og:url" content="https://tinyurl.com/Amplify-AI">
   <meta property="og:type" content="website">
@@ -15,7 +15,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Amplify: The Power of Human-Led AI">
-  <meta name="twitter:description" content="A hands-on workshop for creatives and small business owners. April 25, San Diego. $100 early bird.">
+  <meta name="twitter:description" content="A hands-on workshop for creatives and small business owners. April 25, San Diego. $150.">
   <meta name="twitter:image" content="https://sdguitarist.github.io/amplify-workshop-assets/images/alex-headshot.jpeg">
 
   <link rel="stylesheet" href="styles-shared.css">
@@ -1139,7 +1139,7 @@
         <div class="hero-meta">April 25, 2026 · San Diego, CA</div>
         <p class="hero-desc">A hands-on workshop for artists, creatives, and small business owners who want to use AI to work <em>deeper</em>, not just faster. No tech background needed.</p>
         <a href="#pricing" class="hero-cta">
-          Reserve Your Seat <span class="price-tag">· $100 Early Bird</span>
+          Reserve Your Seat <span class="price-tag">· $150</span>
         </a>
       </div>
       <div class="hero-photo">
@@ -1203,7 +1203,7 @@
   <!-- MID-PAGE CTA -->
   <div class="mid-cta">
     <a href="#pricing" class="hero-cta">
-      Reserve Your Seat <span class="price-tag">· $100 Early Bird</span>
+      Reserve Your Seat <span class="price-tag">· $150</span>
     </a>
   </div>
 
@@ -1286,21 +1286,10 @@
   <section class="pricing-section" id="pricing">
     <div class="pricing-cards">
       <div class="p-card early">
-        <div class="p-label">Early Bird (through March 28)</div>
-        <div class="p-amount">$100</div>
+        <div class="p-label">Workshop Price</div>
+        <div class="p-amount">$150</div>
         <div class="p-note">4 hours of hands-on AI training with live systems</div>
       </div>
-      <div class="p-card regular">
-        <div class="p-label">Regular Price</div>
-        <div class="p-amount">$150</div>
-        <div class="p-note">After March 28</div>
-      </div>
-    </div>
-
-    <!-- Countdown Timer -->
-    <div class="countdown-bar" id="countdown-bar">
-      <div class="countdown-label">Early bird pricing ends in</div>
-      <div class="countdown-timer" id="countdown-timer"></div>
     </div>
 
     <div class="seats-note">Limited to 30 Seats</div>
@@ -1315,7 +1304,7 @@
         </li>
         <li>
           <span class="step-num">2</span>
-          <span>Send <strong>$100</strong> to <strong>@Alex-Guillen-Music</strong> with the note <strong>"Amplify Workshop"</strong></span>
+          <span>Send <strong>$150</strong> to <strong>@Alex-Guillen-Music</strong> with the note <strong>"Amplify Workshop"</strong></span>
         </li>
         <li>
           <span class="step-num">3</span>
@@ -1324,7 +1313,7 @@
       </ol>
 
       <a href="https://venmo.com/Alex-Guillen-Music" class="register-cta">
-        Pay with Venmo · $100
+        Pay with Venmo · $150
       </a>
 
       <div class="register-confirm">
@@ -1347,40 +1336,11 @@
   <!-- STICKY MOBILE CTA -->
   <div class="sticky-cta" id="sticky-cta">
     <a href="#pricing">
-      Reserve Your Seat <span class="price-tag">· $100</span>
+      Reserve Your Seat <span class="price-tag">· $150</span>
     </a>
   </div>
 
   <script>
-    // Countdown timer to March 28, 2026 midnight PT
-    (function() {
-      var deadline = new Date('2026-03-28T23:59:59-07:00').getTime();
-      var timerEl = document.getElementById('countdown-timer');
-      var barEl = document.getElementById('countdown-bar');
-
-      function update() {
-        var now = Date.now();
-        var diff = deadline - now;
-
-        if (diff <= 0) {
-          barEl.style.display = 'none';
-          return;
-        }
-
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-
-        timerEl.innerHTML =
-          '<div class="countdown-unit"><div class="cu-num">' + days + '</div><div class="cu-label">Days</div></div>' +
-          '<div class="countdown-unit"><div class="cu-num">' + hours + '</div><div class="cu-label">Hours</div></div>' +
-          '<div class="countdown-unit"><div class="cu-num">' + mins + '</div><div class="cu-label">Min</div></div>';
-      }
-
-      update();
-      setInterval(update, 60000);
-    })();
-
     // Sticky CTA — hide when pricing section is visible
     (function() {
       var sticky = document.getElementById('sticky-cta');

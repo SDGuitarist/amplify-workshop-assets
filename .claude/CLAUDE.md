@@ -31,7 +31,7 @@ Do NOT load all four files at once. Load brand-voice.md for every post. Load voi
 - **Title:** Amplify: The Power of Human-Led AI
 - **Date:** Saturday, April 25, 2026, 10 AM to 2 PM
 - **Location:** Expressive Arts San Diego, 3201 Thorn St, San Diego CA 92104
-- **Price:** $100 early bird (through March 28) / $150 after
+- **Price:** $150
 - **Payment:** Venmo @Alex-Guillen-Music / Zelle: alex.guillen.music@gmail.com
 - **Contact:** alex@alexguillenmusic.com / 619-755-3246
 - **Bring:** Laptop
